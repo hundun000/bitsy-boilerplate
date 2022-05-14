@@ -1,6 +1,8 @@
+/dev
+/editor
 /.working
-/output
 /input/template.html
+/output
 
 # Logs
 logs

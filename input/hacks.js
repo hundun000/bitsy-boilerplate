@@ -1,2 +1,7 @@
-import '@bitsy/hecks/src/exit-from-dialog';
-import '@bitsy/hecks/src/gamepad input';
+import '@bitsy/hecks/src/dialog choices';
+import '@bitsy/hecks/src/long dialog';
+import '@bitsy/hecks/src/dialog jump';
+import '../modifiedHacks/edit image from dialog';
+import '../modifiedHacks/edit room from dialog';
+import '@bitsy/hecks/src/javascript dialog';
+import '@bitsy/hecks/src/logic-operators-extended';

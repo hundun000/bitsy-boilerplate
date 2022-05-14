@@ -1,6 +1,6 @@
-Write your game's title here
+Bitsy Tower
 
-# BITSY VERSION 7.2
+# BITSY VERSION 7.12
 
 ! ROOM_FORMAT 1
 
@@ -10,37 +10,327 @@ NAME blueprint
 128,159,255
 255,255,255
 
-ROOM 0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-NAME example room
-PAL 0
+#  ----- const tiles ----- 
+TIL UI_playerHP_bit_0
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000000
+NAME UI_playerHP_bit_0
 
-TIL a
+TIL UI_playerHP_bit_1
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerHP_bit_1
+
+TIL UI_playerHP_bit_2
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000011
+NAME UI_playerHP_bit_2
+
+TIL UI_playerHP_bit_3
+11111111
+10001001
+10001001
+10001001
+11111111
+10100001
+10100001
+11111111
+NAME wall
+
+TIL UI_playerHP_bit_3
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000111
+NAME UI_playerHP_bit_3
+
+TIL UI_playerHP_bit_4
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100001
+00000111
+NAME UI_playerHP_bit_4
+
+TIL UI_playerHP_bit_5
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100011
+00000111
+NAME UI_playerHP_bit_5
+
+TIL UI_playerHP_bit_6
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100111
+00000111
+NAME UI_playerHP_bit_6
+
+TIL source_char_empty
+00111000
+01111100
+01111100
+01111100
+01111100
+01111100
+00111000
+00000000
+NAME source_char_empty
+
+TIL source_char_0
+00111000
+01000100
+01001100
+01010100
+01100100
+01000100
+00111000
+00000000
+NAME source_char_0
+
+TIL source_char_1
+00010000
+00110000
+00010000
+00010000
+00010000
+00010000
+00111000
+00000000
+NAME source_char_1
+
+TIL source_char_2
+00111000
+01000100
+00000100
+00011000
+00100000
+01000000
+01111100
+00000000
+NAME source_char_2
+
+TIL source_char_3
+00111000
+01000100
+00000100
+00111000
+00000100
+01000100
+00111000
+00000000
+NAME source_char_3
+
+TIL source_char_4
+00001000
+00011000
+00101000
+01001000
+01111100
+00001000
+00001000
+00000000
+NAME source_char_4
+
+TIL source_char_5
+01111100
+01000000
+01000000
+01111000
+00000100
+01000100
+00111000
+00000000
+NAME source_char_5
+
+TIL source_char_6
+00011000
+00100000
+01000000
+01111000
+01000100
+01000100
+00111000
+00000000
+NAME source_char_6
+
+TIL source_char_7
+01111100
+00000100
+00001000
+00010000
+00100000
+00100000
+00100000
+00000000
+NAME source_char_7
+
+TIL source_char_8
+00111000
+01000100
+01000100
+00111000
+01000100
+01000100
+00111000
+00000000
+NAME source_char_8
+
+TIL source_char_9
+00111000
+01000100
+01000100
+00111100
+00000100
+00001000
+00110000
+00000000
+NAME source_char_9
+
+TIL source_icon_HP
+00000000
+11100111
+11111111
+01111110
+00111100
+00011000
+00000000
+00000000
+NAME source_icon_HP
+
+TIL source_icon_ATK
+00000000
+00011000
+00100100
+00100100
+00100100
+00100100
+01111110
+00011000
+NAME source_icon_ATK
+
+TIL source_icon_DEF
+00000000
+01111110
+01000010
+01000010
+01000010
+00100100
+00011000
+00000000
+NAME source_icon_DEF
+
+TIL source_icon_money
+00010000
+00111000
+01000100
+00110000
+00011000
+01000100
+00111000
+00010000
+NAME source_icon_money
+
+TIL source_icon_floor
+00000000
+00001111
+00001001
+00111001
+00100001
+11100001
+10000001
+11111111
+NAME source_icon_floor
+
+TIL source_icon_level
+00000000
+10000000
+10000000
+10000000
+10010100
+10010100
+11001001
+00000000
+NAME source_icon_level
+
+TIL source_icon_key_a
+00000000
+00111000
+01000100
+00111000
+00010000
+00011100
+00010000
+00010000
+NAME source_icon_key_a
+
+TIL source_icon_key_b
+00000000
+00111000
+01000100
+00111000
+00010000
+00011100
+00010000
+00011100
+NAME source_icon_key_b
+
+TIL source_icon_key_c
+00000000
+00111000
+01000100
+00111000
+00010000
+00011000
+00011100
+00011000
+NAME source_icon_key_c
+
+TIL block
 11111111
 10000001
-10000001
-10011001
-10011001
-10000001
+10111101
+10100101
+10100101
+10111101
 10000001
 11111111
 NAME block
 
+#  ----- const sprite ----- 
 SPR A
 00011000
 00011000
@@ -49,58 +339,496 @@ SPR A
 01111110
 10111101
 00100100
+01101100
+>
+00011000
+00011000
+00011000
+00111100
+01111110
+10111101
 00100100
-POS 0 4,4
+00110110
+POS room_floor1 5,9
 
-SPR a
+SPR spr_starterFaery
+00011000
+00011000
+00011000
+00111100
+01111110
+10111101
+00100100
+01101100
+POS room_floor1 5,10
+DLG dlg_starterFaery
+
+SPR spr_tradeFaery
+00011000
+00011000
+00011000
+00111100
+01111110
+10111101
+00100100
+00110110
+POS room_floor1 5,11
+DLG dlg_tradeFaeryStart
+
+#  ----- item object ----- 
+
+ITM item_ATKGem
+00010000
+00101000
+01000100
+10100010
+10000010
+01000100
+00101000
+00010000
+NAME item_ATKGem
+DLG dlg_ATKGem
+
+ITM item_healBottle
+01100110
+00100100
+00100100
+01000010
+01000010
+01000010
+01111110
+01111110
+NAME item_healBottle
+DLG dlg_healBottle
+
+ITM item_bigHealBottle
+01100110
+00100100
+00100100
+01000010
+11111111
+11111111
+11111111
+01111110
+NAME item_bigHealBottle
+DLG dlg_bigHealBottle
+
+
+
+
+# ----- map object -----
+
+ROOM room_floor1
+source_icon_floor,0,0,0,0,0,0,0,source_icon_HP,UI_playerHP_bit_6,UI_playerHP_bit_5,UI_playerHP_bit_4,UI_playerHP_bit_3,UI_playerHP_bit_2,UI_playerHP_bit_1,UI_playerHP_bit_0
+source_icon_level,0,0,0,0,0,0,0,source_icon_ATK,0,0,0,0,0,0,0
+source_icon_money,0,0,0,0,0,0,0,source_icon_DEF,0,0,0,0,0,0,0
+0,0,0,block,block,block,block,block,block,block,block,block,block,block,block,block
+source_icon_key_a,0,0,block,0,0,0,0,0,0,0,0,0,0,0,block
+source_icon_key_b,0,0,block,0,0,0,0,0,0,0,0,0,0,0,block
+source_icon_key_c,0,0,block,0,0,0,0,0,0,0,0,0,0,0,block
+0,0,0,block,0,0,0,0,0,0,0,0,0,0,0,block
+0,0,0,block,0,0,0,0,0,0,0,0,0,0,0,block
+0,0,0,block,0,0,0,0,0,0,0,0,0,0,0,block
+0,0,0,block,0,0,0,0,block,block,block,0,0,0,0,block
+0,0,0,block,0,0,0,0,0,0,0,0,0,0,0,block
+0,0,0,block,0,0,0,0,0,0,0,0,0,0,0,block
+0,0,0,block,0,0,0,0,0,0,0,0,0,0,0,block
+0,0,0,block,0,0,0,0,0,0,0,0,0,0,0,block
+0,0,0,block,block,block,block,block,block,block,block,block,block,block,block,block
+NAME room_floor1
+ITM item_ATKGem 8,8
+ITM item_healBottle 12,8
+END dlg_floor1_exit 5,5
+PAL 0
+
+
+# ----- monster object -----
+
+SPR spr_green-slime_1_2_3
 00000000
 00000000
-01010001
-01110001
-01110010
+00111000
+01000100
+10000010
+10101010
+10000010
 01111100
-00111100
-00100100
-NAME cat
-DLG 0
-POS 0 8,12
-
-ITM 0
+>
 00000000
 00000000
+00011100
+00100010
+01000001
+01010101
+01000001
+00111110
+NAME spr_green-slime_1_2_3
+DLG dlg_green-slime_1_2_3_intoBattle
+POS room_floor1 7,8
+
+SPR spr_green-slime_1_6_3
 00000000
-00111100
-01100100
-00100100
-00011000
 00000000
-NAME tea
-DLG 1
-
-ITM 1
+00111000
+01000100
+10000010
+10101010
+10000010
+01111100
+>
 00000000
-00111100
-00100100
-00111100
-00010000
-00011000
-00010000
-00011000
-NAME key
-DLG 2
+00000000
+00011100
+00100010
+01000001
+01010101
+01000001
+00111110
+NAME spr_green-slime_1_6_3
+DLG dlg_green-slime_1_6_3_intoBattle
+POS room_floor1 11,8
 
-DLG 0
-I'm a cat
-NAME cat dialog
 
-DLG 1
-You found a nice warm cup of tea
-NAME tea dialog
 
-DLG 2
-A key! {wvy}What does it open?{wvy}
-NAME key dialog
 
-VAR a
-42
+# ----- map dlg -----
 
+DLG dlg_exit_floor1
+jump to room_floor2 5,5
+NAME dlg_exit_floor1
+
+
+# ----- monster dlg -----
+
+DLG dlg_green-slime_1_2_3_intoBattle
+"""
+{var_pointer_eraseTargetId = "spr_green-slime_1_2_3"}
+{var_pointer_eraseSpriteRoomId = "room_floor1"}
+(jump "fun_green-slime_intoBattle")
+"""
+NAME dlg_green-slime_1_2_3_intoBattle
+
+DLG dlg_green-slime_1_6_3_intoBattle
+"""
+{var_pointer_eraseTargetId = "spr_green-slime_1_6_3"}
+{var_pointer_eraseSpriteRoomId = "room_floor1"}
+(jump "fun_green-slime_intoBattle")
+"""
+NAME dlg_green-slime_1_6_3_intoBattle
+
+DLG fun_green-slime_intoBattle
+"""
+{arg_calculateBattle_ememyATK = 20}
+{arg_calculateBattle_ememyDEF = 1}
+{arg_calculateBattle_ememyHP = 50}
+{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyName = "green-slime"}
+(jump "fun_calculateBattle")
+"""
+NAME fun_green-slime_intoBattle
+
+DLG fun_red-slime_intoBattle
+"""
+{arg_calculateBattle_ememyATK = 15}
+{arg_calculateBattle_ememyDEF = 2}
+{arg_calculateBattle_ememyHP = 70}
+{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyName = "red-slime"}
+(jump "fun_calculateBattle")
+"""
+NAME fun_red-slime_intoBattle
+
+DLG fun_small-bat_intoBattle
+"""
+{arg_calculateBattle_ememyATK = 20}
+{arg_calculateBattle_ememyDEF = 5}
+{arg_calculateBattle_ememyHP = 100}
+{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyName = "small-bat"}
+(jump "fun_calculateBattle")
+"""
+NAME fun_small-bat_intoBattle
+
+DLG fun_black-slime_intoBattle
+"""
+{arg_calculateBattle_ememyATK = 35}
+{arg_calculateBattle_ememyDEF = 10}
+{arg_calculateBattle_ememyHP = 200}
+{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyName = "black-slime"}
+(jump "fun_calculateBattle")
+"""
+NAME fun_black-slime_intoBattle
+
+DLG fun_small-skeleton_intoBattle
+"""
+{arg_calculateBattle_ememyATK = 25}
+{arg_calculateBattle_ememyDEF = 5}
+{arg_calculateBattle_ememyHP = 110}
+{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyName = "small-skeleton"}
+(jump "fun_calculateBattle")
+"""
+NAME fun_small-skeleton_intoBattle
+
+DLG fun_soldier-skeleton_intoBattle
+"""
+{arg_calculateBattle_ememyATK = 40}
+{arg_calculateBattle_ememyDEF = 20}
+{arg_calculateBattle_ememyHP = 150}
+{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyName = "soldier-skeleton"}
+(jump "fun_calculateBattle")
+"""
+NAME fun_soldier-skeleton_intoBattle
+
+DLG fun_beast-face-man_intoBattle
+"""
+{arg_calculateBattle_ememyATK = 75}
+{arg_calculateBattle_ememyDEF = 45}
+{arg_calculateBattle_ememyHP = 300}
+{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyName = "beast-face-man"}
+(jump "fun_calculateBattle")
+"""
+NAME fun_beast-face-man_intoBattle
+
+
+
+
+#  ----- item dlg -----
+
+DLG dlg_healBottle
+"""
+{let_enhance_before = member_player_HP}
+{member_player_HP = member_player_HP + 200}
+Heal: {printTile "source_icon_HP"} {print let_enhance_before} -> {print member_player_HP}
+"""
+NAME healBottle
+
+DLG dlg_bigHealBottle
+"""
+{let_enhance_before = member_player_HP}
+{member_player_HP = member_player_HP + 500}
+Heal: {printTile "source_icon_HP"} {print let_enhance_before} -> {print member_player_HP}
+"""
+NAME dlg_bigHealBottle
+
+DLG dlg_ATKGem
+"""
+{let_enhance_before = member_player_ATK}
+{member_player_ATK = member_player_ATK + 3}
+Enhance: {printTile "source_icon_ATK"} {print let_enhance_before} -> {print member_player_ATK}
+"""
+NAME ATKGem
+
+DLG dlg_DEFGem
+"""
+{let_enhance_before = member_player_DEF}
+{member_player_DEF = member_player_DEF + $DEF_GEM_AMOUNT}
+Enhance: {printTile "source_icon_DEF"} {print let_enhance_before} -> {print member_player_DEF}
+"""
+NAME dlg_DEFGem
+
+
+#  ----- other dlg -----
+DLG dlg_starterFaery
+"""
+Hi, see you later.
+{eraseAllNow "SPR, spr_starterFaery, room_floor1"}
+"""
+NAME dlg_starterFaery
+
+DLG dlg_tradeFaeryStart
+"""
+I'm finding [money_icon]x1, can you help me? Give it to me and I will improve your power.
+{
+  - member_player_money >= 1 ?
+    {let_trade_can_afford = 1}
+  - else   
+    {let_trade_can_afford = 0}
+}{
+  - let_trade_can_afford == 1 ?
+    Do you want to pay [money_icon]x1 for [ATK_icon]x100 & [DEF_icon]x100?(jump "dlg_tradeFaeryAsk")
+  - else
+    You can't afford [money_icon]x1 for [ATK_icon]x100 & [DEF_icon]x100.
+}
+"""
+NAME dlg_tradeFaeryStart
+
+DLG dlg_tradeFaeryAsk
+"""
+{choice
+  - Yes
+    {let_trade_confirmed = 1}
+  - No
+    {let_trade_confirmed = 0}
+}(jump "dlg_tradeFaeryCheckComfirmed")
+"""
+NAME dlg_tradeFaeryAsk
+        
+DLG dlg_tradeFaeryCheckComfirmed
+"""
+{
+  - let_trade_confirmed == 1 ?
+    {member_player_money = member_player_money - 1}
+    {member_player_ATK = member_player_ATK + 100}
+    {member_player_DEF = member_player_DEF + 100}
+    Trade done.{eraseAllNow "SPR, spr_tradeFaery, room_floor1"}
+  - else?
+    You choose not to trade.
+}
+"""
+NAME dlg_tradeFaeryCheckComfirmed  
+
+
+
+
+DLG dlg_end
+The demo is end. 
+NAME dlg_end
+
+DLG fun_updateUI_playerHP
+"""
+(updateNumberImagesNow "TIL, UI_playerHP_bit_, source_char_, source_char_empty, 6, member_player_HP")
+"""
+NAME fun_updateUI_playerHP
+
+DLG fun_updateUI_all
+"""
+(updateNumberImagesNow "TIL, UI_playerHP_bit_, source_char_, source_char_empty, 6, member_player_HP")
+"""
+NAME fun_updateUI_all
+
+DLG fun_calculateBattle
+"""
+{print arg_calculateBattle_ememyName}: {printTile "source_icon_HP"} {print arg_calculateBattle_ememyHP}, {printTile "source_icon_ATK"} {print arg_calculateBattle_ememyATK}, {printTile "source_icon_DEF"} {print arg_calculateBattle_ememyDEF}, {printTile "source_icon_money"} {print arg_calculateBattle_ememyReward};
+You: {printTile "source_icon_HP"} {print member_player_HP}, {printTile "source_icon_ATK"} {print member_player_ATK}, {printTile "source_icon_DEF"} {print member_player_DEF}, {printTile "source_icon_money"} {print member_player_money};
+{let_calculateBattle_playerDamagePerTurn = member_player_ATK - arg_calculateBattle_ememyDEF}
+{let_calculateBattle_ememyDamagePerTurn = arg_calculateBattle_ememyATK - member_player_DEF}
+{
+  - let_calculateBattle_playerDamagePerTurn > 0 ?
+    {arg_calculateBattle_ememyHP = arg_calculateBattle_ememyHP - let_calculateBattle_playerDamagePerTurn}
+    {let_calculateBattle_playerWinTurn = arg_calculateBattle_ememyHP / let_calculateBattle_playerDamagePerTurn}
+  - else
+    {let_calculateBattle_playerDamagePerTurn = 0}
+    {let_calculateBattle_playerWinTurn = 100000}
+}{let_calculateBattle_playerWinTurn = (jsNow "Math.ceil(scriptInterpreter.GetVariable('let_calculateBattle_playerWinTurn'))")}{
+  - let_calculateBattle_ememyDamagePerTurn > 0 ?
+    {let_calculateBattle_ememyWinTurn = member_player_HP / let_calculateBattle_ememyDamagePerTurn}
+  - else
+    {let_calculateBattle_ememyDamagePerTurn = 0}
+    {let_calculateBattle_ememyWinTurn = 100000}
+}{let_calculateBattle_ememyWinTurn = (jsNow "Math.ceil(scriptInterpreter.GetVariable('let_calculateBattle_ememyWinTurn'))")}{
+  - let_calculateBattle_ememyWinTurn > let_calculateBattle_playerWinTurn ?
+    {arg_checkComfirmBattle_comfirmed = -1}
+    {var_calculateBattle_playerCostHP = let_calculateBattle_playerWinTurn * let_calculateBattle_ememyDamagePerTurn}
+    The battle will cost {print var_calculateBattle_playerCostHP} {printTile "source_icon_HP"}. {choice
+      - Yes
+        {arg_checkComfirmBattle_comfirmed = 1}
+      - No
+        {arg_checkComfirmBattle_comfirmed = 0}
+    }(jump "fun_afterBattle")
+  - else
+    {arg_checkComfirmBattle_comfirmed = 0}
+    You will not win.
+}
+"""
+NAME fun_calculateBattle
+
+DLG fun_afterBattle
+"""
+{
+  - arg_checkComfirmBattle_comfirmed == 1 ?
+    {member_player_HP = member_player_HP - var_calculateBattle_playerCostHP}
+    {member_player_money = member_player_money + arg_calculateBattle_ememyReward}
+    After battle, you: {printTile "source_icon_HP"} {print member_player_HP}, {printTile "source_icon_money"} {print member_player_money}(eraseAllByPointerNow "SPR, var_pointer_eraseTargetId, var_pointer_eraseSpriteRoomId")(jump "fun_updateUI_playerHP")
+  - else
+    You choose not to fight.
+}
+"""
+NAME fun_afterBattle
+
+
+#  ----- member var -----
+
+VAR member_player_HP
+1000
+
+VAR member_player_ATK
+10
+
+VAR member_player_DEF
+10
+
+VAR member_player_money
+0
+
+VAR member_info_HP_0
+-1
+
+VAR member_info_HP_1
+-1
+
+VAR member_info_HP_2
+-1
+
+VAR member_info_HP_3
+-1
+
+VAR member_info_HP_4
+-1
+
+VAR member_info_HP_5
+-1
+
+
+#  ----- local var -----
+
+VAR arg_calculateBattle_ememyATK
+-1
+
+VAR arg_calculateBattle_ememyDEF
+-1
+
+VAR arg_calculateBattle_ememyHP
+-1
+
+VAR pointer_currentEmenySprId
+-1
+
+VAR arg_calculateBattle_ememyReward
+-1
+
+VAR arg_calculateBattle_ememyName
+[default-text]
+
+VAR var_calculateBattle_playerCostHP
+-1
+
+VAR let_calculateBattle_playerDamagePerTurn
+-1
+
+VAR let_calculateBattle_ememyDamagePerTurn
+-1
+
+VAR let_calculateBattle_playerWinTurn
+-1
+
+VAR let_calculateBattle_ememyWinTurn
+-1
+
+VAR arg_checkComfirmBattle_comfirmed
+-1
+
+VAR let_enhance_before
+-1
+
+VAR let_trade_can_afford
+-1
+
+VAR var_pointer_eraseTargetId
+[default-pointer]
+
+VAR var_pointer_eraseSpriteRoomId
+[default-pointer]

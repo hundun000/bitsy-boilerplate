@@ -4,6 +4,10 @@ tool for building bitsy games
 
 the idea behind this is sort of like a scripted version of [Borksy](https://ayolland.itch.io/borksy); you can set up hacks and etc once, and then paste gamedata in after changing it in bitsy
 
+## different to upstream repo
+
+fetch-bitsy is modified. It will use local .\dev and .\editor which dlownload from bitsy repo. To solve cannot download without proxy.
+
 ## how
 
 1. run `npm i`

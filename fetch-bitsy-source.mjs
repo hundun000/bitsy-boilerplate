@@ -2,10 +2,10 @@ import fse from 'fs-extra';
 import fetch from 'node-fetch';
 import path from 'path';
 import prompts from 'prompts';
-import bitsyPaths from './bitsy-paths.json';
+import bitsyPaths from './bitsy-paths.json' assert { type: "json" };
 
-const bitsySourceUrl = 'https://raw.githubusercontent.com/le-doux/bitsy';
-const latest = 'master';
+const bitsySourceUrl = 'https://github.com/le-doux/bitsy/blob';
+const latest = 'main';
 const safeCommit = '5b9a239c74b47b0f6309effc3f6f550727a77cde';
 
 async function fetchFile(url, savePath) {
@@ -22,6 +22,15 @@ async function fetchFile(url, savePath) {
 	} else {
 		throw new Error(`couldn't download ${url}\nresponse status code: ${response.status}`);
 	}
+}
+
+async function copyFile(url, savePath) {
+	console.log(`copying ` + url);
+	fse.copy(url, savePath, function(err){
+		if (err) return console.error(err);
+		
+		//console.log("success!")
+	}); 
 }
 
 async function fetchBitsyFiles(version = safeCommit) {
@@ -41,7 +50,8 @@ async function fetchBitsyFiles(version = safeCommit) {
 	// arrays of paths into array of promises
 	// reference: https://github.com/le-doux/bitsy/blob/2a36b8d559fe1ccf54704f205f0745e3f947330c/editor/script/exporter.js#L31
 	return Promise.all(Object.values(bitsyPaths).map(([repoPath, savePath]) => (
-		fetchFile([bitsySourceUrl, version, repoPath].join('/'), savePath)
+		//fetchFile([bitsySourceUrl, version, repoPath].join('/'), savePath)
+		copyFile(repoPath, savePath)
 	)));
 }
 
