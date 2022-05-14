@@ -1,6 +1,8 @@
+/dev
+/editor
 /.working
-/output
 /input/template.html
+/output
 
 # Logs
 logs
@@ -78,3 +80,6 @@ typings/
 
 # FuseBox cache
 .fusebox/
+
+# Eclipse
+.project
