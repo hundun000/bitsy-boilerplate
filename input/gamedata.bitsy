@@ -1,6 +1,6 @@
-Write your game's title here
+Harvest Mushroom
 
-# BITSY VERSION 7.2
+# BITSY VERSION 7.10
 
 ! ROOM_FORMAT 1
 
@@ -10,25 +10,209 @@ NAME blueprint
 128,159,255
 255,255,255
 
-ROOM 0
+PAL pal_farm
+NAME farm
+110,200,95
+162,130,47
+255,255,255
+
+PAL pal_home
+NAME home
+0,82,204
+162,130,47
+255,255,255
+
+PAL pam
+NAME forest
+88,159,75
+126,101,37
+255,255,255
+
+PAL pan
+NAME town
+245,197,72
+166,133,49
+255,255,255
+
+ROOM rm_farm
+fc,h16,h17,h18,fh,gr,gr,fh,fh,fh,fh,fh,fh,fh,fh,fc
+fl,h13,h14,h15,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,h10,h11,h12,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
+fl,h00,h01,h02,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
+fl,eus,gr,gr,gr,gr,gr,fd,fd,ev,f0,f0,f0,ev,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,f0,f0,f0,ev,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f0,f0,f0,ev,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f1,f1,f1,ev,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,f1,f1,f1,ev,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f1,f1,f1,ev,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
+fc,fh,fh,fh,fh,edl,edr,fh,fh,fh,fh,fh,fh,fh,fh,fc
+NAME home
+ITM itm_fieldSlotChildren_0 10,4
+ITM itm_fieldSlotChildren_0 11,4
+ITM itm_fieldSlotChildren_0 12,4
+ITM itm_fieldSlotChildren_0 12,5
+ITM itm_fieldSlotChildren_0 11,5
+ITM itm_fieldSlotChildren_0 10,6
+ITM itm_fieldSlotChildren_0 11,6
+ITM itm_fieldSlotChildren_0 12,6
+ITM itm_fieldSlotChildren_1 10,10
+ITM itm_fieldSlotChildren_1 11,10
+ITM itm_fieldSlotChildren_1 12,10
+ITM itm_fieldSlotChildren_1 12,11
+ITM itm_fieldSlotChildren_1 12,12
+ITM itm_fieldSlotChildren_1 11,12
+ITM itm_fieldSlotChildren_1 10,12
+ITM itm_fieldSlotChildren_1 11,11
+EXT 5,15 rm_forest 6,2
+EXT 6,15 rm_forest 7,2
+EXT 1,3 rm_home 9,11
+PAL pal_farm
+
+ROOM rm_home
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-NAME example room
-PAL 0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,a,a,a,a,a,a,a,a,a,a,0,0,0
+0,0,0,a,gs,gs,gs,gs,gs,gs,gs,gs,a,0,0,0
+0,0,0,a,gu,gu,gu,gu,gs,gu,gu,gu,a,0,0,0
+0,0,0,a,0,0,h1s,h1s,0,0,0,0,a,0,0,0
+0,0,0,a,h1s,h1s,h1s,h1s,h1s,h1s,0,0,a,0,0,0
+0,0,0,a,h1s,h1s,h1s,h1s,h1s,h1s,0,0,a,0,0,0
+0,0,0,a,h1s,h1s,h1s,h1s,h1s,h1s,h1s,h1s,a,0,0,0
+0,0,0,a,a,a,a,a,a,h1s,a,a,a,0,0,0
+0,0,0,gt,gs,gs,gs,gs,gs,h1t,gt,gs,gs,0,0,0
+0,0,0,gv,gu,gu,gu,gu,gu,0,gv,gu,gu,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME home
+EXT 9,12 rm_farm 1,4
+PAL pal_home
+
+ROOM rm_forest
+gr,h1b,h1c,gr,h1b,h1c,gr,gr,h1b,h1c,h1b,h1c,gr,h1b,h1c,gr
+gr,h1d,h1e,gr,h1d,h1e,eul,eur,h1d,h1e,h1d,h1b,h1c,h1d,h1e,gr
+gr,h1f,h1b,h1c,h1f,h1g,gr,gr,h1f,h1g,h1f,h1d,h1e,h1f,h1b,h1c
+gr,gr,h1d,h1e,gr,gr,gr,gr,gr,gr,gr,h1f,h1g,gr,h1d,h1e
+gr,h1b,h1c,h1g,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1b,h1c
+h1b,h1c,h1e,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1b,h1c
+h1d,h1e,h1g,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1d,h1e
+h1f,h1b,h1c,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1b,h1c,h1b
+h1c,h1d,h1b,h1c,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1d,h1e,h1d
+h1e,h1f,h1d,h1e,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1f,h1g,h1f
+h1g,gr,h1f,h1g,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1b,h1c
+h1b,h1c,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1d,h1e
+h1d,h1e,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1f,h1g
+h1f,h1b,h1c,gr,gr,gr,h1b,h1c,gr,gr,gr,gr,h1b,h1c,h1b,h1c
+gr,h1d,h1e,h1b,h1c,gr,h1d,h1e,gr,h1b,h1c,gr,h1d,h1e,h1d,h1e
+gr,h1f,h1g,h1d,h1e,h1b,h1c,h1g,h1b,h1c,h1e,h1b,h1c,h1g,h1f,h1g
+NAME forest
+EXT 6,1 rm_farm 5,14
+EXT 7,1 rm_farm 6,14
+PAL pam
+
+ROOM rm_start
+0,0,0,0,h1l,h1l,h1l,h1l,h1l,h1l,h1l,h1l,0,0,0,0
+0,h1r,0,h1m,0,0,0,0,0,0,0,0,h1q,0,0,h1r
+0,0,0,h1m,0,0,0,0,0,0,0,0,h1q,h1r,0,0
+h1r,0,0,h1m,0,0,0,0,0,0,0,0,h1q,0,0,0
+0,0,0,h1m,0,0,0,0,0,0,0,0,h1q,0,h1r,0
+0,0,h1r,h1m,0,0,0,0,0,0,0,0,h1q,0,0,0
+0,0,0,h1m,h1k,h1k,h1k,h1k,h1k,h1k,h1k,h1k,h1q,0,0,0
+fh,fh,fh,h1n,fh,fh,fh,fh,fh,fh,fh,fh,h1p,fh,fh,fh
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+fh,fh,fh,fh,fh,fh,fc,h1i,h1j,fc,fh,fh,fh,fh,fh,fh
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+NAME start
+ITM itm_char_M 4,1
+ITM itm_char_U 5,1
+ITM itm_char_S 6,1
+ITM itm_char_H 7,1
+ITM itm_char_R 8,1
+ITM itm_O 9,1
+ITM itm_O 10,1
+ITM itm_char_M 11,1
+ITM itm_char_H 4,3
+ITM itm_char_A 5,3
+ITM itm_char_R 6,3
+ITM itm_char_V 7,3
+ITM itm_char_E 8,3
+ITM itm_char_S 9,3
+ITM itm_char_T 10,3
+ITM itm_char_F 4,5
+ITM itm_char_E 5,5
+ITM itm_char_S 6,5
+ITM itm_char_T 7,5
+ITM itm_char_I 8,5
+ITM itm_char_V 9,5
+ITM itm_char_A 10,5
+ITM itm_char_L 11,5
+PAL pan
+
+ROOM rm_reachGoal
+0,0,0,0,h1l,h1l,h1l,h1l,h1l,h1l,h1l,h1l,0,0,0,0
+0,h1r,0,h1m,0,0,0,0,0,0,0,0,h1q,0,0,h1r
+0,0,0,h1m,0,0,0,0,0,0,0,0,h1q,h1r,0,0
+h1r,0,0,h1m,0,0,0,0,0,0,0,0,h1q,0,0,0
+0,0,0,h1m,0,0,0,0,0,0,0,0,h1q,0,h1r,0
+0,0,h1r,h1m,0,0,0,0,0,0,0,0,h1q,0,0,0
+0,0,0,h1m,h1k,h1k,h1k,h1k,h1k,h1k,h1k,h1k,h1q,0,0,0
+fh,fh,fh,h1n,fh,fh,fh,fh,fh,fh,fh,fh,h1p,fh,fh,fh
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+fh,fh,fh,fh,fh,fh,fc,h1i,h1j,fc,fh,fh,fh,fh,fh,fh
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+NAME reachGoal
+ITM itm_char_Y 5,2
+ITM itm_O 6,2
+ITM itm_char_U 7,2
+ITM itm_char_W 8,4
+ITM itm_char_I 9,4
+ITM itm_char_N 10,4
+END dlh 7,12
+PAL pan
+
+ROOM rm_notReachGoal
+0,0,0,0,h1l,h1l,h1l,h1l,h1l,h1l,h1l,h1l,0,0,0,0
+0,h1r,0,h1m,0,0,0,0,0,0,0,0,h1q,0,0,h1r
+0,0,0,h1m,0,0,0,0,0,0,0,0,h1q,h1r,0,0
+h1r,0,0,h1m,0,0,0,0,0,0,0,0,h1q,0,0,0
+0,0,0,h1m,0,0,0,0,0,0,0,0,h1q,0,h1r,0
+0,0,h1r,h1m,0,0,0,0,0,0,0,0,h1q,0,0,0
+0,0,0,h1m,h1k,h1k,h1k,h1k,h1k,h1k,h1k,h1k,h1q,0,0,0
+fh,fh,fh,h1n,fh,fh,fh,fh,fh,fh,fh,fh,h1p,fh,fh,fh
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+fh,fh,fh,fh,fh,fh,fc,h1i,h1j,fc,fh,fh,fh,fh,fh,fh
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+NAME notReachGoal
+ITM itm_char_Y 5,2
+ITM itm_O 6,2
+ITM itm_char_U 7,2
+ITM itm_char_F 7,4
+ITM itm_char_A 8,4
+ITM itm_char_L 10,4
+ITM itm_char_I 9,4
+END dli 7,12
+PAL pan
 
 TIL a
 11111111
@@ -40,6 +224,631 @@ TIL a
 10000001
 11111111
 NAME block
+WAL true
+
+TIL ex
+11111111
+00000001
+00010001
+00001001
+11111101
+00001001
+00010001
+11111111
+NAME exit
+
+TIL gr
+00000000
+01010000
+00100000
+00000000
+00001010
+00000100
+00000000
+00000000
+NAME grass
+
+TIL fh
+00000000
+01100110
+11111111
+11111111
+01100110
+01100110
+01100110
+01100110
+NAME fench_horizontal
+WAL true
+
+TIL fc
+00000000
+00011000
+01111110
+01111110
+00011000
+00011000
+00011000
+00011000
+NAME fench_corner
+WAL true
+
+TIL fl
+00010000
+00011000
+00011000
+00010000
+00010000
+00011000
+00011000
+00010000
+NAME fench_left
+WAL true
+
+TIL fr
+00001000
+00011000
+00011000
+00001000
+00001000
+00011000
+00011000
+00001000
+NAME fence_right
+WAL true
+
+TIL f0
+00000000
+01000010
+00100100
+00011000
+00011000
+00100100
+01000010
+00000000
+NAME fieldSlotCildren0
+
+TIL f1
+00000000
+01000010
+00100100
+00011000
+00011000
+00100100
+01000010
+00000000
+NAME fieldSlotCildren1
+
+TIL ev
+00010000
+00001000
+00010000
+00001000
+00010000
+00001000
+00010000
+00001000
+NAME fieldEdge_vertical
+WAL true
+
+TIL eh
+00000000
+00000000
+00000000
+10101010
+01010101
+00000000
+00000000
+00000000
+NAME fieldEdge_horizontal
+WAL true
+
+TIL ec
+00000000
+00010000
+00001000
+01010100
+00101010
+00010000
+00001000
+00000000
+NAME fieldEdge_corner
+WAL true
+
+TIL fd
+00000000
+00000000
+00010000
+00000000
+00000010
+00100000
+00000000
+00000000
+NAME fieldDirt
+
+TIL gs
+11111111
+00010101
+01010001
+00010001
+00011001
+00010001
+10010001
+00010011
+NAME homeWallTop
+WAL true
+
+TIL gt
+11111111
+10010101
+11010001
+10010001
+10011001
+10010001
+10010001
+10010011
+NAME homeWallLefTopt
+WAL true
+
+TIL gu
+00010001
+00010101
+01010001
+00010001
+00011001
+00010001
+10010001
+11111111
+NAME homeWallDown
+WAL true
+
+TIL gv
+10010001
+10010101
+11010001
+10010001
+10011001
+10010001
+10010001
+11111111
+NAME homeWallLefDown
+WAL true
+
+TIL h00
+10100000
+10100010
+10100010
+10100000
+10100000
+10100000
+10100000
+11111111
+NAME house00
+
+TIL h01
+10010001
+10011111
+10010001
+10010001
+10011111
+10000000
+10000000
+11111111
+NAME house01
+WAL true
+
+TIL h02
+00010001
+11110001
+00010001
+00010001
+11110001
+00000001
+00000001
+11111111
+NAME house02
+WAL true
+
+TIL h10
+11111111
+10000000
+11111111
+10000000
+10111111
+10100000
+10100000
+10100000
+NAME house10
+WAL true
+
+TIL h11
+11111111
+00000000
+11111111
+00000000
+10000000
+10000000
+10011111
+10010001
+NAME house11
+WAL true
+
+TIL h12
+11111111
+00000001
+11111111
+00000001
+00000001
+00000001
+11110001
+00010001
+NAME house12
+WAL true
+
+TIL h13
+10010010
+10010011
+10011100
+10110000
+11000000
+10000000
+10000000
+10000000
+NAME house20
+WAL true
+
+TIL h14
+00100100
+11111111
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME house21
+WAL true
+
+TIL h15
+01001001
+11101001
+00011001
+00000101
+00000011
+00000001
+00000001
+00000001
+NAME house22
+WAL true
+
+TIL h16
+00001111
+00110010
+11010010
+10010010
+10010010
+10010010
+10010010
+10010010
+NAME house30
+WAL true
+
+TIL h17
+11111111
+00100100
+00100100
+00100100
+00100100
+00100100
+00100100
+00100100
+NAME house31
+WAL true
+
+TIL h18
+11110000
+01001100
+01001011
+01001001
+01001001
+01001001
+01001001
+01001001
+NAME house32
+WAL true
+
+TIL h1a
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+NAME poolBack
+
+TIL h1b
+00011001
+00100110
+00100000
+01001000
+10010000
+01001001
+00100010
+01000000
+NAME leaf0
+WAL true
+
+TIL h1c
+10000000
+01111000
+00000100
+01000100
+01010010
+00100001
+10000010
+00000010
+NAME leaf1
+WAL true
+
+TIL h1d
+01000100
+10011010
+01000000
+00100101
+00011011
+00001011
+00000111
+00000011
+NAME leaf2
+WAL true
+
+TIL h1e
+00000101
+01001001
+00111010
+11010100
+01111000
+11000000
+11000000
+11000000
+NAME leaf3
+WAL true
+
+TIL h1f
+00000011
+00000011
+00000011
+00000011
+00001111
+00010111
+00001001
+00000000
+NAME leaf4
+WAL true
+
+TIL h1g
+11000000
+11000000
+11000000
+11000000
+11100000
+11111000
+10001100
+00000000
+NAME leaf5
+WAL true
+
+TIL h1h
+11111110
+10000010
+11000010
+10100010
+10010010
+10000010
+10000010
+10000010
+NAME exitUpRight
+
+TIL edl
+00000011
+00000010
+00000010
+00001110
+00001000
+00000100
+00000010
+00000001
+NAME exitDown_left
+
+TIL edr
+11000000
+01000000
+01000000
+01110000
+00010000
+00100000
+01000000
+10000000
+NAME exitDown_right
+
+TIL eul
+00000001
+00000010
+00000100
+00001000
+00001110
+00000010
+00000010
+00000011
+NAME exitUp_left
+
+TIL eur
+10000000
+01000000
+00100000
+00010000
+01110000
+01000000
+01000000
+11000000
+NAME exitUp_right
+
+TIL h1i
+00000000
+00000000
+00000000
+11111100
+11111100
+11111100
+11111100
+11000000
+NAME gateLeft
+WAL true
+
+TIL h1j
+00000000
+00000000
+00000000
+00111111
+00111111
+00111111
+00111111
+00000011
+NAME gateRight
+WAL true
+
+TIL eus
+00011000
+00100100
+01000010
+10000001
+11100111
+00100100
+00100100
+00111100
+NAME exitUpSingle
+
+TIL h1k
+11111111
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME bannerDown
+
+TIL h1l
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+11111111
+NAME bannerUp
+
+TIL h1m
+00000111
+00000111
+00000111
+00000111
+00000111
+00000111
+00000111
+00000111
+NAME poleLeft1
+
+TIL h1n
+00000111
+01100111
+11111111
+11111111
+01100111
+01100111
+01100111
+01100111
+NAME fenchPoleLeft
+WAL true
+
+TIL h1o
+00000000
+01100110
+11111111
+11111111
+01100110
+01100110
+01100110
+01100110
+WAL true
+
+TIL h1p
+11100000
+11100110
+11111111
+11111111
+11100110
+11100110
+11100110
+11100110
+NAME fenchPoleRight
+WAL true
+
+TIL h1q
+11100000
+11100000
+11100000
+11100000
+11100000
+11100000
+11100000
+11100000
+NAME poleRight1
+
+TIL h1r
+00111000
+01000100
+01000100
+01000100
+00101000
+00010000
+00010000
+00100000
+>
+00111000
+01000100
+01000100
+01000100
+00101000
+00010000
+00010000
+00001000
+NAME balloon0
+
+TIL h1s
+11111111
+00000100
+01000000
+00000000
+11111111
+00000000
+00010000
+00000000
+NAME floor
+
+TIL h1t
+11111111
+00000100
+01000000
+00000000
+11111111
+00000000
+00010000
+11111111
+NAME floorDoen
 
 SPR A
 00011000
@@ -50,57 +859,1433 @@ SPR A
 10111101
 00100100
 00100100
-POS 0 4,4
+POS rm_start 1,9
 
-SPR a
+SPR spr_fieldSlot_0
 00000000
 00000000
-01010001
-01110001
-01110010
-01111100
-00111100
-00100100
-NAME cat
-DLG 0
-POS 0 8,12
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+NAME fieldSlot0
+DLG dlg_fieldLogic_0
+POS rm_farm 10,5
 
-ITM 0
+SPR spr_fieldSlot_1
 00000000
 00000000
 00000000
-00111100
-01100100
-00100100
+00000000
+00000000
+00000000
+00000000
+01111110
+NAME fieldSlot1
+DLG dlg_fieldLogic_1
+POS rm_farm 10,11
+
+SPR spr_bed_0
+00111111
+01000000
+01000000
+01000000
+01111111
+01001000
+01010000
+01010000
+NAME bed0
+DLG dlg_newDay
+POS rm_home 10,7
+
+SPR spr_bed_1
+11111100
+00000010
+00000010
+00000010
+11111110
+00010010
+00001010
+00001010
+NAME bed1
+DLG dlg_newDay
+POS rm_home 11,7
+
+SPR spr_bed_2
+01010000
+01001000
+01111111
+01000000
+01000000
+01000000
+01000000
+01000000
+NAME bed2
+DLG dlg_newDay
+POS rm_home 10,8
+
+SPR spr_bed_3
+00001010
+00010010
+11111110
+00000010
+00000010
+00000010
+00000010
+00000010
+NAME bed3
+DLG dlg_newDay
+POS rm_home 11,8
+
+SPR spr_bed_4
+01000000
+01000000
+01000000
+01000000
+01000000
+01000000
+01000000
+00111111
+NAME bed4
+DLG dlg_newDay
+POS rm_home 10,9
+
+SPR spr_bed_5
+00000010
+00000010
+00000010
+00000010
+00000010
+00000010
+00000010
+11111110
+NAME bed5
+DLG dlg_newDay
+POS rm_home 11,9
+
+SPR spr_fieldSlot_empty
+00000000
+00000000
+00000000
+00000000
+00000000
 00011000
-00000000
-NAME tea
-DLG 1
+00111100
+00011000
+NAME fieldSlot_empty
 
-ITM 1
+SPR spr_fieldSlot_prepare
+00000000
+00000000
+00000000
+00011100
+00001000
+01001000
+00101000
+00011000
+>
+00000000
+00000000
+00000000
+00001110
+00000100
+00100100
+00101000
+00011000
+NAME fieldSlot_prepare
+
+SPR spr_fieldSlot_harvest
+00000000
+00011100
+00111110
+00001000
+11101000
+01001000
+00101000
+00011000
+>
+00000000
+00001110
+00011111
+00000100
+01110100
+00100100
+00101000
+00011000
+NAME fieldSlot_harvest
+
+SPR spr_wildSlot_0
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+11111111
+NAME wildSlot0
+DLG dlg_wildSlotLogic_0
+POS rm_forest 4,3
+
+SPR spr_wildSlot_1
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+11111111
+NAME wildSlot1
+DLG dlg_wildSlotLogic_1
+POS rm_forest 10,3
+
+SPR spr_wildSlot_2
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+11111111
+NAME wildSlot2
+DLG dlg_wildSlotLogic_2
+POS rm_forest 13,4
+
+SPR spr_wildSlot_3
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+11111111
+NAME wildSlot3
+DLG dlg_wildSlotLogic_3
+POS rm_forest 3,6
+
+SPR spr_wildSlot_4
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+11111111
+NAME wildSlot4
+DLG dlg_wildSlotLogic_4
+POS rm_forest 12,9
+
+SPR spr_wildSlot_5
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+11111111
+NAME wildSlot5
+DLG dlg_wildSlotLogic_5
+POS rm_forest 4,10
+
+SPR spr_wildSlot_6
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+11111111
+NAME wildSlot6
+DLG dlg_wildSlotLogic_6
+POS rm_forest 2,11
+
+SPR spr_wildSlot_7
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+11111111
+NAME wildSlot7
+DLG dlg_wildSlotLogic_7
+POS rm_forest 5,14
+
+SPR spr_wildSlot_8
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+11111111
+NAME wildSlot8
+DLG dlg_wildSlotLogic_8
+POS rm_forest 8,14
+
+SPR spr_wildSlot_9
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+11111111
+NAME wildSlot9
+DLG dlg_wildSlotLogic_9
+POS rm_forest 13,12
+
+SPR spr_wildSlot_empty
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00011000
+00100100
+NAME wildSlot_empty
+
+SPR spr_wildSlot_harvest
+00000000
+00000000
 00000000
 00111100
+00111100
+01111110
+00011000
+00011000
+NAME wildSlot_harvest
+
+SPR spr_tableRight
+00000010
+11111111
+10000001
+10110001
+10000001
+10000001
+11111111
+00000010
+NAME tableRight
+DLG dlg_table
+POS rm_home 9,7
+
+SPR spx
+11111110
+00000010
+11111010
+00001010
+00001010
+00001010
+00001010
+11111010
+NAME tvRight
+DLG dli
+POS rm_home 9,6
+
+SPR spy
+01111111
+01000000
+01011111
+01010000
+01010000
+01010000
+01010000
+01011111
+NAME tvLeft
+POS rm_home 8,6
+
+SPR spr_tableLeft
+01000000
+11111111
+10000001
+10001101
+10000001
+10000001
+11111111
+01000000
+NAME tableLeft
+DLG dlg_table
+POS rm_home 8,7
+
+SPR spr_storage0
+11111111
+10000000
+10000000
+10000000
+11111111
+10000000
+10000000
+11111111
+NAME storage0
+DLG dlg_storageLogic
+POS rm_home 4,6
+
+SPR spr_storage1
+11111111
+00000001
+00000001
+00000001
+11111111
+00000001
+00000001
+11111111
+NAME storage1
+DLG dlg_storageLogic
+POS rm_home 5,6
+
+SPR spr_storage2
+10000010
+10000001
+10000000
+10000000
+10000000
+11111111
+00000000
+00000000
+NAME storage2
+DLG dlg_storageLogic
+POS rm_home 4,7
+
+SPR spr_storage3
+01000001
+10000001
+00000001
+00000001
+00000001
+11111111
+00000000
+00000000
+NAME storage3
+DLG dlg_storageLogic
+POS rm_home 5,7
+
+SPR spr_shippingBin0
+10111101
+11000011
+10000001
+10111101
+10111101
+10000001
+01111110
+00000000
+NAME shippingBin0
+DLG dlg_shippingBinLogic
+POS rm_farm 4,7
+
+SPR spr_shippingBin1
+00000000
+00111100
+01100110
+10100101
+10100101
+10100101
+10100101
+10100101
+NAME shippingBin1
+DLG dlg_shippingBinLogic
+POS rm_farm 4,6
+
+SPR spr_shippingBinSign
+11111111
+10000001
+10101001
+10010101
+10000001
+11111111
+00011000
+00011000
+NAME shippingBinSign
+DLG dlg_shippingBinSign
+POS rm_farm 3,6
+
+SPR spr_fieldSign
+11111111
+10000001
+10101001
+10010101
+10000001
+11111111
+00011000
+00011000
+NAME fieldSign
+DLG dlg_fieldSign
+POS rm_farm 9,2
+
+SPR itm_mayor_start
+00111100
+00011000
+00011000
+00111100
+01111110
+10111101
+00100100
+00100100
+>
+00111100
+10011000
+01011000
+00111100
+00111110
+00111101
+00100100
+00100100
+NAME mayor_start
+DLG dlg_mayor_start
+POS rm_start 8,10
+
+SPR spz
+00111100
+00011000
+00011000
+00111100
+01111110
+10111101
+00100100
+00100100
+>
+00111100
+10011000
+01011000
+00111100
+00111110
+00111101
+00100100
+00100100
+NAME mayor_win
+DLG dlg_mayor_win
+POS rm_reachGoal 8,13
+
+SPR sq0
+00111100
+00011000
+00011000
+00111100
+01111110
+10111101
+00100100
+00100100
+>
+00111100
+10011000
+01011000
+00111100
+00111110
+00111101
+00100100
+00100100
+NAME mayor_fail
+DLG dlg_mayor_fail
+POS rm_notReachGoal 8,13
+
+ITM itm_fieldSlotChildren_0
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+NAME fieldSlotChildren_0
+
+ITM itm_fieldSlotChildren_1
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+NAME fieldSlotChildren_1
+
+ITM itm_fieldSlotChildren_empty
+00000000
+00000000
+00000000
+00000000
+00000000
+00011000
+00111100
+00011000
+NAME fieldSlotChildren_empty
+
+ITM itm_fieldSlotChildren_prepare
+00000000
+00000000
+00000000
+00011100
+00001000
+01001000
+00101000
+00011000
+>
+00000000
+00000000
+00000000
+00001110
+00000100
+00100100
+00101000
+00011000
+NAME fieldSlotChildren_prepare
+
+ITM itm_fieldSlotChildren_harvest
+00000000
+00011100
+00111110
+00001000
+11101000
+01001000
+00101000
+00011000
+>
+00000000
+00001110
+00011111
+00000100
+01110100
+00100100
+00101000
+00011000
+NAME fieldSlotChildren_harvest
+
+ITM itm_money
+00111100
+01000010
+10011001
+10100101
+10100101
+10011001
+01000010
+00111100
+NAME money
+
+ITM itm_mushroom
+00000000
+00000000
+00000000
+01111110
+10000001
+11111111
 00100100
 00111100
-00010000
-00011000
-00010000
-00011000
-NAME key
-DLG 2
+NAME mushroom
 
-DLG 0
-I'm a cat
-NAME cat dialog
+ITM itm_char_A
+001110NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+011111NaNNaN
+010001NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_A
 
-DLG 1
-You found a nice warm cup of tea
-NAME tea dialog
+ITM itm_char_B
+011110NaNNaN
+010001NaNNaN
+010001NaNNaN
+011110NaNNaN
+010001NaNNaN
+010001NaNNaN
+011110NaNNaN
+000000NaNNaN
+NAME char_B
 
-DLG 2
-A key! {wvy}What does it open?{wvy}
-NAME key dialog
+ITM itm_char_C
+001110NaNNaN
+010001NaNNaN
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+010001NaNNaN
+001110NaNNaN
+000000NaNNaN
+NAME char_C
 
-VAR a
-42
+ITM itm_char_D
+011110NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+011110NaNNaN
+000000NaNNaN
+NAME char_D
+
+ITM itm_char_E
+011111NaNNaN
+010000NaNNaN
+010000NaNNaN
+011110NaNNaN
+010000NaNNaN
+010000NaNNaN
+011111NaNNaN
+000000NaNNaN
+NAME char_E
+
+ITM itm_char_F
+011111NaNNaN
+010000NaNNaN
+010000NaNNaN
+011110NaNNaN
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+000000NaNNaN
+NAME char_F
+
+ITM itm_char_G
+001110NaNNaN
+010001NaNNaN
+010000NaNNaN
+010111NaNNaN
+010001NaNNaN
+010001NaNNaN
+001111NaNNaN
+000000NaNNaN
+NAME char_G
+
+ITM itm_char_H
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+011111NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_H
+
+ITM itm_char_I
+001110NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+001110NaNNaN
+000000NaNNaN
+NAME char_I
+
+ITM itm_char_J
+000001NaNNaN
+000001NaNNaN
+000001NaNNaN
+000001NaNNaN
+010001NaNNaN
+010001NaNNaN
+001110NaNNaN
+000000NaNNaN
+NAME char_J
+
+ITM itm_char_K
+010001NaNNaN
+010010NaNNaN
+010100NaNNaN
+011000NaNNaN
+010100NaNNaN
+010010NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_K
+
+ITM itm_char_L
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+011111NaNNaN
+000000NaNNaN
+NAME char_L
+
+ITM itm_char_M
+010001NaNNaN
+011011NaNNaN
+010101NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_M
+
+ITM itm_char_N
+010001NaNNaN
+011001NaNNaN
+010101NaNNaN
+010011NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_N
+
+ITM itm_O
+001110NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+001110NaNNaN
+000000NaNNaN
+NAME char_O
+
+ITM itm_char_P
+011110NaNNaN
+010001NaNNaN
+010001NaNNaN
+011110NaNNaN
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+000000NaNNaN
+NAME char_P
+
+ITM itm_char_Q
+001110NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010101NaNNaN
+010010NaNNaN
+001101NaNNaN
+000000NaNNaN
+NAME char_Q
+
+ITM itm_char_R
+011110NaNNaN
+010001NaNNaN
+010001NaNNaN
+011110NaNNaN
+010010NaNNaN
+010001NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_R
+
+ITM itm_char_S
+001110NaNNaN
+010001NaNNaN
+010000NaNNaN
+001110NaNNaN
+000001NaNNaN
+010001NaNNaN
+001110NaNNaN
+000000NaNNaN
+NAME char_S
+
+ITM itm_char_T
+011111NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000000NaNNaN
+NAME char_T
+
+ITM itm_char_U
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+001110NaNNaN
+000000NaNNaN
+NAME char_U
+
+ITM itm_char_V
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+001010NaNNaN
+000100NaNNaN
+000000NaNNaN
+NAME char_V
+
+ITM itm_char_W
+010001NaNNaN
+010001NaNNaN
+010101NaNNaN
+010101NaNNaN
+010101NaNNaN
+010101NaNNaN
+001010NaNNaN
+000000NaNNaN
+NAME char_W
+
+ITM itm_char_X
+010001NaNNaN
+010001NaNNaN
+001010NaNNaN
+000100NaNNaN
+001010NaNNaN
+010001NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_X
+
+ITM itm_char_Y
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+001010NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000000NaNNaN
+NAME char_Y
+
+ITM itm_char_Z
+011110NaNNaN
+000010NaNNaN
+000100NaNNaN
+001000NaNNaN
+010000NaNNaN
+010000NaNNaN
+011110NaNNaN
+000000NaNNaN
+NAME char_Z
+
+DLG dlg_shippingBinSign
+At the end of each day, the businessman will gather the {printItem "itm_mushroom"} in the shipping bin and paid you {printItem "itm_money"}.
+NAME shippingBinSign
+
+DLG dlg_fieldSign
+When you unlock the field, some {printItem "itm_mushroom"} will grow in it.
+NAME fieldSign
+
+DLG dlg_newDay_choiceCase1
+"""
+{
+  - var_temp_choiceResult == 1 ?
+    {var_calendarDate = var_calendarDate + 1}
+    {
+      - var_calendarDate > const_goalLimitDate ?
+        {
+          - {item "itm_money"} >= const_goalMoney ?
+            You reach the goal!{pg}
+            (exitNow "rm_reachGoal, 7, 15")
+          - else ? 
+            You don't reach the goal!{pg}
+            (exitNow "rm_notReachGoal, 7, 15")
+        }
+      - else ?
+        Day {print var_calendarDate} comes...
+    }{
+      - var_mushroomShippingBinCount > 0 ?
+        {var_temp = var_mushroomShippingBinCount * const_mushroomSellPrice}
+        You sell {print var_mushroomShippingBinCount} {printItem "itm_mushroom"} and gain {print var_temp} {printItem "itm_money"}.
+        {item "itm_money" {{item "itm_money"} + var_temp}}
+        {var_mushroomShippingBinCount = 0}
+    }{
+      - var_fieldLevel_0 > 0 ?
+        {var_fieldGrowState_0 = var_fieldGrowState_0 + 1}
+        {
+          - var_fieldGrowState_0 >= const_harvestGrowState ?
+            (image "SPR, spr_fieldSlot_0, spr_fieldSlot_harvest")
+            (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_harvest")
+          - else ?
+            (image "SPR, spr_fieldSlot_0, spr_fieldSlot_prepare")
+            (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_prepare")
+        }
+    }{
+      - var_fieldLevel_1 > 0 ?
+        {var_fieldGrowState_1 = var_fieldGrowState_1 + 1}
+        {
+          - var_fieldGrowState_1 >= const_harvestGrowState ?
+            (image "SPR, spr_fieldSlot_1, spr_fieldSlot_harvest")
+            (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_harvest")
+          - else ?
+            (image "SPR, spr_fieldSlot_1, spr_fieldSlot_prepare")
+            (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_prepare")
+        }
+    }{var_wildSlotState_0 = 0}{var_wildSlotState_1 = 0}{var_wildSlotState_2 = 0}{var_wildSlotState_3 = 0}{var_wildSlotState_4 = 0}{var_wildSlotState_5 = 0}{var_wildSlotState_6 = 0}{var_wildSlotState_7 = 0}{var_wildSlotState_8 = 0}{var_wildSlotState_9 = 0}{shuffle
+      - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_8 = 1}
+      - {var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}
+      - {var_wildSlotState_0 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
+      - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_8 = 1}{var_wildSlotState_9 = 1}
+      - {var_wildSlotState_1 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_6 = 1}
+      - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_7 = 1}
+      - {var_wildSlotState_8 = 1}{var_wildSlotState_3 = 1}
+      - {var_wildSlotState_0 = 1}{var_wildSlotState_2 = 1}{var_wildSlotState_8 = 1}
+      - {var_wildSlotState_0 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
+      - {var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}
+      - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_9 = 1}
+    }{
+      - var_wildSlotState_0 > 0 ?
+        (image "SPR, spr_wildSlot_0, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_0, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_1 > 0 ?
+        (image "SPR, spr_wildSlot_1, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_1, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_2 > 0 ?
+        (image "SPR, spr_wildSlot_2, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_2, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_3 > 0 ?
+        (image "SPR, spr_wildSlot_3, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_3, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_4 > 0 ?
+        (image "SPR, spr_wildSlot_4, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_4, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_5 > 0 ?
+        (image "SPR, spr_wildSlot_5, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_5, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_6 > 0 ?
+        (image "SPR, spr_wildSlot_6, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_6, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_7 > 0 ?
+        (image "SPR, spr_wildSlot_7, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_7, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_8 > 0 ?
+        (image "SPR, spr_wildSlot_8, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_8, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_9 > 0 ?
+        (image "SPR, spr_wildSlot_9, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_9, spr_wildSlot_empty")
+    }
+}
+"""
+NAME newDay
+
+DLG dlg_newDay
+"""
+{
+  - var_skipNewDayChoice == 1 ?
+    {var_skipNewDayChoice = 0}
+    {var_temp_choiceResult = 1}
+  - else ?
+    Finish today?{choice
+      - Yes
+        {var_temp_choiceResult = 1}
+      - No
+        {var_temp_choiceResult = 0}
+    }
+}(jump "dlg_newDay_choiceCase1")
+"""
+NAME newDay
+
+DLG dlg_mayor_start
+"""
+Welcome to the {print const_goalLimitDate}-day mushroom harvest festival. The goal is that you hold at least {print const_goalMoney} {printItem "itm_money"} at the {print const_goalLimitDate}-day end.(exit "rm_farm, 5, 0")(jump "dlg_newDay")
+"""
+NAME mayor_start
+
+DLG dlg_mayor_win
+"""
+Congratulation! You reach the goal with {item "itm_money"} {printItem "itm_money"}. Please look forward to our next festival.
+"""
+NAME mayor_win
+
+DLG dlg_mayor_fail
+"""
+You only hold {item "itm_money"} {printItem "itm_money"} and don't reach the goal. Please look forward to our next festival.
+"""
+NAME mayor_fail
+
+DLG dlg_fieldLogic_0_choiceCase1
+"""
+{
+  - var_temp_choiceResult == 1 ?
+    {
+      - {item "itm_money"} >= const_fieldUnlockPrice ?
+        You unlock this field.
+        {var_fieldLevel_0 = 1}
+        (image "SPR, spr_fieldSlot_0, spr_fieldSlot_empty")
+        (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_empty")
+      - else ?
+        You only have {print {item "itm_money"}} {printItem "itm_money"}.
+    }
+}
+"""
+NAME fieldLogic0_choiceCase1
+
+DLG dlg_fieldLogic_0
+"""
+{
+  - var_fieldLevel_0 == 0 ?
+    Unlock price is {print const_fieldUnlockPrice} {printItem "itm_money"}, do you want to unlock it?{choice
+      - Yes
+        {var_temp_choiceResult = 1}
+      - No
+        {var_temp_choiceResult = 0}
+    }(jump "dlg_fieldLogic_0_choiceCase1")
+  - else ?
+    {
+      - var_fieldGrowState_0 >= const_harvestGrowState ?
+        {var_temp = const_fieldOutputAmount * var_fieldLevel_0}
+        You gather {print var_temp} {printItem "itm_mushroom"} from the field.
+        {item "itm_mushroom" {{item "itm_mushroom"} + var_temp}}
+        {var_fieldGrowState_0 = 0}
+        (image "SPR, spr_fieldSlot_0, spr_fieldSlot_empty")
+        (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_empty")
+      - else ?
+        This field is still growing.
+    }
+}
+"""
+NAME fieldLogic0
+
+DLG dlg_fieldLogic_1_choiceCase1
+"""
+{
+  - var_temp_choiceResult == 1 ?
+    {
+      - {item "itm_money"} >= const_fieldUnlockPrice ?
+        You unlock this field.
+        {var_fieldLevel_1 = 1}
+        (image "SPR, spr_fieldSlot_1, spr_fieldSlot_empty")
+        (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_empty")
+      - else ?
+        You only have {print {item "itm_money"}} {printItem "itm_money"}.
+    }
+}
+"""
+NAME fieldLogic1_choiceCase1
+
+DLG dlg_fieldLogic_1
+"""
+{
+  - var_fieldLevel_1 == 0 ?
+    Unlock price is {print const_fieldUnlockPrice} {printItem "itm_money"}, do you want to unlock it?{choice
+      - Yes
+        {var_temp_choiceResult = 1}
+      - No
+        {var_temp_choiceResult = 0}
+    }(jump "dlg_fieldLogic_1_choiceCase1")
+  - else ?
+    {
+      - var_fieldGrowState_1 >= const_harvestGrowState ?
+        {var_temp = const_fieldOutputAmount * var_fieldLevel_1}
+        You gather {print var_temp} {printItem "itm_mushroom"} from the field.
+        {item "itm_mushroom" {{item "itm_mushroom"} + var_temp}}
+        {var_fieldGrowState_1 = 0}
+        (image "SPR, spr_fieldSlot_1, spr_fieldSlot_empty")
+        (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_empty")
+      - else ?
+        This field is still growing.
+    }
+}
+"""
+NAME fieldLogic1
+
+DLG dlg_shippingBinLogic_choiceCase1
+"""
+{
+  - var_temp_choiceResult == 1 ?
+    {
+      - {item "itm_mushroom"} > 0 ?
+        {var_mushroomShippingBinCount = var_mushroomShippingBinCount + {item "itm_mushroom"}}
+        You put {print {item "itm_mushroom"}} {printItem "itm_mushroom"} into the shipping bin. Current count is {print var_mushroomShippingBinCount} {printItem "itm_mushroom"}.
+        {item "itm_mushroom" 0}
+      - else ?
+        You have no {printItem "itm_mushroom"}.
+    }
+}(jump "dlg_shippingBinLogic_choiceCase2")
+"""
+NAME shippingBinLogic_choiceCase1
+
+DLG dlg_shippingBinLogic_choiceCase2
+"""
+{
+  - var_temp_choiceResult == 2 ?
+    {
+      - {item "itm_mushroom"} > 0 ?
+        {var_mushroomShippingBinCount = var_mushroomShippingBinCount + 1}
+        You put 1 {printItem "itm_mushroom"} into the shipping bin. Current count is {print var_mushroomShippingBinCount} {printItem "itm_mushroom"}.
+        {item "itm_mushroom" {{item "itm_mushroom"} - 1}}
+      - else ?
+        You have no {printItem "itm_mushroom"}.
+    }
+}
+"""
+NAME shippingBinLogic_choiceCase2
+
+DLG dlg_shippingBinLogic
+"""
+Current count is {print var_mushroomShippingBinCount} {printItem "itm_mushroom"}. Put {printItem "itm_mushroom"} to shipping bin? {choice
+  - All
+    {var_temp_choiceResult = 1}
+  - One
+    {var_temp_choiceResult = 2}
+  - No
+    {var_temp_choiceResult = 0}
+}(jump "dlg_shippingBinLogic_choiceCase1")
+"""
+NAME shippingBinLogic
+
+DLG dlg_storageLogic
+"""
+You have {print var_temp} {printItem "itm_money"}, {print {item "itm_mushroom"}} {printItem "itm_mushroom"}.
+"""
+NAME storageLogic
+
+DLG dlg_wildSlotLogic_0
+"""
+{
+  - var_wildSlotState_0 == 1 ?
+    You gather 1 wild {printItem "itm_mushroom"}.
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
+    {var_wildSlotState_0 = 0}
+    (image "SPR, spr_wildSlot_0, spr_wildSlot_empty")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic0
+
+DLG dlg_wildSlotLogic_1
+"""
+{
+  - var_wildSlotState_1 == 1 ?
+    You gather 1 wild {printItem "itm_mushroom"}.
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
+    {var_wildSlotState_1 = 0}
+    (image "SPR, spr_wildSlot_1, spr_wildSlot_empty")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic1
+
+DLG dlg_wildSlotLogic_2
+"""
+{
+  - var_wildSlotState_2 == 1 ?
+    You gather 1 wild {printItem "itm_mushroom"}.
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
+    {var_wildSlotState_2 = 0}
+    (image "SPR, spr_wildSlot_2, spr_wildSlot_empty")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic2
+
+DLG dlg_wildSlotLogic_3
+"""
+{
+  - var_wildSlotState_3 == 1 ?
+    You gather 1 wild {printItem "itm_mushroom"}.
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
+    {var_wildSlotState_3 = 0}
+    (image "SPR, spr_wildSlot_3, spr_wildSlot_empty")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic3
+
+DLG dlg_wildSlotLogic_4
+"""
+{
+  - var_wildSlotState_4 == 1 ?
+    You gather 1 wild {printItem "itm_mushroom"}.
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
+    {var_wildSlotState_4 = 0}
+    (image "SPR, spr_wildSlot_4, spr_wildSlot_empty")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic4
+
+DLG dlg_wildSlotLogic_5
+"""
+{
+  - var_wildSlotState_5 == 1 ?
+    You gather 1 wild {printItem "itm_mushroom"}.
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
+    {var_wildSlotState_5 = 0}
+    (image "SPR, spr_wildSlot_5, spr_wildSlot_empty")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic5
+
+DLG dlg_wildSlotLogic_6
+"""
+{
+  - var_wildSlotState_6 == 1 ?
+    You gather 1 wild {printItem "itm_mushroom"}.
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
+    {var_wildSlotState_6 = 0}
+    (image "SPR, spr_wildSlot_6, spr_wildSlot_empty")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic6
+
+DLG dlg_wildSlotLogic_7
+"""
+{
+  - var_wildSlotState_7 == 1 ?
+    You gather 1 wild {printItem "itm_mushroom"}.
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
+    {var_wildSlotState_7 = 0}
+    (image "SPR, spr_wildSlot_7, spr_wildSlot_empty")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic7
+
+DLG dlg_wildSlotLogic_8
+"""
+{
+  - var_wildSlotState_8 == 1 ?
+    You gather 1 wild {printItem "itm_mushroom"}.
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
+    {var_wildSlotState_8 = 0}
+    (image "SPR, spr_wildSlot_8, spr_wildSlot_empty")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic8
+
+DLG dlg_wildSlotLogic_9
+"""
+{
+  - var_wildSlotState_9 == 1 ?
+    You gather 1 wild {printItem "itm_mushroom"}.
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
+    {var_wildSlotState_9 = 0}
+    (image "SPR, spr_wildSlot_9, spr_wildSlot_empty")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic9
+
+DLG dlg_table
+A tv.
+NAME table
+
+DLG dlh
+The end
+NAME ending 1
+
+DLG dli
+The end
+NAME ending 2
+
+VAR var_temp_choiceResult
+1
+
+VAR var_temp
+0
+
+VAR const_harvestGrowState
+2
+
+VAR const_goalMoney
+100
+
+VAR const_goalLimitDate
+10
+
+VAR var_calendarDate
+0
+
+VAR var_mushroomShippingBinCount
+0
+
+VAR const_mushroomSellPrice
+5
+
+VAR const_fieldUnlockPrice
+25
+
+VAR var_fieldLevel_0
+0
+
+VAR var_fieldGrowState_0
+0
+
+VAR var_fieldLevel_1
+0
+
+VAR var_fieldGrowState_1
+0
+
+VAR const_fieldOutputAmount
+9
+
+VAR var_wildSlotState_0
+1
+
+VAR var_wildSlotState_1
+1
+
+VAR var_wildSlotState_2
+1
+
+VAR var_wildSlotState_3
+1
+
+VAR var_wildSlotState_4
+1
+
+VAR var_wildSlotState_5
+1
+
+VAR var_wildSlotState_6
+1
+
+VAR var_wildSlotState_7
+1
+
+VAR var_wildSlotState_8
+1
+
+VAR var_wildSlotState_9
+1
+
+VAR var_skipNewDayChoice
+1
 
