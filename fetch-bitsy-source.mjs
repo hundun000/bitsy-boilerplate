@@ -24,6 +24,15 @@ async function fetchFile(url, savePath) {
 	}
 }
 
+async function copyFile(url, savePath) {
+	console.log(`copying ` + url);
+	fse.copy(url, savePath, function(err){
+		if (err) return console.error(err);
+		
+		//console.log("success!")
+	}); 
+}
+
 async function fetchBitsyFiles(version = safeCommit) {
 	console.log('installing bitsy files');
 	const templateExists = await fse.pathExists('./input/template.html');
@@ -41,7 +50,8 @@ async function fetchBitsyFiles(version = safeCommit) {
 	// arrays of paths into array of promises
 	// reference: https://github.com/le-doux/bitsy/blob/2a36b8d559fe1ccf54704f205f0745e3f947330c/editor/script/exporter.js#L31
 	return Promise.all(Object.values(bitsyPaths).map(([repoPath, savePath]) => (
-		fetchFile([bitsySourceUrl, version, repoPath].join('/'), savePath)
+		//fetchFile([bitsySourceUrl, version, repoPath].join('/'), savePath)
+		copyFile(repoPath, savePath)
 	)));
 }
 
