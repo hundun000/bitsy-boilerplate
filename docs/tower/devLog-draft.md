@@ -102,7 +102,7 @@ DLG dlg_function
 令史莱姆作为ITM，则需要用某种hack阻止玩家直接拾起他，而是像SPR一样先对话。需要用某种hack获取引发对话的ITM所在的(room, x, y)，传递参数到战斗函数里，待玩家确认战斗后通过hack移除(room, x, y)上的这个TIL。
 
 方案2：
-令史莱姆作为SPR，则有spr_instance_1和spr_instance_2。spr_instance_1的dlg_instance_1会将room1和spr_instance_1传递参数到战斗函数里，待玩家确认战斗后通过hack移除(room1)上的所有spr_instance_1。
+令史莱姆作为SPR，则有spr_instance_1和spr_instance_2。spr_instance_1的dlg_instance_1会将room1和spr_instance_1传递参数到战斗函数里，待玩家确认战斗后通过hack移除(room1上的)所有spr_instance_1。
 
 最终采用方案2，认为其更好理解和维护。
 
@@ -158,3 +158,20 @@ https://github.com/seleb/bitsy-hacks/pull/181
 {let_calculateBattle_ememyWinTurn = member_player_HP / let_calculateBattle_ememyDamagePerTurn}
 let_calculateBattle_playerWinTurn = (jsNow "Math.ceil(scriptInterpreter.GetVariable('let_calculateBattle_playerWinTurn'))")
 """
+
+### feature-5: 使用bitsy-bolilerplate管理hackFunctionByPointer
+
+如上所述，基于hackFunction写出了hackFunctionByPointer，属于自定义hack，常规的hack整合工具已不够用。故fork并拓展了bitsy-bolilerplate。
+
+例如，基于`edit image from dialog.js`中的image写出了imageByPointerNow，位于同一个文件。则另存为`'modifiedHacks/edit image from dialog.js'`
+
+对`inoput/hacks.js`，
+
+> import '@bitsy/hecks/src/edit image from dialog';
+
+改为
+
+> import '../modifiedHacks/edit image from dialog';
+
+
+
