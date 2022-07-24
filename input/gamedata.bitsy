@@ -621,35 +621,35 @@ NAME tile_upstair
 ITM item_yellowKey
 00000000
 00011100
-00010000
-00010000
-00010000
-00111000
-01000100
-00111000
+00010100
+00011100
+00001000
+00001000
+00000100
+00011000
 NAME item_yellowKey
 DLG dlg_yellowKey
 
 ITM item_blueKey
 00000000
 00011100
-00010000
+00100010
 00011100
-00010000
-00111000
-01000100
-00111000
+00001000
+00001000
+00001000
+00011000
 NAME item_blueKey
 DLG dlg_blueKey
 
 ITM item_redKey
 00000000
-00011100
-00011100
-00011100
-00010000
-00111000
-01000100
+00111110
+00100010
+00111110
+00001000
+00011000
+00001000
 00111000
 NAME item_redKey
 DLG dlg_redKey
@@ -680,25 +680,25 @@ DLG dlg_AtkGem
 
 ITM item_healBottle
 00000000
-01100110
+00011000
+00111100
+00011000
 00100100
-01000010
-01000010
-01000010
-01111110
-01111110
+00111100
+00111100
+00011000
 NAME item_healBottle
 DLG dlg_healBottle
 
 ITM item_bigHealBottle
-01100110
+00000000
+00011000
+00111100
+00011000
 00100100
-00100100
-01000010
-11111111
-11111111
-11111111
 01111110
+01111110
+00111100
 NAME item_bigHealBottle
 DLG dlg_bigHealBottle
 
@@ -751,7 +751,8 @@ SPR spr_tradeFaery
 10111101
 00100100
 00110110
-POS ▷tradeFaery_roomId◁ ▷tradeFaery_x◁,▷tradeFaery_y◁
+# lazy draw
+# POS room_floor0 8,12
 DLG dlg_tradeFaery
 
 SPR spr_the3FShopL
@@ -803,12 +804,12 @@ SPR spr_greenSlime_floor1_3_0
 >
 00000000
 00000000
-00011100
-00100010
-01000001
-01010101
-01000001
-00111110
+00000000
+01111100
+10000010
+10101010
+10000010
+01111100
 NAME spr_greenSlime_floor1_3_0
 DLG dlg_greenSlime_floor1_3_0_instance
 POS room_floor1 7,4
@@ -826,12 +827,12 @@ SPR spr_greenSlime_floor1_5_0
 >
 00000000
 00000000
-00011100
-00100010
-01000001
-01010101
-01000001
-00111110
+00000000
+01111100
+10000010
+10101010
+10000010
+01111100
 NAME spr_greenSlime_floor1_5_0
 DLG dlg_greenSlime_floor1_5_0_instance
 POS room_floor1 9,4
@@ -849,12 +850,12 @@ SPR spr_greenSlime_floor1_7_5
 >
 00000000
 00000000
-00011100
-00100010
-01000001
-01010101
-01000001
-00111110
+00000000
+01111100
+10000010
+10101010
+10000010
+01111100
 NAME spr_greenSlime_floor1_7_5
 DLG dlg_greenSlime_floor1_7_5_instance
 POS room_floor1 11,9
@@ -872,12 +873,12 @@ SPR spr_greenSlime_floor3_0_5
 >
 00000000
 00000000
-00011100
-00100010
-01000001
-01010101
-01000001
-00111110
+00000000
+01111100
+10000010
+10101010
+10000010
+01111100
 NAME spr_greenSlime_floor3_0_5
 DLG dlg_greenSlime_floor3_0_5_instance
 POS room_floor3 4,9
@@ -895,32 +896,32 @@ SPR spr_greenSlime_floor3_0_6
 >
 00000000
 00000000
-00011100
-00100010
-01000001
-01010101
-01000001
-00111110
+00000000
+01111100
+10000010
+10101010
+10000010
+01111100
 NAME spr_greenSlime_floor3_0_6
 DLG dlg_greenSlime_floor3_0_6_instance
 POS room_floor3 4,10
 
 # generated from TowerBitsyMonsterModel
 SPR spr_redSlime_floor1_4_0
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 10000001
 01111110
 >
 00000000
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 01111110
@@ -930,20 +931,20 @@ POS room_floor1 8,4
 
 # generated from TowerBitsyMonsterModel
 SPR spr_redSlime_floor3_1_0
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 10000001
 01111110
 >
 00000000
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 01111110
@@ -953,20 +954,20 @@ POS room_floor3 5,4
 
 # generated from TowerBitsyMonsterModel
 SPR spr_redSlime_floor3_0_1
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 10000001
 01111110
 >
 00000000
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 01111110
@@ -976,20 +977,20 @@ POS room_floor3 4,5
 
 # generated from TowerBitsyMonsterModel
 SPR spr_redSlime_floor3_10_3
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 10000001
 01111110
 >
 00000000
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 01111110
@@ -999,20 +1000,20 @@ POS room_floor3 14,7
 
 # generated from TowerBitsyMonsterModel
 SPR spr_redSlime_floor3_4_5
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 10000001
 01111110
 >
 00000000
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 01111110
@@ -1022,20 +1023,20 @@ POS room_floor3 8,9
 
 # generated from TowerBitsyMonsterModel
 SPR spr_redSlime_floor3_10_5
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 10000001
 01111110
 >
 00000000
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 01111110
@@ -1045,20 +1046,20 @@ POS room_floor3 14,9
 
 # generated from TowerBitsyMonsterModel
 SPR spr_redSlime_floor3_6_8
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 10000001
 01111110
 >
 00000000
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 01111110
@@ -1068,20 +1069,20 @@ POS room_floor3 10,12
 
 # generated from TowerBitsyMonsterModel
 SPR spr_redSlime_floor3_8_8
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 10000001
 01111110
 >
 00000000
+00000000
 00111100
 01000010
 10000001
-10100101
 10100101
 10000001
 01111110
@@ -1092,13 +1093,22 @@ POS room_floor3 12,12
 # generated from TowerBitsyMonsterModel
 SPR spr_smallBat_floor1_8_5
 00000000
-11100110
-01001001
-01000110
 00000000
-11000110
-10101001
-11000110
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
 NAME spr_smallBat_floor1_8_5
 DLG dlg_smallBat_floor1_8_5_instance
 POS room_floor1 12,9
@@ -1106,13 +1116,22 @@ POS room_floor1 12,9
 # generated from TowerBitsyMonsterModel
 SPR spr_smallBat_floor3_9_1
 00000000
-11100110
-01001001
-01000110
 00000000
-11000110
-10101001
-11000110
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
 NAME spr_smallBat_floor3_9_1
 DLG dlg_smallBat_floor3_9_1_instance
 POS room_floor3 13,5
@@ -1120,13 +1139,22 @@ POS room_floor3 13,5
 # generated from TowerBitsyMonsterModel
 SPR spr_smallBat_floor3_10_4
 00000000
-11100110
-01001001
-01000110
 00000000
-11000110
-10101001
-11000110
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
 NAME spr_smallBat_floor3_10_4
 DLG dlg_smallBat_floor3_10_4_instance
 POS room_floor3 14,8
@@ -1134,13 +1162,22 @@ POS room_floor3 14,8
 # generated from TowerBitsyMonsterModel
 SPR spr_smallBat_floor3_3_5
 00000000
-11100110
-01001001
-01000110
 00000000
-11000110
-10101001
-11000110
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
 NAME spr_smallBat_floor3_3_5
 DLG dlg_smallBat_floor3_3_5_instance
 POS room_floor3 7,9
@@ -1148,13 +1185,22 @@ POS room_floor3 7,9
 # generated from TowerBitsyMonsterModel
 SPR spr_smallBat_floor3_5_5
 00000000
-11100110
-01001001
-01000110
 00000000
-11000110
-10101001
-11000110
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
 NAME spr_smallBat_floor3_5_5
 DLG dlg_smallBat_floor3_5_5_instance
 POS room_floor3 9,9
@@ -1162,13 +1208,22 @@ POS room_floor3 9,9
 # generated from TowerBitsyMonsterModel
 SPR spr_smallBat_floor3_4_8
 00000000
-11100110
-01001001
-01000110
 00000000
-11000110
-10101001
-11000110
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
 NAME spr_smallBat_floor3_4_8
 DLG dlg_smallBat_floor3_4_8_instance
 POS room_floor3 8,12
@@ -1176,13 +1231,22 @@ POS room_floor3 8,12
 # generated from TowerBitsyMonsterModel
 SPR spr_smallBat_floor3_7_9
 00000000
-11100110
-01001001
-01000110
 00000000
-11000110
-10101001
-11000110
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
 NAME spr_smallBat_floor3_7_9
 DLG dlg_smallBat_floor3_7_9_instance
 POS room_floor3 11,13
@@ -1190,97 +1254,160 @@ POS room_floor3 11,13
 # generated from TowerBitsyMonsterModel
 SPR spr_blackSlime_floor1_8_4
 00000000
-11100110
-01001001
-01000110
+00111100
+01111110
+11111111
+11011011
+11111111
+11111111
+01111110
+>
 00000000
-11000110
-10101001
-11000110
+00000000
+00111100
+01111110
+11111111
+11011011
+11111111
+01111110
 NAME spr_blackSlime_floor1_8_4
 DLG dlg_blackSlime_floor1_8_4_instance
 POS room_floor1 12,8
 
 # generated from TowerBitsyMonsterModel
 SPR spr_smallSkeleton_floor1_2_2
-00000000
-11100110
-01001001
-01000110
-00000000
-11000110
-10101001
-11000110
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00100000
+>
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00001000
 NAME spr_smallSkeleton_floor1_2_2
 DLG dlg_smallSkeleton_floor1_2_2_instance
 POS room_floor1 6,6
 
 # generated from TowerBitsyMonsterModel
 SPR spr_smallSkeleton_floor1_1_3
-00000000
-11100110
-01001001
-01000110
-00000000
-11000110
-10101001
-11000110
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00100000
+>
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00001000
 NAME spr_smallSkeleton_floor1_1_3
 DLG dlg_smallSkeleton_floor1_1_3_instance
 POS room_floor1 5,7
 
 # generated from TowerBitsyMonsterModel
 SPR spr_smallSkeleton_floor3_1_2
-00000000
-11100110
-01001001
-01000110
-00000000
-11000110
-10101001
-11000110
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00100000
+>
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00001000
 NAME spr_smallSkeleton_floor3_1_2
 DLG dlg_smallSkeleton_floor3_1_2_instance
 POS room_floor3 5,6
 
 # generated from TowerBitsyMonsterModel
 SPR spr_smallSkeleton_floor3_5_3
-00000000
-11100110
-01001001
-01000110
-00000000
-11000110
-10101001
-11000110
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00100000
+>
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00001000
 NAME spr_smallSkeleton_floor3_5_3
 DLG dlg_smallSkeleton_floor3_5_3_instance
 POS room_floor3 9,7
 
 # generated from TowerBitsyMonsterModel
 SPR spr_skeletonSoldier_floor1_1_5
-00000000
-11100110
-01001001
-01000110
-00000000
-11000110
-10101001
-11000110
+00111000
+01010000
+01111000
+00111010
+00010010
+00101010
+01010110
+00100010
+>
+00111000
+01010000
+01111000
+00111010
+00010010
+00101010
+01010110
+00001010
 NAME spr_skeletonSoldier_floor1_1_5
 DLG dlg_skeletonSoldier_floor1_1_5_instance
 POS room_floor1 5,9
 
 # generated from TowerBitsyMonsterModel
 SPR spr_skeletonSoldier_floor1_1_8
-00000000
-11100110
-01001001
-01000110
-00000000
-11000110
-10101001
-11000110
+00111000
+01010000
+01111000
+00111010
+00010010
+00101010
+01010110
+00100010
+>
+00111000
+01010000
+01111000
+00111010
+00010010
+00101010
+01010110
+00001010
 NAME spr_skeletonSoldier_floor1_1_8
 DLG dlg_skeletonSoldier_floor1_1_8_instance
 POS room_floor1 5,12
@@ -1288,55 +1415,91 @@ POS room_floor1 5,12
 # generated from TowerBitsyMonsterModel
 SPR spr_beastMonster_floor1_9_9
 00000000
-11100110
-01001001
-01000110
+01100110
+00111100
+00101000
+00011100
+00111110
+01011000
+00001000
+>
 00000000
-11000110
-10101001
-11000110
+01100110
+00111100
+00101000
+00011100
+01111100
+00011010
+00010000
 NAME spr_beastMonster_floor1_9_9
 DLG dlg_beastMonster_floor1_9_9_instance
 POS room_floor1 13,13
 
 # generated from TowerBitsyMonsterModel
 SPR spr_goldenGuard_floor2_9_2
-00000000
-11100110
-01001001
-01000110
-00000000
-11000110
-10101001
-11000110
+00111110
+00101010
+00100010
+00011100
+00111100
+01011110
+00011100
+00010000
+>
+00111110
+00101010
+00100010
+00011100
+00111100
+01011110
+00011100
+00000100
 NAME spr_goldenGuard_floor2_9_2
 DLG dlg_goldenGuard_floor2_9_2_instance
 POS room_floor2 13,6
 
 # generated from TowerBitsyMonsterModel
 SPR spr_goldenGuard_floor2_8_6
-00000000
-11100110
-01001001
-01000110
-00000000
-11000110
-10101001
-11000110
+00111110
+00101010
+00100010
+00011100
+00111100
+01011110
+00011100
+00010000
+>
+00111110
+00101010
+00100010
+00011100
+00111100
+01011110
+00011100
+00000100
 NAME spr_goldenGuard_floor2_8_6
 DLG dlg_goldenGuard_floor2_8_6_instance
 POS room_floor2 12,10
 
 # generated from TowerBitsyMonsterModel
 SPR spr_goldenLeader_floor2_3_0
-00000000
-11100110
-01001001
-01000110
-00000000
-11000110
-10101001
-11000110
+00111110
+00101010
+00100011
+11011101
+11111101
+11011110
+00011100
+00010000
+>
+00111110
+00101010
+00100011
+11011101
+11111101
+11011110
+00011100
+00000100
 NAME spr_goldenLeader_floor2_3_0
 DLG dlg_goldenLeader_floor2_3_0_instance
 POS room_floor2 7,4
@@ -1344,251 +1507,260 @@ POS room_floor2 7,4
 # generated from TowerBitsyMonsterModel
 SPR spr_juniorWizard_floor1_6_5
 00000000
-11100110
-01001001
-01000110
+01010100
+00111000
+01101100
+11111110
+00010000
+00010000
+00011000
+>
 00000000
-11000110
-10101001
-11000110
+00000000
+01010100
+00111000
+01101100
+11111110
+00010000
+00011000
 NAME spr_juniorWizard_floor1_6_5
 DLG dlg_juniorWizard_floor1_6_5_instance
 POS room_floor1 10,9
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor0_5_7
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor0_5_7
 DLG dlg_yellowDoor_floor0_5_7_instance
 POS room_floor0 9,11
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor1_3_2
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor1_3_2
 DLG dlg_yellowDoor_floor1_3_2_instance
 POS room_floor1 7,6
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor1_1_4
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor1_1_4
 DLG dlg_yellowDoor_floor1_1_4_instance
 POS room_floor1 5,8
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor1_5_5
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor1_5_5
 DLG dlg_yellowDoor_floor1_5_5_instance
 POS room_floor1 9,9
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor1_1_7
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor1_1_7
 DLG dlg_yellowDoor_floor1_1_7_instance
 POS room_floor1 5,11
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor1_9_8
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor1_9_8
 DLG dlg_yellowDoor_floor1_9_8_instance
 POS room_floor1 13,12
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor2_9_3
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor2_9_3
 DLG dlg_yellowDoor_floor2_9_3_instance
 POS room_floor2 13,7
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor2_7_4
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor2_7_4
 DLG dlg_yellowDoor_floor2_7_4_instance
 POS room_floor2 11,8
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor2_2_5
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor2_2_5
 DLG dlg_yellowDoor_floor2_2_5_instance
 POS room_floor2 6,9
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor2_5_5
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor2_5_5
 DLG dlg_yellowDoor_floor2_5_5_instance
 POS room_floor2 9,9
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor2_8_5
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor2_8_5
 DLG dlg_yellowDoor_floor2_8_5_instance
 POS room_floor2 12,9
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor2_2_7
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor2_2_7
 DLG dlg_yellowDoor_floor2_2_7_instance
 POS room_floor2 6,11
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor3_5_2
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor3_5_2
 DLG dlg_yellowDoor_floor3_5_2_instance
 POS room_floor3 9,6
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor3_1_3
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor3_1_3
 DLG dlg_yellowDoor_floor3_1_3_instance
 POS room_floor3 5,7
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor3_7_7
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
 11111111
-10000001
-10011101
-10010001
-10010001
-10010001
-11000001
-11111111
+00000000
 NAME spr_yellowDoor_floor3_7_7
 DLG dlg_yellowDoor_floor3_7_7_instance
 POS room_floor3 11,11
 
 # generated from TowerBitsyDoorModel
 SPR spr_blueDoor_floor2_5_7
+00111000
+01010101
+11111110
+01010101
 11111111
-10000001
-10011101
-10010001
-10011101
-10010001
-11000001
-11111111 
+01010100
+11111111
+00000000 
 NAME spr_blueDoor_floor2_5_7
 DLG dlg_blueDoor_floor2_5_7_instance
 POS room_floor2 9,11
 
 # generated from TowerBitsyDoorModel
 SPR spr_redDoor_floor1_5_8
-11111111
-10000001
-10011101
-10011101
-10011101
-10010001
-11000001
-11111111 
+00000000
+10111101
+01111110
+01111110
+01011110
+01111110
+11111110
+00000000 
 NAME spr_redDoor_floor1_5_8
 DLG dlg_redDoor_floor1_5_8_instance
 POS room_floor1 9,12
@@ -1597,11 +1769,29 @@ POS room_floor1 9,12
 
 # ------ file constDialogPart.txt ------
 
+DLG dlg_yellowKey
+"""
+(jump "fun_updateUI_all")
+"""
+NAME dlg_yellowKey
+
+DLG dlg_blueKey
+"""
+(jump "fun_updateUI_all")
+"""
+NAME dlg_blueKey
+
+DLG dlg_redKey
+"""
+(jump "fun_updateUI_all")
+"""
+NAME dlg_redKey
+
 DLG dlg_healBottle
 """
 {let_enhance_before = member_playerHp}
 {member_playerHp = member_playerHp + 200
-Heal: {printTile "icon_Hp"} {print let_enhance_before} -> {print member_playerHp}
+Heal: {printTile "UI_Hp"} {print let_enhance_before} -> {print member_playerHp}
 """
 NAME dlg_healBottle
 
@@ -1609,7 +1799,7 @@ DLG dlg_bigHealBottle
 """
 {let_enhance_before = member_playerHp}
 {member_playerHp = member_playerHp + 500
-Heal: {printTile "icon_Hp"} {print let_enhance_before} -> {print member_playerHp}
+Heal: {printTile "UI_Hp"} {print let_enhance_before} -> {print member_playerHp}
 """
 NAME dlg_bigHealBottle
 
@@ -1632,7 +1822,7 @@ NAME dlg_DefGem
 DLG dlg_starterFaery
 """
 Hi, see you later.
-{eraseAllNow "SPR, spr_starterFaery, room_floor0"}{drawNow "SPR, spr_tradeFaery, ▷tradeFaery_x◁, ▷tradeFaery_y◁, ▷tradeFaery_roomId◁"}(jump "fun_updateUI_all")
+{eraseAllNow "SPR, spr_starterFaery, room_floor0"}{drawNow "SPR, spr_tradeFaery, 8, 12, room_floor0"}(jump "fun_updateUI_all")
 """
 NAME dlg_starterFaery
 
@@ -1671,7 +1861,7 @@ DLG dlg_tradeFaery_checkComfirmed
     {member_playerMoney = member_playerMoney - 1}
     {member_playerAtk = member_playerAtk + 100}
     {member_playerDef = member_playerDef + 100}
-    Trade done.{eraseAllNow "SPR, spr_tradeFaery, ▷tradeFaery_roomId◁"}(jump "fun_updateUI_all")
+    Trade done.{eraseAllNow "SPR, spr_tradeFaery, room_floor0"}(jump "fun_updateUI_all")
   - else?
     You choose not to trade.
 }
@@ -1709,7 +1899,7 @@ NAME dlg_currentShop
 DLG dlg_currentShop_ask
 """
 {choice
-  - {printTile "icon_Hp"}x{print arg_currentShopHpAmount}
+  - {printTile "UI_Hp"}x{print arg_currentShopHpAmount}
     {let_trade_confirmed = 1}
   - {printTile "icon_Atk"}x{print arg_currentShopAtkAmount}
     {let_trade_confirmed = 2}
@@ -1768,8 +1958,8 @@ NAME fun_updateUI_all
 
 DLG fun_calculateBattle
 """
-{print arg_calculateBattle_ememyName}: {printTile "icon_Hp"} {print arg_calculateBattle_ememyHP}, {printTile "icon_Atk"} {print arg_calculateBattle_ememyATK}, {printTile "icon_Def"} {print arg_calculateBattle_ememyDEF}, {printTile "icon_money"} {print arg_calculateBattle_ememyReward};
-You: {printTile "icon_Hp"} {print member_playerHp}, {printTile "icon_Atk"} {print member_playerAtk}, {printTile "icon_Def"} {print member_playerDef}, {printTile "icon_money"} {print member_playerMoney};
+{print arg_calculateBattle_ememyName}: {printTile "UI_Hp"} {print arg_calculateBattle_ememyHP}, {printTile "icon_Atk"} {print arg_calculateBattle_ememyATK}, {printTile "icon_Def"} {print arg_calculateBattle_ememyDEF}, {printTile "icon_money"} {print arg_calculateBattle_ememyReward};
+You: {printTile "UI_Hp"} {print member_playerHp}, {printTile "icon_Atk"} {print member_playerAtk}, {printTile "icon_Def"} {print member_playerDef}, {printTile "icon_money"} {print member_playerMoney};
 {let_calculateBattle_playerDamagePerTurn = member_playerAtk - arg_calculateBattle_ememyDEF}
 {let_calculateBattle_ememyDamagePerTurn = arg_calculateBattle_ememyATK - member_playerDef}
 {
@@ -1789,7 +1979,7 @@ You: {printTile "icon_Hp"} {print member_playerHp}, {printTile "icon_Atk"} {prin
   - let_calculateBattle_ememyWinTurn > let_calculateBattle_playerWinTurn ?
     {arg_checkComfirmBattle_comfirmed = -1}
     {var_calculateBattle_playerCostHP = let_calculateBattle_playerWinTurn * let_calculateBattle_ememyDamagePerTurn}
-    The battle will cost {print var_calculateBattle_playerCostHP} {printTile "icon_Hp"}. {choice
+    The battle will cost {print var_calculateBattle_playerCostHP} {printTile "UI_Hp"}. {choice
       - Yes
         {arg_checkComfirmBattle_comfirmed = 1}
       - No
@@ -1808,7 +1998,7 @@ DLG fun_afterBattle
   - arg_checkComfirmBattle_comfirmed == 1 ?
     {member_playerHp = member_playerHp - var_calculateBattle_playerCostHP}
     {member_playerMoney = member_playerMoney + arg_calculateBattle_ememyReward}
-    After battle, you: {printTile "icon_Hp"} {print member_playerHp}, {printTile "icon_money"} {print member_playerMoney}(eraseAllByPointerNow "SPR, var_pointer_eraseTargetId, var_pointer_eraseSpriteRoomId")(jump "fun_updateUI_all")
+    After battle, you: {printTile "UI_Hp"} {print member_playerHp}, {printTile "icon_money"} {print member_playerMoney}(eraseAllByPointerNow "SPR, var_pointer_eraseTargetId, var_pointer_eraseSpriteRoomId")(jump "fun_updateUI_all")
   - else
     You choose not to fight.
 }

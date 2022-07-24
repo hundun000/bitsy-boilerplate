@@ -101,6 +101,20 @@ DLG dlg_function
 方案1：
 令史莱姆作为ITM，则需要用某种hack阻止玩家直接拾起他，而是像SPR一样先对话。需要用某种hack获取引发对话的ITM所在的(room, x, y)，传递参数到战斗函数里，待玩家确认战斗后通过hack移除(room, x, y)上的这个TIL。
 
+看起来即使hack也无法获取当前ITM，一定需要Bitsy修改代码。个人分析需要改如下代码，将currentItm作为Bitsy的成员，否则本地变量itm不会以其它方式被记录。
+```js
+function movePlayer(direction) {
+    ……
+    if (itmIndex > -1) {
+        var itm = room[player().room].items[itmIndex];
+        // new code
+        this.currentItm = itm;
+		……
+	}
+    ……
+}
+```
+
 方案2：
 令史莱姆作为SPR，则有spr_instance_1和spr_instance_2。spr_instance_1的dlg_instance_1会将room1和spr_instance_1传递参数到战斗函数里，待玩家确认战斗后通过hack移除(room1上的)所有spr_instance_1。
 
