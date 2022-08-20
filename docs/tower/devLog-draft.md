@@ -188,4 +188,12 @@ let_calculateBattle_playerWinTurn = (jsNow "Math.ceil(scriptInterpreter.GetVaria
 > import '../modifiedHacks/edit image from dialog';
 
 
+### feature-6: 使用save-hack
+
+需要modify。
+
+- 新增`hasSaveNow`，因为需要先判断，然后询问，用户确认后才执行load。
+- 新增`loadAndJump`，因为原版load后的文本只会作为纯文本，无法jump。
+- 新增`hackOptions.sprites_position`, `snapshot.sprites_position`。因为被`edit room from dialog.remove`修改的sprite属性，也需要保存。
+
 
