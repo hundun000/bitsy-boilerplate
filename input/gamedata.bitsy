@@ -2,6 +2,8 @@ Bitsy Tower(jump "fun_onStart")
 
 # BITSY VERSION 7.12
 
+# check "▷" and "◁" not in output gamedata
+
 ! ROOM_FORMAT 1
 
 PAL 0
@@ -12,13 +14,13 @@ NAME blueprint
 
 # generated from TowerBitsyMapModel
 ROOM room_floor0
-UI_floor,0,0,0,0,0,0,0,UI_Hp,UI_playerHp_5,UI_playerHp_4,UI_playerHp_3,UI_playerHp_2,UI_playerHp_1,UI_playerHp_0,0
-UI_level,0,0,0,0,0,0,0,UI_Atk,UI_playerAtk_2,UI_playerAtk_1,UI_playerAtk_0,0,0,0,0
-UI_money,0,0,0,0,0,0,0,UI_Def,UI_playerDef_2,UI_playerDef_1,UI_playerDef_0,0,0,0,0
+UI_floor,UI_playerFloor_2,UI_playerFloor_1,UI_playerFloor_0,0,0,0,0,UI_Hp,UI_playerHp_5,UI_playerHp_4,UI_playerHp_3,UI_playerHp_2,UI_playerHp_1,UI_playerHp_0,0
+UI_level,UI_playerLevel_2,UI_playerLevel_1,UI_playerLevel_0,0,0,0,0,UI_Atk,UI_playerAtk_2,UI_playerAtk_1,UI_playerAtk_0,0,0,0,0
+UI_money,UI_playerMoney_5,UI_playerMoney_4,UI_playerMoney_3,UI_playerMoney_2,UI_playerMoney_1,UI_playerMoney_0,0,UI_Def,UI_playerDef_2,UI_playerDef_1,UI_playerDef_0,0,0,0,0
 0,0,0,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block
-item_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_upstair,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
-item_bluewKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
-item_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
+UI_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_upstair,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
+UI_blueKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
+UI_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
 0,0,0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
 0,0,0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
 0,0,0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
@@ -34,13 +36,13 @@ PAL 0
 
 # generated from TowerBitsyMapModel
 ROOM room_floor1
-UI_floor,0,0,0,0,0,0,0,UI_Hp,UI_playerHp_5,UI_playerHp_4,UI_playerHp_3,UI_playerHp_2,UI_playerHp_1,UI_playerHp_0,0
-UI_level,0,0,0,0,0,0,0,UI_Atk,UI_playerAtk_2,UI_playerAtk_1,UI_playerAtk_0,0,0,0,0
-UI_money,0,0,0,0,0,0,0,UI_Def,UI_playerDef_2,UI_playerDef_1,UI_playerDef_0,0,0,0,0
+UI_floor,UI_playerFloor_2,UI_playerFloor_1,UI_playerFloor_0,0,0,0,0,UI_Hp,UI_playerHp_5,UI_playerHp_4,UI_playerHp_3,UI_playerHp_2,UI_playerHp_1,UI_playerHp_0,0
+UI_level,UI_playerLevel_2,UI_playerLevel_1,UI_playerLevel_0,0,0,0,0,UI_Atk,UI_playerAtk_2,UI_playerAtk_1,UI_playerAtk_0,0,0,0,0
+UI_money,UI_playerMoney_5,UI_playerMoney_4,UI_playerMoney_3,UI_playerMoney_2,UI_playerMoney_1,UI_playerMoney_0,0,UI_Def,UI_playerDef_2,UI_playerDef_1,UI_playerDef_0,0,0,0,0
 0,0,0,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block
-item_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,tile_upstair,0,0,0,0,0,0,0,0,0,0,tile_block
-item_bluewKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_block
-item_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,0,0,0,0,0,tile_blockInner,0,0,0,tile_blockInner,0,tile_block
+UI_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,tile_upstair,0,0,0,0,0,0,0,0,0,0,tile_block
+UI_blueKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_block
+UI_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,0,0,0,0,0,tile_blockInner,0,0,0,tile_blockInner,0,tile_block
 0,0,0,tile_block,0,0,0,tile_blockInner,0,tile_blockInner,0,0,0,tile_blockInner,0,tile_block
 0,0,0,tile_block,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,0,tile_block
 0,0,0,tile_block,0,0,0,tile_blockInner,0,0,0,0,0,tile_blockInner,0,tile_block
@@ -81,13 +83,13 @@ PAL 0
 
 # generated from TowerBitsyMapModel
 ROOM room_floor2
-UI_floor,0,0,0,0,0,0,0,UI_Hp,UI_playerHp_5,UI_playerHp_4,UI_playerHp_3,UI_playerHp_2,UI_playerHp_1,UI_playerHp_0,0
-UI_level,0,0,0,0,0,0,0,UI_Atk,UI_playerAtk_2,UI_playerAtk_1,UI_playerAtk_0,0,0,0,0
-UI_money,0,0,0,0,0,0,0,UI_Def,UI_playerDef_2,UI_playerDef_1,UI_playerDef_0,0,0,0,0
+UI_floor,UI_playerFloor_2,UI_playerFloor_1,UI_playerFloor_0,0,0,0,0,UI_Hp,UI_playerHp_5,UI_playerHp_4,UI_playerHp_3,UI_playerHp_2,UI_playerHp_1,UI_playerHp_0,0
+UI_level,UI_playerLevel_2,UI_playerLevel_1,UI_playerLevel_0,0,0,0,0,UI_Atk,UI_playerAtk_2,UI_playerAtk_1,UI_playerAtk_0,0,0,0,0
+UI_money,UI_playerMoney_5,UI_playerMoney_4,UI_playerMoney_3,UI_playerMoney_2,UI_playerMoney_1,UI_playerMoney_0,0,UI_Def,UI_playerDef_2,UI_playerDef_1,UI_playerDef_0,0,0,0,0
 0,0,0,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block
-item_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,tile_downstair,tile_blockInner,0,0,0,tile_blockInner,0,0,0,0,tile_blockInner,tile_block
-item_bluewKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,0,tile_blockInner,0,tile_blockInner,0,tile_blockInner,0,0,0,0,tile_blockInner,tile_block
-item_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,0,tile_blockInner,0,tile_blockInner,0,tile_blockInner,0,0,0,0,tile_blockInner,tile_block
+UI_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,tile_downstair,tile_blockInner,0,0,0,tile_blockInner,0,0,0,0,tile_blockInner,tile_block
+UI_blueKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,0,tile_blockInner,0,tile_blockInner,0,tile_blockInner,0,0,0,0,tile_blockInner,tile_block
+UI_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,0,tile_blockInner,0,tile_blockInner,0,tile_blockInner,0,0,0,0,tile_blockInner,tile_block
 0,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_block
 0,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,0,0,0,0,0,0,tile_blockInner,tile_block
 0,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_block
@@ -130,13 +132,13 @@ PAL 0
 
 # generated from TowerBitsyMapModel
 ROOM room_floor3
-UI_floor,0,0,0,0,0,0,0,UI_Hp,UI_playerHp_5,UI_playerHp_4,UI_playerHp_3,UI_playerHp_2,UI_playerHp_1,UI_playerHp_0,0
-UI_level,0,0,0,0,0,0,0,UI_Atk,UI_playerAtk_2,UI_playerAtk_1,UI_playerAtk_0,0,0,0,0
-UI_money,0,0,0,0,0,0,0,UI_Def,UI_playerDef_2,UI_playerDef_1,UI_playerDef_0,0,0,0,0
+UI_floor,UI_playerFloor_2,UI_playerFloor_1,UI_playerFloor_0,0,0,0,0,UI_Hp,UI_playerHp_5,UI_playerHp_4,UI_playerHp_3,UI_playerHp_2,UI_playerHp_1,UI_playerHp_0,0
+UI_level,UI_playerLevel_2,UI_playerLevel_1,UI_playerLevel_0,0,0,0,0,UI_Atk,UI_playerAtk_2,UI_playerAtk_1,UI_playerAtk_0,0,0,0,0
+UI_money,UI_playerMoney_5,UI_playerMoney_4,UI_playerMoney_3,UI_playerMoney_2,UI_playerMoney_1,UI_playerMoney_0,0,UI_Def,UI_playerDef_2,UI_playerDef_1,UI_playerDef_0,0,0,0,0
 0,0,0,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block
-item_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,0,0,0,tile_blockInner,0,0,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
-item_bluewKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,0,0,0,tile_blockInner,0,0,0,tile_blockInner,0,0,0,tile_block
-item_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,0,0,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,0,tile_block
+UI_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,0,0,0,tile_blockInner,0,0,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
+UI_blueKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,0,0,0,tile_blockInner,0,0,0,tile_blockInner,0,0,0,tile_block
+UI_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,0,0,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,0,tile_block
 0,0,0,tile_block,tile_blockInner,0,tile_blockInner,tile_blockInner,0,0,0,tile_blockInner,0,tile_blockInner,0,tile_block
 0,0,0,tile_block,0,0,0,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,0,tile_blockInner,0,tile_block
 0,0,0,tile_block,0,tile_blockInner,0,0,0,0,0,tile_blockInner,0,tile_blockInner,0,tile_block
@@ -163,6 +165,198 @@ END dlg_end 14,14
 PAL 0
 
 
+
+# generated from TowerUiModel
+TIL UI_playerDef_0
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerDef_0
+
+# generated from TowerUiModel
+TIL UI_playerDef_1
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerDef_1
+
+# generated from TowerUiModel
+TIL UI_playerDef_2
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerDef_2
+
+# generated from TowerUiModel
+TIL UI_playerMoney_0
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerMoney_0
+
+# generated from TowerUiModel
+TIL UI_playerMoney_1
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerMoney_1
+
+# generated from TowerUiModel
+TIL UI_playerMoney_2
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerMoney_2
+
+# generated from TowerUiModel
+TIL UI_playerMoney_3
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerMoney_3
+
+# generated from TowerUiModel
+TIL UI_playerMoney_4
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerMoney_4
+
+# generated from TowerUiModel
+TIL UI_playerMoney_5
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerMoney_5
+
+# generated from TowerUiModel
+TIL UI_playerRedKey_0
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerRedKey_0
+
+# generated from TowerUiModel
+TIL UI_playerRedKey_1
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerRedKey_1
+
+# generated from TowerUiModel
+TIL UI_playerAtk_0
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerAtk_0
+
+# generated from TowerUiModel
+TIL UI_playerAtk_1
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerAtk_1
+
+# generated from TowerUiModel
+TIL UI_playerAtk_2
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerAtk_2
+
+# generated from TowerUiModel
+TIL UI_playerYellowKey_0
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerYellowKey_0
+
+# generated from TowerUiModel
+TIL UI_playerYellowKey_1
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerYellowKey_1
 
 # generated from TowerUiModel
 TIL UI_playerHp_0
@@ -237,6 +431,78 @@ TIL UI_playerHp_5
 NAME UI_playerHp_5
 
 # generated from TowerUiModel
+TIL UI_playerLevel_0
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerLevel_0
+
+# generated from TowerUiModel
+TIL UI_playerLevel_1
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerLevel_1
+
+# generated from TowerUiModel
+TIL UI_playerLevel_2
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerLevel_2
+
+# generated from TowerUiModel
+TIL UI_playerFloor_0
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerFloor_0
+
+# generated from TowerUiModel
+TIL UI_playerFloor_1
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerFloor_1
+
+# generated from TowerUiModel
+TIL UI_playerFloor_2
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerFloor_2
+
+# generated from TowerUiModel
 TIL UI_playerBlueKey_0
 00111000
 01000100
@@ -260,138 +526,18 @@ TIL UI_playerBlueKey_1
 00000001
 NAME UI_playerBlueKey_1
 
-# generated from TowerUiModel
-TIL UI_playerYellowKey_0
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerYellowKey_0
-
-# generated from TowerUiModel
-TIL UI_playerYellowKey_1
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerYellowKey_1
-
-# generated from TowerUiModel
-TIL UI_playerDef_0
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerDef_0
-
-# generated from TowerUiModel
-TIL UI_playerDef_1
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerDef_1
-
-# generated from TowerUiModel
-TIL UI_playerDef_2
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerDef_2
-
-# generated from TowerUiModel
-TIL UI_playerAtk_0
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerAtk_0
-
-# generated from TowerUiModel
-TIL UI_playerAtk_1
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerAtk_1
-
-# generated from TowerUiModel
-TIL UI_playerAtk_2
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerAtk_2
-
-# generated from TowerUiModel
-TIL UI_playerRedKey_0
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerRedKey_0
-
-# generated from TowerUiModel
-TIL UI_playerRedKey_1
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerRedKey_1
-
 
 
 # ------ file constTilePart.txt ------
 
 TIL source_char_empty
-00111000
-01111100
-01111100
-01111100
-01111100
-01111100
-00111000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
 00000000
 NAME source_char_empty
 
@@ -504,6 +650,39 @@ TIL source_char_9
 00110000
 00000000
 NAME source_char_9
+
+TIL UI_yellowKey 
+00000000
+00011100
+00010100
+00011100
+00001000
+00001000
+00000100
+00011000
+NAME UI_yellowKey
+
+TIL UI_blueKey
+00000000
+00011100
+00100010
+00011100
+00001000
+00001000
+00001000
+00011000
+NAME UI_blueKey
+
+TIL UI_redKey   
+00000000
+00111110
+00100010
+00111110
+00001000
+00011000
+00001000
+00111000
+NAME UI_redKey
 
 TIL UI_Hp
 00000000
@@ -1771,51 +1950,51 @@ POS room_floor1 9,12
 
 DLG dlg_yellowKey
 """
-(jump "fun_updateUI_all")
+You pick up a {printItem "item_yellowKey"}.(jump "fun_updateUI_all")
 """
 NAME dlg_yellowKey
 
 DLG dlg_blueKey
 """
-(jump "fun_updateUI_all")
+You pick up a {printItem "item_blueKey"}.(jump "fun_updateUI_all")
 """
 NAME dlg_blueKey
 
 DLG dlg_redKey
 """
-(jump "fun_updateUI_all")
+You pick up a {printItem "item_redKey"}.(jump "fun_updateUI_all")
 """
 NAME dlg_redKey
 
 DLG dlg_healBottle
 """
 {let_enhance_before = member_playerHp}
-{member_playerHp = member_playerHp + 200
-Heal: {printTile "UI_Hp"} {print let_enhance_before} -> {print member_playerHp}
+{member_playerHp = member_playerHp + 200}
+Heal: {printTile "UI_Hp"} {print let_enhance_before} -> {print member_playerHp}(jump "fun_updateUI_all")
 """
 NAME dlg_healBottle
 
 DLG dlg_bigHealBottle
 """
 {let_enhance_before = member_playerHp}
-{member_playerHp = member_playerHp + 500
-Heal: {printTile "UI_Hp"} {print let_enhance_before} -> {print member_playerHp}
+{member_playerHp = member_playerHp + 500}
+Heal: {printTile "UI_Hp"} {print let_enhance_before} -> {print member_playerHp}(jump "fun_updateUI_all")
 """
 NAME dlg_bigHealBottle
 
 DLG dlg_AtkGem
 """
 {let_enhance_before = member_playerAtk}
-{member_playerAtk = member_playerAtk + 3
-Enhance: {printTile "icon_Atk"} {print let_enhance_before} -> {print member_playerAtk}
+{member_playerAtk = member_playerAtk + 3}
+Enhance: {printTile "UI_Atk"} {print let_enhance_before} -> {print member_playerAtk}(jump "fun_updateUI_all")
 """
 NAME dlg_AtkGem
 
 DLG dlg_DefGem
 """
 {let_enhance_before = member_playerDef}
-{member_playerDef = member_playerDef + 3
-Enhance: {printTile "icon_Def"} {print let_enhance_before} -> {print member_playerDef}
+{member_playerDef = member_playerDef + 3}
+Enhance: {printTile "UI_Def"} {print let_enhance_before} -> {print member_playerDef}(jump "fun_updateUI_all")
 """
 NAME dlg_DefGem
 
@@ -1836,7 +2015,7 @@ I'm finding [money_icon]x1, can you help me? Give it to me and I will improve yo
     {let_trade_can_afford = 0}
 }{
   - let_trade_can_afford == 1 ?
-    Do you want to pay for {printTile "icon_Atk"}x100 & {printTile "icon_Def"}x100?(jump "dlg_tradeFaery_ask")
+    Do you want to pay for {printTile "UI_Atk"}x100 & {printTile "UI_Def"}x100?(jump "dlg_tradeFaery_ask")
   - else
     You can't afford it.
 }
@@ -1901,9 +2080,9 @@ DLG dlg_currentShop_ask
 {choice
   - {printTile "UI_Hp"}x{print arg_currentShopHpAmount}
     {let_trade_confirmed = 1}
-  - {printTile "icon_Atk"}x{print arg_currentShopAtkAmount}
+  - {printTile "UI_Atk"}x{print arg_currentShopAtkAmount}
     {let_trade_confirmed = 2}
-  - {printTile "icon_Def"}x{print arg_currentShopDefAmount}
+  - {printTile "UI_Def"}x{print arg_currentShopDefAmount}
     {let_trade_confirmed = 3}
   - No
     {let_trade_confirmed = 0}
@@ -1936,9 +2115,10 @@ NAME dlg_currentShop_checkComfirmed
 DLG fun_towerSave
 """
 {globalVar_saveState = 2}
-save happen.(save)
+(save)
 """
 NAME fun_towerSave
+
 
 DLG fun_onStart
 """
@@ -1963,6 +2143,7 @@ DLG fun_onStart
 """
 NAME fun_onStart
 
+
 DLG fun_postLoad
 """
 Load done.
@@ -1970,18 +2151,21 @@ Load done.
 """
 NAME fun_postLoad
 
+
 DLG dlg_end
 The demo is end. 
 NAME dlg_end
 
 DLG fun_updateUI_all
 """
-{let_drawingNumber = member_playerHp}
+(updateNumberImagesNow "TIL, UI_playerFloor_, source_char_, source_char_empty, 3, member_playerFloor")
+(updateNumberImagesNow "TIL, UI_playerLevel_, source_char_, source_char_empty, 3, member_playerHp")
 (updateNumberImagesNow "TIL, UI_playerHp_, source_char_, source_char_empty, 6, member_playerHp")
-{let_drawingNumber = member_playerAtk}
+(updateNumberImagesNow "TIL, UI_playerHp_, source_char_, source_char_empty, 6, member_playerHp")
 (updateNumberImagesNow "TIL, UI_playerAtk_, source_char_, source_char_empty, 3, member_playerAtk")
-{let_drawingNumber = member_playerDef}
 (updateNumberImagesNow "TIL, UI_playerDef_, source_char_, source_char_empty, 3, member_playerDef")
+(updateNumberImagesNow "TIL, UI_playerMoney_, source_char_, source_char_empty, 6, member_playerMoney")
+(updateNumberImagesNow "TIL, UI_playerLevel_, source_char_, source_char_empty, 3, member_playerLevel")
 {let_drawingNumber = {item "item_yellowKey"}}
 (updateNumberImagesNow "TIL, UI_playerYellowKey_, source_char_, source_char_empty, 2, let_drawingNumber")
 {let_drawingNumber = {item "item_blueKey"}}
@@ -1993,8 +2177,7 @@ NAME fun_updateUI_all
 
 DLG fun_calculateBattle
 """
-{print arg_calculateBattle_ememyName}: {printTile "UI_Hp"} {print arg_calculateBattle_ememyHP}, {printTile "icon_Atk"} {print arg_calculateBattle_ememyATK}, {printTile "icon_Def"} {print arg_calculateBattle_ememyDEF}, {printTile "icon_money"} {print arg_calculateBattle_ememyReward};
-You: {printTile "UI_Hp"} {print member_playerHp}, {printTile "icon_Atk"} {print member_playerAtk}, {printTile "icon_Def"} {print member_playerDef}, {printTile "icon_money"} {print member_playerMoney};
+{print arg_calculateBattle_ememyName}: {printTile "UI_Hp"} {print arg_calculateBattle_ememyHP}, {printTile "UI_Atk"} {print arg_calculateBattle_ememyATK}, {printTile "UI_Def"} {print arg_calculateBattle_ememyDEF}, {printTile "UI_money"} {print arg_calculateBattle_ememyReward};
 {let_calculateBattle_playerDamagePerTurn = member_playerAtk - arg_calculateBattle_ememyDEF}
 {let_calculateBattle_ememyDamagePerTurn = arg_calculateBattle_ememyATK - member_playerDef}
 {
@@ -2033,7 +2216,7 @@ DLG fun_afterBattle
   - arg_checkComfirmBattle_comfirmed == 1 ?
     {member_playerHp = member_playerHp - var_calculateBattle_playerCostHP}
     {member_playerMoney = member_playerMoney + arg_calculateBattle_ememyReward}
-    After battle, you: {printTile "UI_Hp"} {print member_playerHp}, {printTile "icon_money"} {print member_playerMoney}(eraseAllByPointerNow "SPR, var_pointer_eraseTargetId, var_pointer_eraseSpriteRoomId")(jump "fun_updateUI_all")
+    After battle, you: {printTile "UI_Hp"} {print member_playerHp}, {printTile "UI_money"} {print member_playerMoney}(eraseAllByPointerNow "SPR, var_pointer_eraseTargetId, var_pointer_eraseSpriteRoomId")(jump "fun_updateUI_all")
   - else
     You choose not to fight.
 }
@@ -2046,7 +2229,7 @@ DLG dlg_seniorWizard_prototype
 {arg_calculateBattle_ememyATK = 200}
 {arg_calculateBattle_ememyDEF = 110}
 {arg_calculateBattle_ememyHP = 100}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 30}
 {arg_calculateBattle_ememyName = "senior-wizard"}
 (jump "fun_calculateBattle")
 """
@@ -2058,7 +2241,7 @@ DLG dlg_stoneMonster_prototype
 {arg_calculateBattle_ememyATK = 115}
 {arg_calculateBattle_ememyDEF = 65}
 {arg_calculateBattle_ememyHP = 500}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 15}
 {arg_calculateBattle_ememyName = "stone-monster"}
 (jump "fun_calculateBattle")
 """
@@ -2070,7 +2253,7 @@ DLG dlg_beastWarrior_prototype
 {arg_calculateBattle_ememyATK = 450}
 {arg_calculateBattle_ememyDEF = 330}
 {arg_calculateBattle_ememyHP = 900}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 50}
 {arg_calculateBattle_ememyName = "beast-warrior"}
 (jump "fun_calculateBattle")
 """
@@ -2082,7 +2265,7 @@ DLG dlg_doppelsoldner_prototype
 {arg_calculateBattle_ememyATK = 620}
 {arg_calculateBattle_ememyDEF = 520}
 {arg_calculateBattle_ememyHP = 1200}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 65}
 {arg_calculateBattle_ememyName = "doppelsoldner"}
 (jump "fun_calculateBattle")
 """
@@ -2094,7 +2277,7 @@ DLG dlg_ghostGuard_prototype
 {arg_calculateBattle_ememyATK = 500}
 {arg_calculateBattle_ememyDEF = 400}
 {arg_calculateBattle_ememyHP = 1250}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 55}
 {arg_calculateBattle_ememyName = "ghost-guard"}
 (jump "fun_calculateBattle")
 """
@@ -2106,7 +2289,7 @@ DLG dlg_seniorGuard_prototype
 {arg_calculateBattle_ememyATK = 560}
 {arg_calculateBattle_ememyDEF = 460}
 {arg_calculateBattle_ememyHP = 1500}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 60}
 {arg_calculateBattle_ememyName = "senior-guard"}
 (jump "fun_calculateBattle")
 """
@@ -2118,7 +2301,7 @@ DLG dlg_shadowWarrior_prototype
 {arg_calculateBattle_ememyATK = 1150}
 {arg_calculateBattle_ememyDEF = 1050}
 {arg_calculateBattle_ememyHP = 3100}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 92}
 {arg_calculateBattle_ememyName = "shadow-warrior"}
 (jump "fun_calculateBattle")
 """
@@ -2175,7 +2358,7 @@ DLG dlg_greenSlime_prototype
 {arg_calculateBattle_ememyATK = 20}
 {arg_calculateBattle_ememyDEF = 1}
 {arg_calculateBattle_ememyHP = 50}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 1}
 {arg_calculateBattle_ememyName = "green-slime"}
 (jump "fun_calculateBattle")
 """
@@ -2259,7 +2442,7 @@ DLG dlg_redSlime_prototype
 {arg_calculateBattle_ememyATK = 15}
 {arg_calculateBattle_ememyDEF = 2}
 {arg_calculateBattle_ememyHP = 70}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 2}
 {arg_calculateBattle_ememyName = "red-slime"}
 (jump "fun_calculateBattle")
 """
@@ -2334,7 +2517,7 @@ DLG dlg_smallBat_prototype
 {arg_calculateBattle_ememyATK = 20}
 {arg_calculateBattle_ememyDEF = 5}
 {arg_calculateBattle_ememyHP = 100}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 3}
 {arg_calculateBattle_ememyName = "small-bat"}
 (jump "fun_calculateBattle")
 """
@@ -2355,7 +2538,7 @@ DLG dlg_blackSlime_prototype
 {arg_calculateBattle_ememyATK = 35}
 {arg_calculateBattle_ememyDEF = 10}
 {arg_calculateBattle_ememyHP = 200}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 5}
 {arg_calculateBattle_ememyName = "black-slime"}
 (jump "fun_calculateBattle")
 """
@@ -2403,7 +2586,7 @@ DLG dlg_smallSkeleton_prototype
 {arg_calculateBattle_ememyATK = 25}
 {arg_calculateBattle_ememyDEF = 5}
 {arg_calculateBattle_ememyHP = 110}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 5}
 {arg_calculateBattle_ememyName = "small-skeleton"}
 (jump "fun_calculateBattle")
 """
@@ -2433,7 +2616,7 @@ DLG dlg_skeletonSoldier_prototype
 {arg_calculateBattle_ememyATK = 40}
 {arg_calculateBattle_ememyDEF = 20}
 {arg_calculateBattle_ememyHP = 150}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 8}
 {arg_calculateBattle_ememyName = "skeleton-soldier"}
 (jump "fun_calculateBattle")
 """
@@ -2454,7 +2637,7 @@ DLG dlg_beastMonster_prototype
 {arg_calculateBattle_ememyATK = 75}
 {arg_calculateBattle_ememyDEF = 45}
 {arg_calculateBattle_ememyHP = 300}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 13}
 {arg_calculateBattle_ememyName = "beast-monster"}
 (jump "fun_calculateBattle")
 """
@@ -2466,7 +2649,7 @@ DLG dlg_juniorGuard_prototype
 {arg_calculateBattle_ememyATK = 150}
 {arg_calculateBattle_ememyDEF = 90}
 {arg_calculateBattle_ememyHP = 450}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 22}
 {arg_calculateBattle_ememyName = "junior-guard"}
 (jump "fun_calculateBattle")
 """
@@ -2478,7 +2661,7 @@ DLG dlg_largeBat_prototype
 {arg_calculateBattle_ememyATK = 65}
 {arg_calculateBattle_ememyDEF = 30}
 {arg_calculateBattle_ememyHP = 150}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 10}
 {arg_calculateBattle_ememyName = "large-bat"}
 (jump "fun_calculateBattle")
 """
@@ -2490,7 +2673,7 @@ DLG dlg_redBat_prototype
 {arg_calculateBattle_ememyATK = 160}
 {arg_calculateBattle_ememyDEF = 90}
 {arg_calculateBattle_ememyHP = 550}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 25}
 {arg_calculateBattle_ememyName = "red-bat"}
 (jump "fun_calculateBattle")
 """
@@ -2502,7 +2685,7 @@ DLG dlg_whiteKnight_prototype
 {arg_calculateBattle_ememyATK = 300}
 {arg_calculateBattle_ememyDEF = 150}
 {arg_calculateBattle_ememyHP = 1300}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 40}
 {arg_calculateBattle_ememyName = "white-knight"}
 (jump "fun_calculateBattle")
 """
@@ -2514,7 +2697,7 @@ DLG dlg_monsterLord_prototype
 {arg_calculateBattle_ememyATK = 250}
 {arg_calculateBattle_ememyDEF = 125}
 {arg_calculateBattle_ememyHP = 700}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 32}
 {arg_calculateBattle_ememyName = "monster-lord"}
 (jump "fun_calculateBattle")
 """
@@ -2526,7 +2709,7 @@ DLG dlg_redWizard_prototype
 {arg_calculateBattle_ememyATK = 400}
 {arg_calculateBattle_ememyDEF = 260}
 {arg_calculateBattle_ememyHP = 500}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 47}
 {arg_calculateBattle_ememyName = "red-wizard"}
 (jump "fun_calculateBattle")
 """
@@ -2538,7 +2721,7 @@ DLG dlg_redLord_prototype
 {arg_calculateBattle_ememyATK = 1000}
 {arg_calculateBattle_ememyDEF = 1000}
 {arg_calculateBattle_ememyHP = 15000}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 100}
 {arg_calculateBattle_ememyName = "red-lord"}
 (jump "fun_calculateBattle")
 """
@@ -2568,7 +2751,7 @@ DLG dlg_goldenGuard_prototype
 {arg_calculateBattle_ememyATK = 350}
 {arg_calculateBattle_ememyDEF = 200}
 {arg_calculateBattle_ememyHP = 850}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 45}
 {arg_calculateBattle_ememyName = "golden-guard"}
 (jump "fun_calculateBattle")
 """
@@ -2589,7 +2772,7 @@ DLG dlg_goldenLeader_prototype
 {arg_calculateBattle_ememyATK = 750}
 {arg_calculateBattle_ememyDEF = 650}
 {arg_calculateBattle_ememyHP = 900}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 77}
 {arg_calculateBattle_ememyName = "golden-leader"}
 (jump "fun_calculateBattle")
 """
@@ -2601,7 +2784,7 @@ DLG dlg_skeletonLeader_prototype
 {arg_calculateBattle_ememyATK = 90}
 {arg_calculateBattle_ememyDEF = 50}
 {arg_calculateBattle_ememyHP = 400}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 15}
 {arg_calculateBattle_ememyName = "skeleton-leader"}
 (jump "fun_calculateBattle")
 """
@@ -2613,7 +2796,7 @@ DLG dlg_spiritWizard_prototype
 {arg_calculateBattle_ememyATK = 830}
 {arg_calculateBattle_ememyDEF = 730}
 {arg_calculateBattle_ememyHP = 1500}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 80}
 {arg_calculateBattle_ememyName = "spirit-wizard"}
 (jump "fun_calculateBattle")
 """
@@ -2625,7 +2808,7 @@ DLG dlg_spiritSamurai_prototype
 {arg_calculateBattle_ememyATK = 980}
 {arg_calculateBattle_ememyDEF = 900}
 {arg_calculateBattle_ememyHP = 1200}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 88}
 {arg_calculateBattle_ememyName = "spirit-samurai"}
 (jump "fun_calculateBattle")
 """
@@ -2637,7 +2820,7 @@ DLG dlg_spiritLord_prototype
 {arg_calculateBattle_ememyATK = 1700}
 {arg_calculateBattle_ememyDEF = 1500}
 {arg_calculateBattle_ememyHP = 30000}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 250}
 {arg_calculateBattle_ememyName = "spirit-lord"}
 (jump "fun_calculateBattle")
 """
@@ -2649,7 +2832,7 @@ DLG dlg_linenWizard_prototype
 {arg_calculateBattle_ememyATK = 120}
 {arg_calculateBattle_ememyDEF = 70}
 {arg_calculateBattle_ememyHP = 250}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 20}
 {arg_calculateBattle_ememyName = "linen-wizard"}
 (jump "fun_calculateBattle")
 """
@@ -2661,7 +2844,7 @@ DLG dlg_ghostWarrior_prototype
 {arg_calculateBattle_ememyATK = 680}
 {arg_calculateBattle_ememyDEF = 590}
 {arg_calculateBattle_ememyHP = 2000}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 70}
 {arg_calculateBattle_ememyName = "ghost-warrior"}
 (jump "fun_calculateBattle")
 """
@@ -2673,7 +2856,7 @@ DLG dlg_ghostLeader_prototype
 {arg_calculateBattle_ememyATK = 900}
 {arg_calculateBattle_ememyDEF = 850}
 {arg_calculateBattle_ememyHP = 2500}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 84}
 {arg_calculateBattle_ememyName = "ghost-leader"}
 (jump "fun_calculateBattle")
 """
@@ -2694,7 +2877,7 @@ DLG dlg_juniorWizard_prototype
 {arg_calculateBattle_ememyATK = 50}
 {arg_calculateBattle_ememyDEF = 25}
 {arg_calculateBattle_ememyHP = 125}
-{arg_calculateBattle_ememyReward = 0}
+{arg_calculateBattle_ememyReward = 10}
 {arg_calculateBattle_ememyName = "junior-wizard"}
 (jump "fun_calculateBattle")
 """
@@ -2841,7 +3024,7 @@ DLG dlg_yellowDoor_prototype
 {
   - {item "item_yellowKey"} > 0 ?
     {item "item_yellowKey" {{item "item_yellowKey"} - 1}}
-    You open it.(eraseAllByPointerNow "SPR, var_pointer_eraseTargetId, var_pointer_eraseSpriteRoomId")(jump "fun_updateUI_all")
+    You use {printItem "item_yellowKey"} open it.(eraseAllByPointerNow "SPR, var_pointer_eraseTargetId, var_pointer_eraseSpriteRoomId")(jump "fun_updateUI_all")
   - else
     The door need {printItem "item_yellowKey"}, You can't open it.
 }
@@ -2863,7 +3046,7 @@ DLG dlg_blueDoor_prototype
 {
   - {item "item_blueKey"} > 0 ?
     {item "item_blueKey" {{item "item_blueKey"} - 1}}
-    You open it.(eraseAllByPointerNow "SPR, var_pointer_eraseTargetId, var_pointer_eraseSpriteRoomId")(jump "fun_updateUI_all")
+    You use {printItem "item_blueKey"} open it.(eraseAllByPointerNow "SPR, var_pointer_eraseTargetId, var_pointer_eraseSpriteRoomId")(jump "fun_updateUI_all")
   - else
     The door need {printItem "item_blueKey"}, You can't open it.
 }
@@ -2885,7 +3068,7 @@ DLG dlg_redDoor_prototype
 {
   - {item "item_redKey"} > 0 ?
     {item "item_redKey" {{item "item_redKey"} - 1}}
-    You open it.(eraseAllByPointerNow "SPR, var_pointer_eraseTargetId, var_pointer_eraseSpriteRoomId")(jump "fun_updateUI_all")
+    You use {printItem "item_redKey"} open it.(eraseAllByPointerNow "SPR, var_pointer_eraseTargetId, var_pointer_eraseSpriteRoomId")(jump "fun_updateUI_all")
   - else
     The door need {printItem "item_redKey"}, You can't open it.
 }
@@ -2905,6 +3088,15 @@ VAR member_playerAtk
 VAR member_playerDef
 10
 
+VAR member_playerFloor
+0
+
+VAR member_playerMoney
+0
+
+VAR member_playerLevel
+0
+
 VAR const_the3FShopPrice
 25
 
@@ -2916,9 +3108,6 @@ VAR const_the3FShopAtkAmount
 
 VAR const_the3FShopDefAmount
 4
-
-VAR member_playerMoney
-0
 
 VAR globalVar_saveState
 -1
