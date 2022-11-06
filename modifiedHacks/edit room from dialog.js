@@ -731,6 +731,7 @@ function copyBoxAt(mapId, targetId, x1, y1, x2, y2, copyRoomId, pasteXPos, paste
 	});
 }
 
+// ------ hundun modified hack area ------
 addDualDialogTag('eraseAllByPointer', function (environment, parameters) {
 	var params = parameters[0].split(',');
 	var targetId = environment.GetVariable(params[1].trim());
@@ -740,4 +741,73 @@ addDualDialogTag('eraseAllByPointer', function (environment, parameters) {
 	} else {
 		eraseBoxAt(params[0], targetId, 0, 0, bitsy.mapsize - 1, bitsy.mapsize - 1, roomId);
 	}
+});
+
+/**
+ * Usage:
+ * {let_tileId = {readTileIdAtNow "+0, +0"}}
+ * {
+ *   - let_tileId == "til_A" ?
+ *     do something
+ * }
+*/
+addDualDialogTag('readTileIdAt', function (environment, parameters) {
+	var params = parameters[0].split(',');
+	return readTileIdAt(params[0].trim(), params[1].trim());
+});
+
+function readTileIdAt(xPos, yPos) {
+	var roomId = bitsy.player().room;
+
+	// Trim and sanitize X Position parameter, and set relative positions, even if omitted.
+	xPos = getRelativeNumber(xPos, bitsy.player().x);
+	if (xPos < 0 || xPos > bitsy.mapsize - 1) {
+		console.log("CAN'T READ. X POSITION (" + xPos + ') OUT OF BOUNDS. 0-' + bitsy.mapsize - 1 + ' EXPECTED.');
+		return;
+	}
+
+	// Trim and sanitize Y Position parameter, and set relative positions, even if omitted
+	yPos = getRelativeNumber(yPos, bitsy.player().y);
+	if (yPos < 0 || yPos > bitsy.mapsize - 1) {
+		console.log("CAN'T READ. Y POSITION (" + yPos + ') OUT OF BOUNDS. 0-' + bitsy.mapsize - 1 + ' EXPECTED.');
+		return;
+	}
+
+	// Trim and sanitize Room ID parameter, and set to current room if omitted
+	roomId = (roomId || bitsy.curRoom).toString().trim();
+	if (!bitsy.room[roomId]) {
+		console.log("CAN'T READ. ROOM ID (" + roomId + ') NOT FOUND.');
+		return;
+	}
+
+	// tiles
+	return bitsy.room[roomId].tilemap[yPos][xPos];
+	
+}
+
+addDualDialogTag('drawBy2DVarArrayCondition', function (environment, parameters) {
+	var params = parameters[0].split(',');
+    var varArrayName = params[0].trim();
+    var varArrayWidth = Number(params[1].trim());
+    var varArrayHeight = Number(params[2].trim());
+	var type = params[3].trim();
+	var source0 = params[4].trim();
+    var source1 = params[5].trim();
+	var x0 = Number(params[6].trim());
+	var y0 = Number(params[7].trim());
+	var map = params[8].trim();
+
+	var source;
+    for (var x = 0; x < varArrayWidth; x++) {
+        for (var y = 0; y < varArrayHeight; y++) {
+            var key = varArrayName + "_" + x + "_" + y;
+			var value = environment.GetVariable(key);
+            if (value == 0) {
+				source = source0;
+			} else {
+				source = source1;
+			}
+			drawAt(type, source, x0 + x, y0 + y, map);
+        }
+    }
 });

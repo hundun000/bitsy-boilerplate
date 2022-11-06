@@ -37,37 +37,21 @@ NAME town
 ROOM rm_farm
 fc,h16,h17,h18,fh,gr,gr,fh,fh,fh,fh,fh,fh,fh,fh,fc
 fl,h13,h14,h15,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
-fl,h10,h11,h12,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
-fl,h00,h01,h02,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
-fl,eus,gr,gr,gr,gr,gr,fd,fd,ev,f0,f0,f0,ev,fd,fr
-fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,f0,f0,f0,ev,fd,fr
-fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f0,f0,f0,ev,fd,fr
-fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
-fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
-fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
-fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f1,f1,f1,ev,fd,fr
-fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,f1,f1,f1,ev,fd,fr
-fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f1,f1,f1,ev,fd,fr
-fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
-fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
+fl,h10,h11,h12,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,h00,h01,h02,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,eus,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
 fc,fh,fh,fh,fh,edl,edr,fh,fh,fh,fh,fh,fh,fh,fh,fc
 NAME home
-ITM itm_fieldSlotChildren_0 10,4
-ITM itm_fieldSlotChildren_0 11,4
-ITM itm_fieldSlotChildren_0 12,4
-ITM itm_fieldSlotChildren_0 12,5
-ITM itm_fieldSlotChildren_0 11,5
-ITM itm_fieldSlotChildren_0 10,6
-ITM itm_fieldSlotChildren_0 11,6
-ITM itm_fieldSlotChildren_0 12,6
-ITM itm_fieldSlotChildren_1 10,10
-ITM itm_fieldSlotChildren_1 11,10
-ITM itm_fieldSlotChildren_1 12,10
-ITM itm_fieldSlotChildren_1 12,11
-ITM itm_fieldSlotChildren_1 12,12
-ITM itm_fieldSlotChildren_1 11,12
-ITM itm_fieldSlotChildren_1 10,12
-ITM itm_fieldSlotChildren_1 11,11
 EXT 5,15 rm_forest 6,2
 EXT 6,15 rm_forest 7,2
 EXT 1,3 rm_home 9,11
@@ -247,6 +231,39 @@ TIL gr
 00000000
 00000000
 NAME grass
+
+TIL til_winterField_emptyShow
+11111111
+10000001
+10000001
+10000001
+10000001
+10000001
+10000001
+11111111
+NAME til_winterField_emptyShow
+
+TIL til_winterField_emptyHide
+11111111
+11010001
+10100001
+10000001
+10001011
+10000101
+10000001
+11111111
+NAME til_winterField_emptyHide
+
+TIL til_winterField_harvest
+11111111
+11010001
+10100001
+10000001
+10001011
+10000101
+10000001
+11111111
+NAME til_winterField_harvest
 
 TIL fh
 00000000
@@ -860,32 +877,6 @@ SPR A
 00100100
 00100100
 POS rm_start 1,9
-
-SPR spr_fieldSlot_0
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-01111110
-NAME fieldSlot0
-DLG dlg_fieldLogic_0
-POS rm_farm 10,5
-
-SPR spr_fieldSlot_1
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-01111110
-NAME fieldSlot1
-DLG dlg_fieldLogic_1
-POS rm_farm 10,11
 
 SPR spr_bed_0
 00111111
@@ -1770,6 +1761,26 @@ ITM itm_char_Z
 000000NaNNaN
 NAME char_Z
 
+
+DLG listener_ondown_z
+"""
+{let_tileId = {readTileIdAtNow "+0, +0"}}
+{
+  - let_tileId == "til_winterField_harvest" ?
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
+    You dig out one {printItem "itm_mushroom"}!
+    (draw "TIL, til_winterField_emptyShow,+0,+0, rm_farm")
+  - let_tileId == "til_winterField_emptyHide"?
+    Here is empty.
+    (draw "TIL, til_winterField_emptyShow,+0,+0, rm_farm")
+  - let_tileId == "til_winterField_emptyShow" ?
+    Here is empty.
+  - else ?
+    You can't dig here.
+}
+"""
+NAME listener_ondown_z
+
 DLG dlg_shippingBinSign
 At the end of each day, the businessman will gather the {printItem "itm_mushroom"} in the shipping bin and paid you {printItem "itm_money"}.
 NAME shippingBinSign
@@ -1886,6 +1897,8 @@ DLG dlg_newDay_choiceCase1
       - else ?
         (image "SPR, spr_wildSlot_9, spr_wildSlot_empty")
     }
+    (random2DVarArrayNow "var_winterFieldState, 2, 3, 2")
+    (drawBy2DVarArrayCondition "var_winterFieldState, 2, 3, TIL, til_winterField_harvest, til_winterField_emptyHide, 10, 10, rm_farm")
 }
 """
 NAME newDay
