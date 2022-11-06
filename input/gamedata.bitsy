@@ -254,7 +254,7 @@ TIL til_winterField_emptyHide
 11111111
 NAME til_winterField_emptyHide
 
-TIL til_winterField_harvest
+TIL til_winterField_harvestHide
 11111111
 11010001
 10100001
@@ -263,7 +263,7 @@ TIL til_winterField_harvest
 10000101
 10000001
 11111111
-NAME til_winterField_harvest
+NAME til_winterField_harvestHide
 
 TIL fh
 00000000
@@ -1766,7 +1766,7 @@ DLG listener_ondown_z
 """
 {let_tileId = {readTileIdAtNow "+0, +0"}}
 {
-  - let_tileId == "til_winterField_harvest" ?
+  - let_tileId == "til_winterField_harvestHide" ?
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     You dig out one {printItem "itm_mushroom"}!
     (draw "TIL, til_winterField_emptyShow,+0,+0, rm_farm")
@@ -1812,93 +1812,11 @@ DLG dlg_newDay_choiceCase1
         You sell {print var_mushroomShippingBinCount} {printItem "itm_mushroom"} and gain {print var_temp} {printItem "itm_money"}.
         {item "itm_money" {{item "itm_money"} + var_temp}}
         {var_mushroomShippingBinCount = 0}
-    }{
-      - var_fieldLevel_0 > 0 ?
-        {var_fieldGrowState_0 = var_fieldGrowState_0 + 1}
-        {
-          - var_fieldGrowState_0 >= const_harvestGrowState ?
-            (image "SPR, spr_fieldSlot_0, spr_fieldSlot_harvest")
-            (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_harvest")
-          - else ?
-            (image "SPR, spr_fieldSlot_0, spr_fieldSlot_prepare")
-            (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_prepare")
-        }
-    }{
-      - var_fieldLevel_1 > 0 ?
-        {var_fieldGrowState_1 = var_fieldGrowState_1 + 1}
-        {
-          - var_fieldGrowState_1 >= const_harvestGrowState ?
-            (image "SPR, spr_fieldSlot_1, spr_fieldSlot_harvest")
-            (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_harvest")
-          - else ?
-            (image "SPR, spr_fieldSlot_1, spr_fieldSlot_prepare")
-            (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_prepare")
-        }
-    }{var_wildSlotState_0 = 0}{var_wildSlotState_1 = 0}{var_wildSlotState_2 = 0}{var_wildSlotState_3 = 0}{var_wildSlotState_4 = 0}{var_wildSlotState_5 = 0}{var_wildSlotState_6 = 0}{var_wildSlotState_7 = 0}{var_wildSlotState_8 = 0}{var_wildSlotState_9 = 0}{shuffle
-      - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_8 = 1}
-      - {var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}
-      - {var_wildSlotState_0 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
-      - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_8 = 1}{var_wildSlotState_9 = 1}
-      - {var_wildSlotState_1 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_6 = 1}
-      - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_7 = 1}
-      - {var_wildSlotState_8 = 1}{var_wildSlotState_3 = 1}
-      - {var_wildSlotState_0 = 1}{var_wildSlotState_2 = 1}{var_wildSlotState_8 = 1}
-      - {var_wildSlotState_0 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
-      - {var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}
-      - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_9 = 1}
-    }{
-      - var_wildSlotState_0 > 0 ?
-        (image "SPR, spr_wildSlot_0, spr_wildSlot_harvest")
-      - else ?
-        (image "SPR, spr_wildSlot_0, spr_wildSlot_empty")
-    }{
-      - var_wildSlotState_1 > 0 ?
-        (image "SPR, spr_wildSlot_1, spr_wildSlot_harvest")
-      - else ?
-        (image "SPR, spr_wildSlot_1, spr_wildSlot_empty")
-    }{
-      - var_wildSlotState_2 > 0 ?
-        (image "SPR, spr_wildSlot_2, spr_wildSlot_harvest")
-      - else ?
-        (image "SPR, spr_wildSlot_2, spr_wildSlot_empty")
-    }{
-      - var_wildSlotState_3 > 0 ?
-        (image "SPR, spr_wildSlot_3, spr_wildSlot_harvest")
-      - else ?
-        (image "SPR, spr_wildSlot_3, spr_wildSlot_empty")
-    }{
-      - var_wildSlotState_4 > 0 ?
-        (image "SPR, spr_wildSlot_4, spr_wildSlot_harvest")
-      - else ?
-        (image "SPR, spr_wildSlot_4, spr_wildSlot_empty")
-    }{
-      - var_wildSlotState_5 > 0 ?
-        (image "SPR, spr_wildSlot_5, spr_wildSlot_harvest")
-      - else ?
-        (image "SPR, spr_wildSlot_5, spr_wildSlot_empty")
-    }{
-      - var_wildSlotState_6 > 0 ?
-        (image "SPR, spr_wildSlot_6, spr_wildSlot_harvest")
-      - else ?
-        (image "SPR, spr_wildSlot_6, spr_wildSlot_empty")
-    }{
-      - var_wildSlotState_7 > 0 ?
-        (image "SPR, spr_wildSlot_7, spr_wildSlot_harvest")
-      - else ?
-        (image "SPR, spr_wildSlot_7, spr_wildSlot_empty")
-    }{
-      - var_wildSlotState_8 > 0 ?
-        (image "SPR, spr_wildSlot_8, spr_wildSlot_harvest")
-      - else ?
-        (image "SPR, spr_wildSlot_8, spr_wildSlot_empty")
-    }{
-      - var_wildSlotState_9 > 0 ?
-        (image "SPR, spr_wildSlot_9, spr_wildSlot_harvest")
-      - else ?
-        (image "SPR, spr_wildSlot_9, spr_wildSlot_empty")
     }
+    (randomVarArrayNow "var_wildSlotState, 10, 2")
+    (imageByVarArrayCondition "SPR, spr_wildSlot, var_wildSlotState, 10, spr_wildSlot_empty, spr_wildSlot_harvest")
     (random2DVarArrayNow "var_winterFieldState, 2, 3, 2")
-    (drawBy2DVarArrayCondition "var_winterFieldState, 2, 3, TIL, til_winterField_harvest, til_winterField_emptyHide, 10, 10, rm_farm")
+    (drawBy2DVarArrayCondition "var_winterFieldState, 2, 3, TIL, til_winterField_emptyHide, til_winterField_harvestHide, 10, 10, rm_farm")
 }
 """
 NAME newDay
@@ -2075,143 +1993,89 @@ You have {print var_temp} {printItem "itm_money"}, {print {item "itm_mushroom"}}
 """
 NAME storageLogic
 
-DLG dlg_wildSlotLogic_0
+# args: arg_dlg_wildSlotLogic_0 means index
+DLG dlg_wildSlotLogic_general
 """
+{let_arrayItemValue = (getVariableByArrayItemNow "var_wildSlotState, *arg_dlg_wildSlotLogic_0")}
 {
-  - var_wildSlotState_0 == 1 ?
+  - let_arrayItemValue == 1 ?
     You gather 1 wild {printItem "itm_mushroom"}.
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
-    {var_wildSlotState_0 = 0}
-    (image "SPR, spr_wildSlot_0, spr_wildSlot_empty")
+    (setVariableByArrayItemNow "var_wildSlotState, *arg_dlg_wildSlotLogic_0, 0")
+    (imageByVarArrayItem "SPR, spr_wildSlot, *arg_dlg_wildSlotLogic_0, spr_wildSlot_empty")
   - else ?
     Here is empty!
 }
+"""
+NAME dlg_wildSlotLogic_general
+
+DLG dlg_wildSlotLogic_0
+"""
+{arg_dlg_wildSlotLogic_0 = 0}
+(jump "dlg_wildSlotLogic_general")
 """
 NAME wildSlotLogic0
 
 DLG dlg_wildSlotLogic_1
 """
-{
-  - var_wildSlotState_1 == 1 ?
-    You gather 1 wild {printItem "itm_mushroom"}.
-    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
-    {var_wildSlotState_1 = 0}
-    (image "SPR, spr_wildSlot_1, spr_wildSlot_empty")
-  - else ?
-    Here is empty!
-}
+{arg_dlg_wildSlotLogic_0 = 1}
+(jump "dlg_wildSlotLogic_general")
 """
 NAME wildSlotLogic1
 
 DLG dlg_wildSlotLogic_2
 """
-{
-  - var_wildSlotState_2 == 1 ?
-    You gather 1 wild {printItem "itm_mushroom"}.
-    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
-    {var_wildSlotState_2 = 0}
-    (image "SPR, spr_wildSlot_2, spr_wildSlot_empty")
-  - else ?
-    Here is empty!
-}
+{arg_dlg_wildSlotLogic_0 = 2}
+(jump "dlg_wildSlotLogic_general")
 """
 NAME wildSlotLogic2
 
 DLG dlg_wildSlotLogic_3
 """
-{
-  - var_wildSlotState_3 == 1 ?
-    You gather 1 wild {printItem "itm_mushroom"}.
-    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
-    {var_wildSlotState_3 = 0}
-    (image "SPR, spr_wildSlot_3, spr_wildSlot_empty")
-  - else ?
-    Here is empty!
-}
+{arg_dlg_wildSlotLogic_0 = 3}
+(jump "dlg_wildSlotLogic_general")
 """
 NAME wildSlotLogic3
 
 DLG dlg_wildSlotLogic_4
 """
-{
-  - var_wildSlotState_4 == 1 ?
-    You gather 1 wild {printItem "itm_mushroom"}.
-    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
-    {var_wildSlotState_4 = 0}
-    (image "SPR, spr_wildSlot_4, spr_wildSlot_empty")
-  - else ?
-    Here is empty!
-}
+{arg_dlg_wildSlotLogic_0 = 4}
+(jump "dlg_wildSlotLogic_general")
 """
 NAME wildSlotLogic4
 
 DLG dlg_wildSlotLogic_5
 """
-{
-  - var_wildSlotState_5 == 1 ?
-    You gather 1 wild {printItem "itm_mushroom"}.
-    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
-    {var_wildSlotState_5 = 0}
-    (image "SPR, spr_wildSlot_5, spr_wildSlot_empty")
-  - else ?
-    Here is empty!
-}
+{arg_dlg_wildSlotLogic_0 = 5}
+(jump "dlg_wildSlotLogic_general")
 """
 NAME wildSlotLogic5
 
 DLG dlg_wildSlotLogic_6
 """
-{
-  - var_wildSlotState_6 == 1 ?
-    You gather 1 wild {printItem "itm_mushroom"}.
-    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
-    {var_wildSlotState_6 = 0}
-    (image "SPR, spr_wildSlot_6, spr_wildSlot_empty")
-  - else ?
-    Here is empty!
-}
+{arg_dlg_wildSlotLogic_0 = 06}
+(jump "dlg_wildSlotLogic_general")
 """
 NAME wildSlotLogic6
 
 DLG dlg_wildSlotLogic_7
 """
-{
-  - var_wildSlotState_7 == 1 ?
-    You gather 1 wild {printItem "itm_mushroom"}.
-    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
-    {var_wildSlotState_7 = 0}
-    (image "SPR, spr_wildSlot_7, spr_wildSlot_empty")
-  - else ?
-    Here is empty!
-}
+{arg_dlg_wildSlotLogic_0 = 7}
+(jump "dlg_wildSlotLogic_general")
 """
 NAME wildSlotLogic7
 
 DLG dlg_wildSlotLogic_8
 """
-{
-  - var_wildSlotState_8 == 1 ?
-    You gather 1 wild {printItem "itm_mushroom"}.
-    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
-    {var_wildSlotState_8 = 0}
-    (image "SPR, spr_wildSlot_8, spr_wildSlot_empty")
-  - else ?
-    Here is empty!
-}
+{arg_dlg_wildSlotLogic_0 = 8}
+(jump "dlg_wildSlotLogic_general")
 """
 NAME wildSlotLogic8
 
 DLG dlg_wildSlotLogic_9
 """
-{
-  - var_wildSlotState_9 == 1 ?
-    You gather 1 wild {printItem "itm_mushroom"}.
-    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
-    {var_wildSlotState_9 = 0}
-    (image "SPR, spr_wildSlot_9, spr_wildSlot_empty")
-  - else ?
-    Here is empty!
-}
+{arg_dlg_wildSlotLogic_0 = 9}
+(jump "dlg_wildSlotLogic_general")
 """
 NAME wildSlotLogic9
 

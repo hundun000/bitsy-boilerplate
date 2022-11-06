@@ -151,14 +151,14 @@ addDualDialogTag('imagePal', editPalette);
  *  til_UI_1's sprite will change to til_digit_4's;
  *  til_UI_0's sprite will change to til_digit_2's;
  * 
- *  if left==true
+ *  (updateNumberImagesNow "TIL, 'til_UI_', 'til_digit_', 'til_digit_empty', 3, 'a', true")
  *  til_UI_2's sprite will change to til_digit_4's;
  *  til_UI_1's sprite will change to til_digit_2's;
  *  til_UI_0's sprite will change to til_digit_empty's;
  */
 addDialogTag('updateNumberImagesNow', function (environment, parameters) {
 	let params = parameters[0].split(',');
-	let mapId = params[0];
+	let type = params[0];
 	let targetIdStart = params[1].trim();
 	let sourIdStart = params[2].trim();
 	let emptyNumberId = params[3].trim();
@@ -200,7 +200,72 @@ addDialogTag('updateNumberImagesNow', function (environment, parameters) {
 		}
 		
 
-		let editImageParameters = [mapId + "," + targetId + "," + sourId];
+		let editImageParameters = [type + "," + targetId + "," + sourId];
+		editImage(environment, editImageParameters);
+	}
+
+});
+
+/**
+ * Usage:
+ * # equals (image "SPR, spr_targetArray_0, spr_source")
+ * (imageByVarArrayItem "SPR, spr_targetArray, 0, spr_source")
+*/
+addDualDialogTag('imageByVarArrayItem', function (environment, parameters) {
+	var params = parameters[0].split(',');
+	var type = params[0].trim();
+    var varArrayName = params[1].trim();
+    var index = params[2].trim();
+    if (index.startsWith("*")) {
+        index = index.substring(1, index.length);
+        index = environment.GetVariable(index);
+    }
+	var source = params[3].trim();
+
+	var targetId = varArrayName + "_" + index;
+	let editImageParameters = [type + "," + targetId + "," + source];
+	editImage(environment, editImageParameters);
+});
+
+
+/**
+ * Usage:
+ * {length= 5}
+ * (imageByVarArrayCondition "SPR, spr_targetArray, myConditionArray, *length, spr_source0, spr_source1")
+ * 
+ * # equals :
+ * for (i = 0 to 5)
+ * {
+      - myConditionArray_i == 0 ?
+        (image "SPR, spr_targetArray_i, spr_source0")
+      - else ?
+        (image "SPR, spr_targetArray_i, spr_source1")
+    }
+*/
+addDualDialogTag('imageByVarArrayCondition', function (environment, parameters) {
+	var params = parameters[0].split(',');
+	var type = params[0].trim();
+	var targetArrayName = params[1].trim();
+    var conditionArrayName = params[2].trim();
+    var length = params[3].trim();
+    if (length.startsWith("*")) {
+        length = length.substring(1, length.length);
+        length = environment.GetVariable(length);
+    }
+	var soure0 = params[4].trim();
+	var soure1 = params[5].trim();
+
+	for (var index = 0; index < length; index++) {
+		var targetId = targetArrayName + "_" + index;
+		var conditonKey = conditionArrayName + "_" + index;
+		var conditonValue = environment.GetVariable(conditonKey);
+		var source;
+		if (conditonValue == 0) {
+			source = soure0;
+		} else {
+			source = soure1;
+		}
+		let editImageParameters = [type + "," + targetId + "," + source];
 		editImage(environment, editImageParameters);
 	}
 
