@@ -4,6 +4,10 @@ Harvest Mushroom
 
 ! ROOM_FORMAT 1
 
+
+
+# ------ file constRoomPart.txt ------
+
 PAL 0
 NAME blueprint
 0,82,204
@@ -197,6 +201,10 @@ ITM itm_char_L 10,4
 ITM itm_char_I 9,4
 END dli 7,12
 PAL pan
+
+
+
+# ------ file constTilePart.txt ------
 
 TIL a
 11111111
@@ -867,452 +875,10 @@ TIL h1t
 11111111
 NAME floorDoen
 
-SPR A
-00011000
-00011000
-00011000
-00111100
-01111110
-10111101
-00100100
-00100100
-POS rm_start 1,9
 
-SPR spr_bed_0
-00111111
-01000000
-01000000
-01000000
-01111111
-01001000
-01010000
-01010000
-NAME bed0
-DLG dlg_newDay
-POS rm_home 10,7
 
-SPR spr_bed_1
-11111100
-00000010
-00000010
-00000010
-11111110
-00010010
-00001010
-00001010
-NAME bed1
-DLG dlg_newDay
-POS rm_home 11,7
+# ------ file constItemPart.txt ------
 
-SPR spr_bed_2
-01010000
-01001000
-01111111
-01000000
-01000000
-01000000
-01000000
-01000000
-NAME bed2
-DLG dlg_newDay
-POS rm_home 10,8
-
-SPR spr_bed_3
-00001010
-00010010
-11111110
-00000010
-00000010
-00000010
-00000010
-00000010
-NAME bed3
-DLG dlg_newDay
-POS rm_home 11,8
-
-SPR spr_bed_4
-01000000
-01000000
-01000000
-01000000
-01000000
-01000000
-01000000
-00111111
-NAME bed4
-DLG dlg_newDay
-POS rm_home 10,9
-
-SPR spr_bed_5
-00000010
-00000010
-00000010
-00000010
-00000010
-00000010
-00000010
-11111110
-NAME bed5
-DLG dlg_newDay
-POS rm_home 11,9
-
-SPR spr_fieldSlot_empty
-00000000
-00000000
-00000000
-00000000
-00000000
-00011000
-00111100
-00011000
-NAME fieldSlot_empty
-
-SPR spr_fieldSlot_prepare
-00000000
-00000000
-00000000
-00011100
-00001000
-01001000
-00101000
-00011000
->
-00000000
-00000000
-00000000
-00001110
-00000100
-00100100
-00101000
-00011000
-NAME fieldSlot_prepare
-
-SPR spr_fieldSlot_harvest
-00000000
-00011100
-00111110
-00001000
-11101000
-01001000
-00101000
-00011000
->
-00000000
-00001110
-00011111
-00000100
-01110100
-00100100
-00101000
-00011000
-NAME fieldSlot_harvest
-
-SPR spr_wildSlot_0
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-11111111
-NAME wildSlot0
-DLG dlg_wildSlotLogic_0
-POS rm_forest 4,3
-
-SPR spr_wildSlot_1
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-11111111
-NAME wildSlot1
-DLG dlg_wildSlotLogic_1
-POS rm_forest 10,3
-
-SPR spr_wildSlot_2
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-11111111
-NAME wildSlot2
-DLG dlg_wildSlotLogic_2
-POS rm_forest 13,4
-
-SPR spr_wildSlot_3
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-11111111
-NAME wildSlot3
-DLG dlg_wildSlotLogic_3
-POS rm_forest 3,6
-
-SPR spr_wildSlot_4
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-11111111
-NAME wildSlot4
-DLG dlg_wildSlotLogic_4
-POS rm_forest 12,9
-
-SPR spr_wildSlot_5
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-11111111
-NAME wildSlot5
-DLG dlg_wildSlotLogic_5
-POS rm_forest 4,10
-
-SPR spr_wildSlot_6
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-11111111
-NAME wildSlot6
-DLG dlg_wildSlotLogic_6
-POS rm_forest 2,11
-
-SPR spr_wildSlot_7
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-11111111
-NAME wildSlot7
-DLG dlg_wildSlotLogic_7
-POS rm_forest 5,14
-
-SPR spr_wildSlot_8
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-11111111
-NAME wildSlot8
-DLG dlg_wildSlotLogic_8
-POS rm_forest 8,14
-
-SPR spr_wildSlot_9
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-11111111
-NAME wildSlot9
-DLG dlg_wildSlotLogic_9
-POS rm_forest 13,12
-
-SPR spr_wildSlot_empty
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00011000
-00100100
-NAME wildSlot_empty
-
-SPR spr_wildSlot_harvest
-00000000
-00000000
-00000000
-00111100
-00111100
-01111110
-00011000
-00011000
-NAME wildSlot_harvest
-
-SPR spr_tableRight
-00000010
-11111111
-10000001
-10110001
-10000001
-10000001
-11111111
-00000010
-NAME tableRight
-DLG dlg_table
-POS rm_home 9,7
-
-SPR spx
-11111110
-00000010
-11111010
-00001010
-00001010
-00001010
-00001010
-11111010
-NAME tvRight
-DLG dli
-POS rm_home 9,6
-
-SPR spy
-01111111
-01000000
-01011111
-01010000
-01010000
-01010000
-01010000
-01011111
-NAME tvLeft
-POS rm_home 8,6
-
-SPR spr_tableLeft
-01000000
-11111111
-10000001
-10001101
-10000001
-10000001
-11111111
-01000000
-NAME tableLeft
-DLG dlg_table
-POS rm_home 8,7
-
-SPR spr_storage0
-11111111
-10000000
-10000000
-10000000
-11111111
-10000000
-10000000
-11111111
-NAME storage0
-DLG dlg_storageLogic
-POS rm_home 4,6
-
-SPR spr_storage1
-11111111
-00000001
-00000001
-00000001
-11111111
-00000001
-00000001
-11111111
-NAME storage1
-DLG dlg_storageLogic
-POS rm_home 5,6
-
-SPR spr_storage2
-10000010
-10000001
-10000000
-10000000
-10000000
-11111111
-00000000
-00000000
-NAME storage2
-DLG dlg_storageLogic
-POS rm_home 4,7
-
-SPR spr_storage3
-01000001
-10000001
-00000001
-00000001
-00000001
-11111111
-00000000
-00000000
-NAME storage3
-DLG dlg_storageLogic
-POS rm_home 5,7
-
-SPR spr_shippingBin0
-10111101
-11000011
-10000001
-10111101
-10111101
-10000001
-01111110
-00000000
-NAME shippingBin0
-DLG dlg_shippingBinLogic
-POS rm_farm 4,7
-
-SPR spr_shippingBin1
-00000000
-00111100
-01100110
-10100101
-10100101
-10100101
-10100101
-10100101
-NAME shippingBin1
-DLG dlg_shippingBinLogic
-POS rm_farm 4,6
-
-SPR spr_shippingBinSign
-11111111
-10000001
-10101001
-10010101
-10000001
-11111111
-00011000
-00011000
-NAME shippingBinSign
-DLG dlg_shippingBinSign
-POS rm_farm 3,6
-
-SPR spr_fieldSign
-11111111
-10000001
-10101001
-10010101
-10000001
-11111111
-00011000
-00011000
-NAME fieldSign
-DLG dlg_fieldSign
-POS rm_farm 9,2
 
 SPR itm_mayor_start
 00111100
@@ -1464,7 +1030,7 @@ ITM itm_money
 00111100
 NAME money
 
-ITM itm_mushroom
+ITM itm_snowYam
 00000000
 00000000
 00000000
@@ -1473,7 +1039,7 @@ ITM itm_mushroom
 11111111
 00100100
 00111100
-NAME mushroom
+NAME itm_snowYam
 
 ITM itm_char_A
 001110NaNNaN
@@ -1761,14 +1327,579 @@ ITM itm_char_Z
 000000NaNNaN
 NAME char_Z
 
+# generated from WildSlotModel
+SPR spr_snowYamWildSlot_instances_0
+00000000
+00111000
+01000100
+00000100
+00001000
+00010000
+00000000
+00010000
+NAME spr_snowYamWildSlot_instances_0
+DLG dlg_snowYamWildSlot_0
+POS rm_forest 4,3
+
+# generated from WildSlotModel
+SPR spr_snowYamWildSlot_instances_1
+00000000
+00111000
+01000100
+00000100
+00001000
+00010000
+00000000
+00010000
+NAME spr_snowYamWildSlot_instances_1
+DLG dlg_snowYamWildSlot_1
+POS rm_forest 10,3
+
+# generated from WildSlotModel
+SPR spr_snowYamWildSlot_instances_2
+00000000
+00111000
+01000100
+00000100
+00001000
+00010000
+00000000
+00010000
+NAME spr_snowYamWildSlot_instances_2
+DLG dlg_snowYamWildSlot_2
+POS rm_forest 13,4
+
+# generated from WildSlotModel
+SPR spr_snowYamWildSlot_instances_3
+00000000
+00111000
+01000100
+00000100
+00001000
+00010000
+00000000
+00010000
+NAME spr_snowYamWildSlot_instances_3
+DLG dlg_snowYamWildSlot_3
+POS rm_forest 3,6
+
+# generated from WildSlotModel
+SPR spr_snowYamWildSlot_instances_4
+00000000
+00111000
+01000100
+00000100
+00001000
+00010000
+00000000
+00010000
+NAME spr_snowYamWildSlot_instances_4
+DLG dlg_snowYamWildSlot_4
+POS rm_forest 12,9
+
+# generated from WildSlotModel
+SPR spr_snowYamWildSlot_instances_5
+00000000
+00111000
+01000100
+00000100
+00001000
+00010000
+00000000
+00010000
+NAME spr_snowYamWildSlot_instances_5
+DLG dlg_snowYamWildSlot_5
+POS rm_forest 4,10
+
+# generated from WildSlotModel
+SPR spr_snowYamWildSlot_instances_6
+00000000
+00111000
+01000100
+00000100
+00001000
+00010000
+00000000
+00010000
+NAME spr_snowYamWildSlot_instances_6
+DLG dlg_snowYamWildSlot_6
+POS rm_forest 2,11
+
+# generated from WildSlotModel
+SPR spr_snowYamWildSlot_instances_7
+00000000
+00111000
+01000100
+00000100
+00001000
+00010000
+00000000
+00010000
+NAME spr_snowYamWildSlot_instances_7
+DLG dlg_snowYamWildSlot_7
+POS rm_forest 5,14
+
+# generated from WildSlotModel
+SPR spr_snowYamWildSlot_instances_8
+00000000
+00111000
+01000100
+00000100
+00001000
+00010000
+00000000
+00010000
+NAME spr_snowYamWildSlot_instances_8
+DLG dlg_snowYamWildSlot_8
+POS rm_forest 8,14
+
+# generated from WildSlotModel
+SPR spr_snowYamWildSlot_instances_9
+00000000
+00111000
+01000100
+00000100
+00001000
+00010000
+00000000
+00010000
+NAME spr_snowYamWildSlot_instances_9
+DLG dlg_snowYamWildSlot_9
+POS rm_forest 13,12
+
+# generated from WildSlotModel
+SPR spr_snowYamWildSlot_protytypeEmpty
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00011000
+00100100
+NAME spr_snowYamWildSlot_protytypeEmpty
+
+# generated from WildSlotModel
+SPR spr_snowYamWildSlot_protytypeHarvest
+00000000
+00000000
+00000000
+00111100
+00111100
+01111110
+00011000
+00011000
+NAME spr_snowYamWildSlot_protytypeHarvest
+
+
+
+# ------ file constSpritePart.txt ------
+
+SPR A
+00011000
+00011000
+00011000
+00111100
+01111110
+10111101
+00100100
+00100100
+POS rm_start 1,9
+
+SPR spr_bed_0
+00111111
+01000000
+01000000
+01000000
+01111111
+01001000
+01010000
+01010000
+NAME bed0
+DLG dlg_newDay
+POS rm_home 10,7
+
+SPR spr_bed_1
+11111100
+00000010
+00000010
+00000010
+11111110
+00010010
+00001010
+00001010
+NAME bed1
+DLG dlg_newDay
+POS rm_home 11,7
+
+SPR spr_bed_2
+01010000
+01001000
+01111111
+01000000
+01000000
+01000000
+01000000
+01000000
+NAME bed2
+DLG dlg_newDay
+POS rm_home 10,8
+
+SPR spr_bed_3
+00001010
+00010010
+11111110
+00000010
+00000010
+00000010
+00000010
+00000010
+NAME bed3
+DLG dlg_newDay
+POS rm_home 11,8
+
+SPR spr_bed_4
+01000000
+01000000
+01000000
+01000000
+01000000
+01000000
+01000000
+00111111
+NAME bed4
+DLG dlg_newDay
+POS rm_home 10,9
+
+SPR spr_bed_5
+00000010
+00000010
+00000010
+00000010
+00000010
+00000010
+00000010
+11111110
+NAME bed5
+DLG dlg_newDay
+POS rm_home 11,9
+
+SPR spr_fieldSlot_empty
+00000000
+00000000
+00000000
+00000000
+00000000
+00011000
+00111100
+00011000
+NAME fieldSlot_empty
+
+SPR spr_fieldSlot_prepare
+00000000
+00000000
+00000000
+00011100
+00001000
+01001000
+00101000
+00011000
+>
+00000000
+00000000
+00000000
+00001110
+00000100
+00100100
+00101000
+00011000
+NAME fieldSlot_prepare
+
+SPR spr_fieldSlot_harvest
+00000000
+00011100
+00111110
+00001000
+11101000
+01001000
+00101000
+00011000
+>
+00000000
+00001110
+00011111
+00000100
+01110100
+00100100
+00101000
+00011000
+NAME fieldSlot_harvest
+
+SPR spr_tableRight
+00000010
+11111111
+10000001
+10110001
+10000001
+10000001
+11111111
+00000010
+NAME tableRight
+DLG dlg_table
+POS rm_home 9,7
+
+SPR spx
+11111110
+00000010
+11111010
+00001010
+00001010
+00001010
+00001010
+11111010
+NAME tvRight
+DLG dli
+POS rm_home 9,6
+
+SPR spy
+01111111
+01000000
+01011111
+01010000
+01010000
+01010000
+01010000
+01011111
+NAME tvLeft
+POS rm_home 8,6
+
+SPR spr_tableLeft
+01000000
+11111111
+10000001
+10001101
+10000001
+10000001
+11111111
+01000000
+NAME tableLeft
+DLG dlg_table
+POS rm_home 8,7
+
+SPR spr_storage0
+11111111
+10000000
+10000000
+10000000
+11111111
+10000000
+10000000
+11111111
+NAME storage0
+DLG dlg_storageLogic
+POS rm_home 4,6
+
+SPR spr_storage1
+11111111
+00000001
+00000001
+00000001
+11111111
+00000001
+00000001
+11111111
+NAME storage1
+DLG dlg_storageLogic
+POS rm_home 5,6
+
+SPR spr_storage2
+10000010
+10000001
+10000000
+10000000
+10000000
+11111111
+00000000
+00000000
+NAME storage2
+DLG dlg_storageLogic
+POS rm_home 4,7
+
+SPR spr_storage3
+01000001
+10000001
+00000001
+00000001
+00000001
+11111111
+00000000
+00000000
+NAME storage3
+DLG dlg_storageLogic
+POS rm_home 5,7
+
+SPR spr_shippingBin0
+10111101
+11000011
+10000001
+10111101
+10111101
+10000001
+01111110
+00000000
+NAME shippingBin0
+DLG dlg_shippingBinLogic
+POS rm_farm 4,7
+
+SPR spr_shippingBin1
+00000000
+00111100
+01100110
+10100101
+10100101
+10100101
+10100101
+10100101
+NAME shippingBin1
+DLG dlg_shippingBinLogic
+POS rm_farm 4,6
+
+SPR spr_shippingBinSign
+11111111
+10000001
+10101001
+10010101
+10000001
+11111111
+00011000
+00011000
+NAME shippingBinSign
+DLG dlg_shippingBinSign
+POS rm_farm 3,6
+
+SPR spr_fieldSign
+11111111
+10000001
+10101001
+10010101
+10000001
+11111111
+00011000
+00011000
+NAME fieldSign
+DLG dlg_fieldSign
+POS rm_farm 9,2
+
+
+# generated from WildSlotModel
+DLG dlg_snowYamWildSlot_0
+"""
+{arg_dlg_snowYamWildSlot_general_0 = 0}
+(jump "dlg_snowYamWildSlot_general")
+"""
+NAME dlg_snowYamWildSlot_0
+
+# generated from WildSlotModel
+DLG dlg_snowYamWildSlot_1
+"""
+{arg_dlg_snowYamWildSlot_general_0 = 1}
+(jump "dlg_snowYamWildSlot_general")
+"""
+NAME dlg_snowYamWildSlot_1
+
+# generated from WildSlotModel
+DLG dlg_snowYamWildSlot_2
+"""
+{arg_dlg_snowYamWildSlot_general_0 = 2}
+(jump "dlg_snowYamWildSlot_general")
+"""
+NAME dlg_snowYamWildSlot_2
+
+# generated from WildSlotModel
+DLG dlg_snowYamWildSlot_3
+"""
+{arg_dlg_snowYamWildSlot_general_0 = 3}
+(jump "dlg_snowYamWildSlot_general")
+"""
+NAME dlg_snowYamWildSlot_3
+
+# generated from WildSlotModel
+DLG dlg_snowYamWildSlot_4
+"""
+{arg_dlg_snowYamWildSlot_general_0 = 4}
+(jump "dlg_snowYamWildSlot_general")
+"""
+NAME dlg_snowYamWildSlot_4
+
+# generated from WildSlotModel
+DLG dlg_snowYamWildSlot_5
+"""
+{arg_dlg_snowYamWildSlot_general_0 = 5}
+(jump "dlg_snowYamWildSlot_general")
+"""
+NAME dlg_snowYamWildSlot_5
+
+# generated from WildSlotModel
+DLG dlg_snowYamWildSlot_6
+"""
+{arg_dlg_snowYamWildSlot_general_0 = 6}
+(jump "dlg_snowYamWildSlot_general")
+"""
+NAME dlg_snowYamWildSlot_6
+
+# generated from WildSlotModel
+DLG dlg_snowYamWildSlot_7
+"""
+{arg_dlg_snowYamWildSlot_general_0 = 7}
+(jump "dlg_snowYamWildSlot_general")
+"""
+NAME dlg_snowYamWildSlot_7
+
+# generated from WildSlotModel
+DLG dlg_snowYamWildSlot_8
+"""
+{arg_dlg_snowYamWildSlot_general_0 = 8}
+(jump "dlg_snowYamWildSlot_general")
+"""
+NAME dlg_snowYamWildSlot_8
+
+# generated from WildSlotModel
+DLG dlg_snowYamWildSlot_9
+"""
+{arg_dlg_snowYamWildSlot_general_0 = 9}
+(jump "dlg_snowYamWildSlot_general")
+"""
+NAME dlg_snowYamWildSlot_9
+
+# generated from WildSlotModel
+# ###
+# arg_0 means index
+# ###
+DLG dlg_snowYamWildSlot_general
+"""
+{let_arrayItemValue = (getVariableByArrayItemNow "var_snowYamWildSlot_states, *arg_dlg_snowYamWildSlot_general_0")}
+{
+  - let_arrayItemValue == 1 ?
+    You gather 1 wild {printItem "itm_snowYam"}.
+    {item "itm_snowYam" {{item "itm_snowYam"} + 1}}
+    (setVariableByArrayItemNow "var_snowYamWildSlot_states, *arg_dlg_snowYamWildSlot_general_0, 0")
+    (imageByVarArrayItem "SPR, spr_snowYamWildSlot_instances, *arg_dlg_snowYamWildSlot_general_0, spr_snowYamWildSlot_protytypeEmpty")
+  - else ?
+    Here is empty!
+}
+"""
+NAME dlg_snowYamWildSlot_general
+
+
+# ------ file constDialogPart-item.txt ------
 
 DLG listener_ondown_z
 """
 {let_tileId = {readTileIdAtNow "+0, +0"}}
 {
   - let_tileId == "til_winterField_harvestHide" ?
-    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
-    You dig out one {printItem "itm_mushroom"}!
+    {item "itm_snowYam" {{item "itm_snowYam"} + 1}}
+    You dig out one {printItem "itm_snowYam"}!
     (draw "TIL, til_winterField_emptyShow,+0,+0, rm_farm")
   - let_tileId == "til_winterField_emptyHide"?
     Here is empty.
@@ -1782,11 +1913,11 @@ DLG listener_ondown_z
 NAME listener_ondown_z
 
 DLG dlg_shippingBinSign
-At the end of each day, the businessman will gather the {printItem "itm_mushroom"} in the shipping bin and paid you {printItem "itm_money"}.
+At the end of each day, the businessman will gather the {printItem "itm_snowYam"} in the shipping bin and paid you {printItem "itm_money"}.
 NAME shippingBinSign
 
 DLG dlg_fieldSign
-When you unlock the field, some {printItem "itm_mushroom"} will grow in it.
+When you unlock the field, some {printItem "itm_snowYam"} will grow in it.
 NAME fieldSign
 
 DLG dlg_newDay_choiceCase1
@@ -1809,12 +1940,12 @@ DLG dlg_newDay_choiceCase1
     }{
       - var_mushroomShippingBinCount > 0 ?
         {var_temp = var_mushroomShippingBinCount * const_mushroomSellPrice}
-        You sell {print var_mushroomShippingBinCount} {printItem "itm_mushroom"} and gain {print var_temp} {printItem "itm_money"}.
+        You sell {print var_mushroomShippingBinCount} {printItem "itm_snowYam"} and gain {print var_temp} {printItem "itm_money"}.
         {item "itm_money" {{item "itm_money"} + var_temp}}
         {var_mushroomShippingBinCount = 0}
     }
-    (randomVarArrayNow "var_wildSlotState, 10, 2")
-    (imageByVarArrayCondition "SPR, spr_wildSlot, var_wildSlotState, 10, spr_wildSlot_empty, spr_wildSlot_harvest")
+    (randomVarArrayNow "var_snowYamWildSlot_states, 10, 2")
+    (imageByVarArrayCondition "SPR, spr_snowYamWildSlot_instances, var_snowYamWildSlot_states, 10, spr_snowYamWildSlot_protytypeEmpty, spr_snowYamWildSlot_protytypeHarvest")
     (random2DVarArrayNow "var_winterFieldState, 2, 3, 2")
     (drawBy2DVarArrayCondition "var_winterFieldState, 2, 3, TIL, til_winterField_emptyHide, til_winterField_harvestHide, 10, 10, rm_farm")
 }
@@ -1837,24 +1968,6 @@ DLG dlg_newDay
 }(jump "dlg_newDay_choiceCase1")
 """
 NAME newDay
-
-DLG dlg_mayor_start
-"""
-Welcome to the {print const_goalLimitDate}-day mushroom harvest festival. The goal is that you hold at least {print const_goalMoney} {printItem "itm_money"} at the {print const_goalLimitDate}-day end.(exit "rm_farm, 5, 0")(jump "dlg_newDay")
-"""
-NAME mayor_start
-
-DLG dlg_mayor_win
-"""
-Congratulation! You reach the goal with {item "itm_money"} {printItem "itm_money"}. Please look forward to our next festival.
-"""
-NAME mayor_win
-
-DLG dlg_mayor_fail
-"""
-You only hold {item "itm_money"} {printItem "itm_money"} and don't reach the goal. Please look forward to our next festival.
-"""
-NAME mayor_fail
 
 DLG dlg_fieldLogic_0_choiceCase1
 """
@@ -1887,8 +2000,8 @@ DLG dlg_fieldLogic_0
     {
       - var_fieldGrowState_0 >= const_harvestGrowState ?
         {var_temp = const_fieldOutputAmount * var_fieldLevel_0}
-        You gather {print var_temp} {printItem "itm_mushroom"} from the field.
-        {item "itm_mushroom" {{item "itm_mushroom"} + var_temp}}
+        You gather {print var_temp} {printItem "itm_snowYam"} from the field.
+        {item "itm_snowYam" {{item "itm_snowYam"} + var_temp}}
         {var_fieldGrowState_0 = 0}
         (image "SPR, spr_fieldSlot_0, spr_fieldSlot_empty")
         (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_empty")
@@ -1930,8 +2043,8 @@ DLG dlg_fieldLogic_1
     {
       - var_fieldGrowState_1 >= const_harvestGrowState ?
         {var_temp = const_fieldOutputAmount * var_fieldLevel_1}
-        You gather {print var_temp} {printItem "itm_mushroom"} from the field.
-        {item "itm_mushroom" {{item "itm_mushroom"} + var_temp}}
+        You gather {print var_temp} {printItem "itm_snowYam"} from the field.
+        {item "itm_snowYam" {{item "itm_snowYam"} + var_temp}}
         {var_fieldGrowState_1 = 0}
         (image "SPR, spr_fieldSlot_1, spr_fieldSlot_empty")
         (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_empty")
@@ -1947,12 +2060,12 @@ DLG dlg_shippingBinLogic_choiceCase1
 {
   - var_temp_choiceResult == 1 ?
     {
-      - {item "itm_mushroom"} > 0 ?
-        {var_mushroomShippingBinCount = var_mushroomShippingBinCount + {item "itm_mushroom"}}
-        You put {print {item "itm_mushroom"}} {printItem "itm_mushroom"} into the shipping bin. Current count is {print var_mushroomShippingBinCount} {printItem "itm_mushroom"}.
-        {item "itm_mushroom" 0}
+      - {item "itm_snowYam"} > 0 ?
+        {var_mushroomShippingBinCount = var_mushroomShippingBinCount + {item "itm_snowYam"}}
+        You put {print {item "itm_snowYam"}} {printItem "itm_snowYam"} into the shipping bin. Current count is {print var_mushroomShippingBinCount} {printItem "itm_snowYam"}.
+        {item "itm_snowYam" 0}
       - else ?
-        You have no {printItem "itm_mushroom"}.
+        You have no {printItem "itm_snowYam"}.
     }
 }(jump "dlg_shippingBinLogic_choiceCase2")
 """
@@ -1963,12 +2076,12 @@ DLG dlg_shippingBinLogic_choiceCase2
 {
   - var_temp_choiceResult == 2 ?
     {
-      - {item "itm_mushroom"} > 0 ?
+      - {item "itm_snowYam"} > 0 ?
         {var_mushroomShippingBinCount = var_mushroomShippingBinCount + 1}
-        You put 1 {printItem "itm_mushroom"} into the shipping bin. Current count is {print var_mushroomShippingBinCount} {printItem "itm_mushroom"}.
-        {item "itm_mushroom" {{item "itm_mushroom"} - 1}}
+        You put 1 {printItem "itm_snowYam"} into the shipping bin. Current count is {print var_mushroomShippingBinCount} {printItem "itm_snowYam"}.
+        {item "itm_snowYam" {{item "itm_snowYam"} - 1}}
       - else ?
-        You have no {printItem "itm_mushroom"}.
+        You have no {printItem "itm_snowYam"}.
     }
 }
 """
@@ -1976,7 +2089,7 @@ NAME shippingBinLogic_choiceCase2
 
 DLG dlg_shippingBinLogic
 """
-Current count is {print var_mushroomShippingBinCount} {printItem "itm_mushroom"}. Put {printItem "itm_mushroom"} to shipping bin? {choice
+Current count is {print var_mushroomShippingBinCount} {printItem "itm_snowYam"}. Put {printItem "itm_snowYam"} to shipping bin? {choice
   - All
     {var_temp_choiceResult = 1}
   - One
@@ -1989,95 +2102,9 @@ NAME shippingBinLogic
 
 DLG dlg_storageLogic
 """
-You have {print var_temp} {printItem "itm_money"}, {print {item "itm_mushroom"}} {printItem "itm_mushroom"}.
+You have {print var_temp} {printItem "itm_money"}, {print {item "itm_snowYam"}} {printItem "itm_snowYam"}.
 """
 NAME storageLogic
-
-# args: arg_dlg_wildSlotLogic_0 means index
-DLG dlg_wildSlotLogic_general
-"""
-{let_arrayItemValue = (getVariableByArrayItemNow "var_wildSlotState, *arg_dlg_wildSlotLogic_0")}
-{
-  - let_arrayItemValue == 1 ?
-    You gather 1 wild {printItem "itm_mushroom"}.
-    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
-    (setVariableByArrayItemNow "var_wildSlotState, *arg_dlg_wildSlotLogic_0, 0")
-    (imageByVarArrayItem "SPR, spr_wildSlot, *arg_dlg_wildSlotLogic_0, spr_wildSlot_empty")
-  - else ?
-    Here is empty!
-}
-"""
-NAME dlg_wildSlotLogic_general
-
-DLG dlg_wildSlotLogic_0
-"""
-{arg_dlg_wildSlotLogic_0 = 0}
-(jump "dlg_wildSlotLogic_general")
-"""
-NAME wildSlotLogic0
-
-DLG dlg_wildSlotLogic_1
-"""
-{arg_dlg_wildSlotLogic_0 = 1}
-(jump "dlg_wildSlotLogic_general")
-"""
-NAME wildSlotLogic1
-
-DLG dlg_wildSlotLogic_2
-"""
-{arg_dlg_wildSlotLogic_0 = 2}
-(jump "dlg_wildSlotLogic_general")
-"""
-NAME wildSlotLogic2
-
-DLG dlg_wildSlotLogic_3
-"""
-{arg_dlg_wildSlotLogic_0 = 3}
-(jump "dlg_wildSlotLogic_general")
-"""
-NAME wildSlotLogic3
-
-DLG dlg_wildSlotLogic_4
-"""
-{arg_dlg_wildSlotLogic_0 = 4}
-(jump "dlg_wildSlotLogic_general")
-"""
-NAME wildSlotLogic4
-
-DLG dlg_wildSlotLogic_5
-"""
-{arg_dlg_wildSlotLogic_0 = 5}
-(jump "dlg_wildSlotLogic_general")
-"""
-NAME wildSlotLogic5
-
-DLG dlg_wildSlotLogic_6
-"""
-{arg_dlg_wildSlotLogic_0 = 06}
-(jump "dlg_wildSlotLogic_general")
-"""
-NAME wildSlotLogic6
-
-DLG dlg_wildSlotLogic_7
-"""
-{arg_dlg_wildSlotLogic_0 = 7}
-(jump "dlg_wildSlotLogic_general")
-"""
-NAME wildSlotLogic7
-
-DLG dlg_wildSlotLogic_8
-"""
-{arg_dlg_wildSlotLogic_0 = 8}
-(jump "dlg_wildSlotLogic_general")
-"""
-NAME wildSlotLogic8
-
-DLG dlg_wildSlotLogic_9
-"""
-{arg_dlg_wildSlotLogic_0 = 9}
-(jump "dlg_wildSlotLogic_general")
-"""
-NAME wildSlotLogic9
 
 DLG dlg_table
 A tv.
@@ -2090,6 +2117,63 @@ NAME ending 1
 DLG dli
 The end
 NAME ending 2
+
+# ------ file constDialogPart-npc.txt ------
+
+DLG dlg_mayor_start
+"""
+Welcome to the {print const_goalLimitDate}-day mushroom harvest festival. The goal is that you hold at least {print const_goalMoney} {printItem "itm_money"} at the {print const_goalLimitDate}-day end.(exit "rm_farm, 5, 0")(jump "dlg_newDay")
+"""
+NAME mayor_start
+
+DLG dlg_mayor_win
+"""
+Congratulation! You reach the goal with {item "itm_money"} {printItem "itm_money"}. Please look forward to our next festival.
+"""
+NAME mayor_win
+
+DLG dlg_mayor_fail
+"""
+You only hold {item "itm_money"} {printItem "itm_money"} and don't reach the goal. Please look forward to our next festival.
+"""
+NAME mayor_fail
+
+# generated from GameDataBuilder
+# --------------------
+
+VAR var_snowYamWildSlot_states_0
+-1
+
+VAR var_snowYamWildSlot_states_1
+-1
+
+VAR var_snowYamWildSlot_states_2
+-1
+
+VAR var_snowYamWildSlot_states_3
+-1
+
+VAR var_snowYamWildSlot_states_4
+-1
+
+VAR var_snowYamWildSlot_states_5
+-1
+
+VAR var_snowYamWildSlot_states_6
+-1
+
+VAR var_snowYamWildSlot_states_7
+-1
+
+VAR var_snowYamWildSlot_states_8
+-1
+
+VAR var_snowYamWildSlot_states_9
+-1
+
+
+
+# ------ file constVarPart.txt ------
 
 VAR var_temp_choiceResult
 1
@@ -2133,36 +2217,7 @@ VAR var_fieldGrowState_1
 VAR const_fieldOutputAmount
 9
 
-VAR var_wildSlotState_0
-1
-
-VAR var_wildSlotState_1
-1
-
-VAR var_wildSlotState_2
-1
-
-VAR var_wildSlotState_3
-1
-
-VAR var_wildSlotState_4
-1
-
-VAR var_wildSlotState_5
-1
-
-VAR var_wildSlotState_6
-1
-
-VAR var_wildSlotState_7
-1
-
-VAR var_wildSlotState_8
-1
-
-VAR var_wildSlotState_9
-1
-
 VAR var_skipNewDayChoice
 1
+
 
