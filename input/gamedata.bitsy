@@ -131,9 +131,9 @@ ROOM rm_start
 0,0,0,0,0,0,til_shop12,til_shop_door0,til_shop_door1,til_shop2,0,0,0,0,0,0
 0,0,0,0,0,0,til_outdoor_fenchRight,0,0,til_outdoor_fenchLeft,0,0,0,0,0,0
 til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchCorner,til_outdoor_fenchGateLeft,til_outdoor_fenchGateRight,til_outdoor_fenchCorner,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad
+til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad
+til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad
 til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchCorner,til_outdoor_fenchGateLeft,til_outdoor_fenchGateRight,til_outdoor_fenchCorner,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal
 0,0,0,0,0,0,til_outdoor_fenchRight,0,0,til_outdoor_fenchLeft,0,0,0,0,0,0
 0,0,0,0,0,0,til_outdoor_fenchRight,0,0,til_outdoor_fenchLeft,0,0,0,0,0,0
@@ -151,9 +151,9 @@ til_other_balloon0,0,0,til_other_bannerLeft,0,0,0,0,0,0,0,0,til_other_bannerRigh
 0,0,til_other_balloon0,til_other_bannerLeft,0,0,0,0,0,0,0,0,til_other_bannerRight,0,0,0
 0,0,0,til_other_bannerLeft,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerRight,0,0,0
 til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_other_fenchPoleLeft,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_other_fenchPoleRight,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad
+til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad
+til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad
 til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchCorner,til_outdoor_fenchGateLeft,til_outdoor_fenchGateRight,til_outdoor_fenchCorner,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal
 0,0,0,0,0,0,til_outdoor_fenchRight,0,0,til_outdoor_fenchLeft,0,0,0,0,0,0
 0,0,0,0,0,0,til_outdoor_fenchRight,0,0,til_outdoor_fenchLeft,0,0,0,0,0,0
@@ -178,9 +178,9 @@ til_other_balloon0,0,0,til_other_bannerLeft,0,0,0,0,0,0,0,0,til_other_bannerRigh
 0,0,til_other_balloon0,til_other_bannerLeft,0,0,0,0,0,0,0,0,til_other_bannerRight,0,0,0
 0,0,0,til_other_bannerLeft,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerBottom,til_other_bannerRight,0,0,0
 til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_other_fenchPoleLeft,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_other_fenchPoleRight,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad
+til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad
+til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad
 til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchCorner,til_outdoor_fenchGateLeft,til_outdoor_fenchGateRight,til_outdoor_fenchCorner,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal
 0,0,0,0,0,0,til_outdoor_fenchRight,0,0,til_outdoor_fenchLeft,0,0,0,0,0,0
 0,0,0,0,0,0,til_outdoor_fenchRight,0,0,til_outdoor_fenchLeft,0,0,0,0,0,0
@@ -205,14 +205,14 @@ ROOM rm_town
 0,0,0,0,0,0,til_shop13,til_shop3,til_shop4,til_shop5,0,0,0,0,0,0
 0,0,0,0,0,0,til_shop12,til_shop_door0,til_shop_door1,til_shop2,0,0,0,0,0,0
 0,0,0,0,0,0,til_outdoor_fenchRight,til_other_exitUpHintLeft,til_other_exitUpHintRight,til_outdoor_fenchLeft,0,0,0,0,0,0
-til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchCorner,0,0,til_outdoor_fenchCorner,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchCorner,0,0,til_outdoor_fenchCorner,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal
-0,0,0,0,0,0,til_outdoor_fenchRight,0,0,til_outdoor_fenchLeft,0,0,0,0,0,0
-0,0,0,0,0,0,til_outdoor_fenchRight,0,0,til_outdoor_fenchLeft,0,0,0,0,0,0
-0,0,0,0,0,0,til_outdoor_fenchRight,0,0,til_outdoor_fenchLeft,0,0,0,0,0,0
+til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchCorner,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_fenchCorner,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal
+til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad
+til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad
+til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_townRoad
+til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchCorner,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_fenchCorner,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal,til_outdoor_fenchHorizonal
+0,0,0,0,0,0,til_outdoor_fenchRight,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_fenchLeft,0,0,0,0,0,0
+0,0,0,0,0,0,til_outdoor_fenchRight,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_fenchLeft,0,0,0,0,0,0
+0,0,0,0,0,0,til_outdoor_fenchRight,til_outdoor_townRoad,til_outdoor_townRoad,til_outdoor_fenchLeft,0,0,0,0,0,0
 0,0,0,0,0,0,til_outdoor_fenchRight,til_other_exitDownHintLeft,til_other_exitDownHintRight,til_outdoor_fenchLeft,0,0,0,0,0,0
 NAME rm_town
 EXT 7,5 rm_shop 7,12
@@ -250,14 +250,47 @@ NAME til_other_exitHint
 
 TIL til_outdoor_grass
 00000000
-01010000
-00100000
 00000000
-00001010
-00000100
+00000000
+00000000
+00000000
+00000000
 00000000
 00000000
 NAME til_outdoor_grass
+
+TIL til_outdoor_grass_footprint
+00000000
+00100000
+01010000
+00100000
+00000100
+00001010
+00000100
+00000000
+NAME til_outdoor_grass_footprint
+
+TIL til_outdoor_townRoad
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME til_outdoor_townRoad
+
+TIL til_outdoor_townRoad_footprint
+00000000
+00100000
+01010000
+00100000
+00000100
+00001010
+00000100
+00000000
+NAME til_outdoor_townRoad_footprint
 
 TIL til_winterField_emptyShow
 11111111
@@ -1570,6 +1603,28 @@ DLG dlg_fieldSign
 POS rm_farm 9,2
 
 
+# generated from WildSpawnModel
+ITM itm_snowYamWildSpawn
+00000000
+00001000
+00011100
+00001000
+00000000
+00000000
+00011000
+00100100
+>
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00011000
+00100100
+NAME itm_snowYamWildSpawn
+DLG dlg_snowYamWildSpawn_general
+
 
 
 # ------ file constItemPart.txt ------
@@ -1979,9 +2034,22 @@ DLG dlg_snowYamWildSlot_general
 }
 """
 NAME dlg_snowYamWildSlot_general
+# generated from WildSpawnModel
+DLG dlg_snowYamWildSpawn_general
+"""
+You gather a wild snow yam.
+{item "itm_snowYam" {{item "itm_snowYam"} + 1}}
+"""
+NAME dlg_snowYamWildSpawn_general
 
 
-# ------ file constDialogPart-item.txt ------
+# ------ file constDialogPart-other.txt ------
+
+DLG dlg_onTitleStart
+"""
+{item "itm_money" 0}
+"""
+NAME dlg_onTitleStart
 
 DLG listener_ondown_z
 """
@@ -1991,6 +2059,18 @@ DLG listener_ondown_z
 }
 """
 NAME listener_ondown_z
+
+DLG listener_onMovePlayer
+"""
+{let_tileId = {readTileIdAtNow "+0, +0"}}
+{
+  - let_tileId == "til_outdoor_grass" ?
+    (draw "TIL, til_outdoor_grass_footprint,+0,+0")
+  - let_tileId == "til_outdoor_townRoad" ?
+    (draw "TIL, til_outdoor_townRoad_footprint,+0,+0")
+}
+"""
+NAME listener_onMovePlayer
 
 DLG dlg_useHoe
 """
@@ -2011,14 +2091,6 @@ DLG dlg_useHoe
 """
 NAME dlg_useHoe
 
-DLG dlg_shippingBinSign
-At the end of each day, the businessman will gather the items in the shipping bin and paid you money.
-NAME shippingBinSign
-
-DLG dlg_fieldSign
-When you have a hoe, dig the fields to find the snow yams in it.
-NAME fieldSign
-
 # ##
 # arg_0 means choiceResult
 # ##
@@ -2027,6 +2099,9 @@ DLG dlg_newDay_comfirmed
 {
   - arg_0 == 1 ?
     {var_calendarDate = var_calendarDate + 1}
+    (replaceAll "TIL, til_outdoor_grass_footprint, TIL, til_outdoor_grass, rm_farm")
+    (replaceAll "TIL, til_outdoor_grass_footprint, TIL, til_outdoor_grass, rm_forest")
+    (replaceAll "TIL, til_outdoor_townRoad_footprint, TIL, til_outdoor_townRoad, rm_town")
     {
       - var_calendarDate > const_goalLimitDate ?
         {
@@ -2047,12 +2122,24 @@ DLG dlg_newDay_comfirmed
         }
         (randomVarArrayNow "var_snowYamWildSlot_states, 10, 2")
         (imageByVarArrayCondition "SPR, spr_snowYamWildSlot_instances, var_snowYamWildSlot_states, 10, spr_snowYamWildSlot_protytypeEmpty, spr_snowYamWildSlot_protytypeHarvest")
+        (randomVarArrayNow "var_wildSpawnState, 4, 2")
+        (drawDiscreteByVarArrayCondition "var_wildSpawnState, 4, ITM, 0, itm_snowYamWildSpawn, var_snowYamWildSpawn_spawnX, var_snowYamWildSpawn_spawnY, rm_forest")
         (random2DVarArrayNow "var_winterFieldState, 3, 3, 2")
-        (drawBy2DVarArrayCondition "var_winterFieldState, 3, 3, TIL, til_winterField_emptyHide, til_winterField_harvestHide, 9, 4, rm_farm")
+        (drawBoxBy2DVarArrayCondition "var_winterFieldState, 3, 3, TIL, til_winterField_emptyHide, til_winterField_harvestHide, 9, 4, rm_farm")
     }
 }
 """
 NAME dlg_newDay_comfirmed
+
+# ------ file constDialogPart-item.txt ------
+
+DLG dlg_shippingBinSign
+At the end of each day, the businessman will gather the items in the shipping bin and paid you money.
+NAME shippingBinSign
+
+DLG dlg_fieldSign
+When you have a hoe, dig the fields to find the snow yams in it.
+NAME fieldSign
 
 DLG dlg_newDay
 """
@@ -2125,12 +2212,6 @@ The end
 NAME dlg_end
 
 # ------ file constDialogPart-npc.txt ------
-
-DLG dlg_onTitleStart
-"""
-{item "itm_money" 0}
-"""
-NAME dlg_onTitleStart
 
 DLG dlg_mayor_start
 """
@@ -2246,6 +2327,30 @@ VAR var_snowYamWildSlot_states_8
 
 VAR var_snowYamWildSlot_states_9
 -1
+
+VAR var_snowYamWildSpawn_spawnX_0
+5
+
+VAR var_snowYamWildSpawn_spawnY_0
+7
+
+VAR var_snowYamWildSpawn_spawnX_1
+5
+
+VAR var_snowYamWildSpawn_spawnY_1
+8
+
+VAR var_snowYamWildSpawn_spawnX_2
+6
+
+VAR var_snowYamWildSpawn_spawnY_2
+7
+
+VAR var_snowYamWildSpawn_spawnX_3
+6
+
+VAR var_snowYamWildSpawn_spawnY_3
+8
 
 
 

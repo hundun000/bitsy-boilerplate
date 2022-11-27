@@ -785,29 +785,88 @@ function readTileIdAt(xPos, yPos) {
 	
 }
 
-addDualDialogTag('drawBy2DVarArrayCondition', function (environment, parameters) {
-	var params = parameters[0].split(',');
-    var varArrayName = params[0].trim();
-    var varArrayWidth = Number(params[1].trim());
-    var varArrayHeight = Number(params[2].trim());
-	var type = params[3].trim();
-	var source0 = params[4].trim();
-    var source1 = params[5].trim();
-	var x0 = Number(params[6].trim());
-	var y0 = Number(params[7].trim());
-	var map = params[8].trim();
+/**
+ * Usage:
+ * (drawBoxBy2DVarArrayCondition "myConditionArray, varArrayWidth, varArrayHeight, TIL, til_source0, til_source1, x0, y0, rm_A")
+ * 
+ * # equals :
+for (i = 0 to varArrayWidth)
+   	for (j = 0 to varArrayHeight)
+	{
+		var currentSpawnXArray = x0 + i
+		var currentSpawnYArray = y0 + j
+		- myConditionArray_x_y == 0 ?
+			(draw "TIL, currentSpawnXArray, currentSpawnYArray, til_source0, rm_A")
+		- else ?
+			(draw "TIL, currentSpawnXArray, currentSpawnYArray, til_source1, rm_A")
+	}
+*/
+addDualDialogTag('drawBoxBy2DVarArrayCondition', function (environment, parameters) {
+	let params = parameters[0].split(',');
+    let varArrayName = params[0].trim();
+    let varArrayWidth = Number(params[1].trim());
+    let varArrayHeight = Number(params[2].trim());
+	let type = params[3].trim();
+	let source0 = params[4].trim();
+    let source1 = params[5].trim();
+	let x0 = Number(params[6].trim());
+	let y0 = Number(params[7].trim());
+	let map = params[8].trim();
 
-	var source;
-    for (var x = 0; x < varArrayWidth; x++) {
-        for (var y = 0; y < varArrayHeight; y++) {
-            var key = varArrayName + "_" + x + "_" + y;
-			var value = environment.GetVariable(key);
+	let source;
+    for (let x = 0; x < varArrayWidth; x++) {
+        for (let y = 0; y < varArrayHeight; y++) {
+            let key = varArrayName + "_" + x + "_" + y;
+			let value = environment.GetVariable(key);
+			let drawX = x0 + x;
+			let drawY = y0 + y;
             if (value == 0) {
 				source = source0;
 			} else {
 				source = source1;
 			}
-			drawAt(type, source, x0 + x, y0 + y, map);
+			drawAt(type, source, drawX, drawY, map);
         }
+    }
+});
+
+/**
+ * Usage:
+ * (drawDiscreteByVarArrayCondition "myConditionArray, varArrayLength, ITM, itm_source0, itm_source1, mySpawnXArray, mySpawnYArray, rm_A")
+ * 
+ * # equals :
+for (i = 0 to varArrayLength)
+{
+	var currentSpawnXArray = mySpawnXArray_i
+	var currentSpawnYArray = mySpawnYArray_i
+	- myConditionArray_i == 0 ?
+		(draw "ITM, currentSpawnXArray, currentSpawnYArray, itm_source0, rm_A")
+	- else ?
+		(draw "ITM, currentSpawnXArray, currentSpawnYArray, itm_source1, rm_A")
+}
+*/
+addDualDialogTag('drawDiscreteByVarArrayCondition', function (environment, parameters) {
+	let params = parameters[0].split(',');
+    let varArrayName = params[0].trim();
+    let varArrayLength = Number(params[1].trim());
+	let type = params[2].trim();
+	let source0 = params[3].trim();
+    let source1 = params[4].trim();
+	let varSpawnXArrayName = params[5].trim();
+	let varSpawnYArrayName = params[6].trim();
+	let map = params[7].trim();
+
+	let source;
+    for (let i = 0; i < varArrayLength; i++) {
+		let key = varArrayName + "_" + i;
+		let value = environment.GetVariable(key);
+		let drawX = environment.GetVariable(varSpawnXArrayName + "_" + i);
+		let drawY = environment.GetVariable(varSpawnYArrayName + "_" + i);
+		if (value == 0) {
+			source = source0;
+		} else {
+			source = source1;
+		}
+		drawAt(type, source, drawX, drawY, map);
     }
 });

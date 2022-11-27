@@ -9,6 +9,25 @@
 Adds an extra layer of key handlers to bitsy's input handling
 that allow custom functions to be run when a key is pressed, held, or released.
 
+
+bitsy key = {
+	left : 37,
+	right : 39,
+	up : 38,
+	down : 40,
+	space : 32,
+	enter : 13,
+	w : 87,
+	a : 65,
+	s : 83,
+	d : 68,
+	r : 82,
+	shift : 16,
+	ctrl : 17,
+	alt : 18,
+	cmd : 224
+};
+
 Some simple example functions:
 	bitsy.scriptInterpreter.SetVariable('myvar', 10); // sets a variable that can be accessed in bitsy scripts
 	bitsy.startDialog('a dialog string'); // starts a bitsy dialog script
@@ -21,7 +40,14 @@ HOW TO USE:
 */
 
 import bitsy from 'bitsy';
-import { after } from '@bitsy/hecks/src/helpers/kitsy-script-toolkit';
+import { after, before } from '@bitsy/hecks/src/helpers/kitsy-script-toolkit';
+
+var function_onMovePlayer = function () {
+	let id = 'listener_onMovePlayer';
+	let content = bitsy.dialog[id].src;
+	bitsy.startDialog(content, id);
+	console.log('function_onMovePlayer');
+}
 
 export var hackOptions = {
 	// each object below is a map of key -> handler
@@ -31,27 +57,27 @@ export var hackOptions = {
 			let id = 'listener_ondown_z';
 			let content = bitsy.dialog[id].src;
 			bitsy.startDialog(content, id);
-			console.log('pressed z');
 		},
 	},
 	// onheld is called every frame key is held
 	// it includes a single parameter,
 	// which is the number of frames the key has been held
 	onheld: {
-		z: function (f) {
-			console.log('held z for ' + f + ' frames');
-		},
 	},
 	// onup is called when key is released
 	onup: {
-		z: function () {
-			console.log('released z');
-		},
 	},
+	onMovePlayer: function_onMovePlayer
 };
 
 var allHandlers = [];
 var held = {};
+
+before('movePlayer', function (direction) {
+	if (hackOptions.onMovePlayer) {
+		function_onMovePlayer.apply();
+	}
+});
 
 after('onready', function () {
 	held = {};
