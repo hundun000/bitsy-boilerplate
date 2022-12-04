@@ -1300,8 +1300,21 @@ SPR spr_shopHoe
 00100000
 00000000
 NAME spr_shopHoe
-DLG dlg_shopContainer_hop
+DLG dlg_shopContainer_hoe
 POS rm_shop 7,7
+
+SPR spr_shopAxe
+00000100
+00111010
+00100010
+00111010
+00100100
+00100000
+00100000
+00000000
+NAME spr_shopAxe
+DLG dlg_shopContainer_axe
+POS rm_shop 5,7
 
 SPR spr_shopAssistant
 00111100
@@ -1378,7 +1391,7 @@ SPR spr_bed_0
 01001000
 01010000
 01010000
-NAME bed0
+NAME spr_bed_0
 DLG dlg_newDay
 POS rm_home 10,7
 
@@ -1391,7 +1404,7 @@ SPR spr_bed_1
 00010010
 00001010
 00001010
-NAME bed1
+NAME spr_bed_1
 DLG dlg_newDay
 POS rm_home 11,7
 
@@ -1404,7 +1417,7 @@ SPR spr_bed_2
 01000000
 01000000
 01000000
-NAME bed2
+NAME spr_bed_2
 DLG dlg_newDay
 POS rm_home 10,8
 
@@ -1417,7 +1430,7 @@ SPR spr_bed_3
 00000010
 00000010
 00000010
-NAME bed3
+NAME spr_bed_3
 DLG dlg_newDay
 POS rm_home 11,8
 
@@ -1430,7 +1443,7 @@ SPR spr_bed_4
 01000000
 01000000
 00111111
-NAME bed4
+NAME spr_bed_4
 DLG dlg_newDay
 POS rm_home 10,9
 
@@ -1443,37 +1456,11 @@ SPR spr_bed_5
 00000010
 00000010
 11111110
-NAME bed5
+NAME spr_bed_5
 DLG dlg_newDay
 POS rm_home 11,9
 
-SPR spr_tableRight
-00000010
-11111111
-10000001
-10110001
-10000001
-10000001
-11111111
-00000010
-NAME tableRight
-DLG dlg_tv
-POS rm_home 9,7
-
-SPR spx
-11111110
-00000010
-11111010
-00001010
-00001010
-00001010
-00001010
-11111010
-NAME tvRight
-DLG dlg_end
-POS rm_home 9,6
-
-SPR spy
+SPR spr_tv0
 01111111
 01000000
 01011111
@@ -1482,10 +1469,22 @@ SPR spy
 01010000
 01010000
 01011111
-NAME tvLeft
+NAME spr_tv0
 POS rm_home 8,6
 
-SPR spr_tableLeft
+SPR spr_tv1
+11111110
+00000010
+11111010
+00001010
+00001010
+00001010
+00001010
+11111010
+NAME spr_tv1
+POS rm_home 9,6
+
+SPR spr_tv2
 01000000
 11111111
 10000001
@@ -1494,9 +1493,22 @@ SPR spr_tableLeft
 10000001
 11111111
 01000000
-NAME tableLeft
+NAME spr_tv2
 DLG dlg_tv
 POS rm_home 8,7
+
+SPR spr_tv3
+00000010
+11111111
+10000001
+10110001
+10000001
+10000001
+11111111
+00000010
+NAME spr_tv3
+DLG dlg_tv
+POS rm_home 9,7
 
 SPR spr_storage0
 11111111
@@ -1602,6 +1614,31 @@ NAME fieldSign
 DLG dlg_fieldSign
 POS rm_farm 9,2
 
+SPR spr_roadBlock0
+00000000
+00000010
+00000011
+00000011
+00001111
+00010111
+00001001
+00000000
+NAME spr_roadBlock0
+DLG dlg_roadBlock
+POS rm_forest 8,5
+
+SPR spr_roadBlock1
+00000000
+11000000
+11000000
+11000000
+11100000
+11111000
+10001100
+00000000
+NAME spr_roadBlock1
+DLG dlg_roadBlock
+POS rm_forest 9,5
 
 # generated from WildSpawnModel
 ITM itm_snowYamWildSpawn
@@ -2047,7 +2084,7 @@ NAME dlg_snowYamWildSpawn_general
 
 DLG dlg_onTitleStart
 """
-{item "itm_money" 0}
+{item "itm_money" 15}
 """
 NAME dlg_onTitleStart
 
@@ -2059,6 +2096,17 @@ DLG listener_ondown_z
 }
 """
 NAME listener_ondown_z
+
+DLG dlg_roadBlock
+"""
+{
+  - var_ownAxe == true ?
+    You destory the road block.(eraseAll "SPR, spr_roadBlock0, rm_forest")(eraseAll "SPR, spr_roadBlock1, rm_forest")
+  - else ?
+    You need an axe to destory the road block.
+}
+"""
+NAME dlg_roadBlock
 
 DLG listener_onMovePlayer
 """
@@ -2199,7 +2247,7 @@ NAME dlg_shippingBinLogic
 
 DLG dlg_storageLogic
 """
-You have {print var_temp}$, {print {item "itm_snowYam"}} snow yam(s).
+You have {say {item "itm_money"}}$, {say {item "itm_snowYam"}} snow yam(s).
 """
 NAME dlg_storageLogic
 
@@ -2221,35 +2269,49 @@ NAME mayor_start
 
 DLG dlg_mayor_win
 """
-Congratulation! You reach the goal with {item "itm_money"}$. Please look forward to our next festival.
+Congratulation! You reach the goal with {say {item "itm_money"}}$. Please look forward to our next festival.
 """
 NAME mayor_win
 
 DLG dlg_mayor_fail
 """
-You only hold {item "itm_money"}$ and don't reach the goal. Please look forward to our next festival.
+You only hold {say {item "itm_money"}}$ and don't reach the goal. Please look forward to our next festival.
 """
 NAME mayor_fail
 
-DLG dlg_shopContainer_hop
+DLG dlg_shopContainer_hoe
 """
 {arg_0 = const_hoeBuyPrice}
 {arg_1 = "hoe"}
 {arg_dlg_shopContainer_general_checkComfirmed_buyDes = "You have the hoe now. Press key Z to use it in the farm field."}
+{arg_dlg_shopContainer_general_checkComfirmed_buyFlagPointer = "var_ownHoe"}
+{arg_dlg_shopContainer_general_checkComfirmed_price = const_hoeBuyPrice}
 (jump "dlg_shopContainer_general")
 """
-NAME dlg_shopContainer_hop
+NAME dlg_shopContainer_hoe
+
+DLG dlg_shopContainer_axe
+"""
+{arg_0 = const_axeBuyPrice}
+{arg_1 = "axe"}
+{arg_dlg_shopContainer_general_checkComfirmed_buyDes = "You have the axe now. You can destory the road block."}
+{arg_dlg_shopContainer_general_checkComfirmed_buyFlagPointer = "var_ownAxe"}
+{arg_dlg_shopContainer_general_checkComfirmed_price = const_axeBuyPrice}
+(jump "dlg_shopContainer_general")
+"""
+NAME dlg_shopContainer_axe
 
 # ##
 # arg_0 means price
+# arg_1 means goodDes
 # ##
 DLG dlg_shopContainer_general
 """
 The price of the {print arg_1} is {print arg_0}. {
   - {item "itm_money"} >= arg_0 ?
-    {arg_0 = 1}
+    {arg_0 = true}
   - else   
-    {arg_0 = 0}
+    {arg_0 = false}
 }(jump "dlg_shopContainer_general_ask")
 """
 NAME dlg_shopContainer_general
@@ -2260,12 +2322,12 @@ NAME dlg_shopContainer_general
 DLG dlg_shopContainer_general_ask
 """
 {
-  - arg_0 == 1 ?
+  - arg_0 == true ?
     {choice
       - Yes
-        {arg_0 = 1}
+        {arg_0 = true}
       - No
-        {arg_0 = 0}
+        {arg_0 = false}
     }(jump "dlg_shopContainer_general_checkComfirmed")
   - else
     You can't afford it.
@@ -2276,18 +2338,33 @@ NAME dlg_shopContainer_general_ask
 # ##
 # arg_0 means confirmed
 # arg_dlg_shopContainer_general_checkComfirmed_buyDes
+# arg_dlg_shopContainer_general_checkComfirmed_buyFlagPointer
+# arg_dlg_shopContainer_general_checkComfirmed_price
 # ##
 DLG dlg_shopContainer_general_checkComfirmed
 """
 {
-  - arg_0 == 1 ?
-    {print arg_dlg_shopContainer_general_checkComfirmed_buyDes}{var_ownHoe = true}
+  - arg_0 == true ?
+    {print arg_dlg_shopContainer_general_checkComfirmed_buyDes}
+    {item "itm_money" {{item "itm_money"} - arg_1}}
+    (setVariableByPointerNow "arg_dlg_shopContainer_general_checkComfirmed_buyFlagPointer, true, AS_BOOL")
   - else?
     You can do it later.
-}
+}(jump "dlg_shopContainer_general_postBuy")
 """
 NAME dlg_shopContainer_general_checkComfirmed  
 
+DLG dlg_shopContainer_general_postBuy
+"""
+{
+  - var_ownHoe == true ?
+    (eraseAll "SPR, spr_shopHoe, rm_shop")
+}{
+  - var_ownAxe == true ?
+    (eraseAll "SPR, spr_shopAxe, rm_shop")
+}
+"""
+NAME dlg_shopContainer_general_postBuy
 
 DLG dlg_shopAssistant
 """
@@ -2359,6 +2436,9 @@ VAR var_snowYamWildSpawn_spawnY_3
 VAR var_ownHoe
 false
 
+VAR var_ownAxe
+false
+
 VAR const_harvestGrowState
 2
 
@@ -2378,6 +2458,9 @@ VAR const_snowYamSellPrice
 5
 
 VAR const_hoeBuyPrice
+10
+
+VAR const_axeBuyPrice
 10
 
 
