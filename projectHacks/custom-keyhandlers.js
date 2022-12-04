@@ -46,7 +46,7 @@ var function_onMovePlayer = function () {
 	let id = 'listener_onMovePlayer';
 	let content = bitsy.dialog[id].src;
 	bitsy.startDialog(content, id);
-	console.log('function_onMovePlayer');
+	//console.log('function_onMovePlayer');
 }
 
 export var hackOptions = {

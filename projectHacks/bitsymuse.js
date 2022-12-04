@@ -47,7 +47,7 @@ export var hackOptions = {
 	// Note: you can add <audio> tags to the html manually if you prefer
 	audio: {
 		// Note: the entries below are examples that should be removed and replaced with your own audio files
-		'MUSIC_TOWN': { src: './Melody Town Theme.mp3', loop: true },
+		'MUSIC_TOWN': { src: './Melody Town Theme.mp3', loop: true, volume: 0.75 },
 		'MUSIC_FARM': { src: './snow_city.mp3', loop: true }
 	},
 	// Put entries in this list for every room ID or name that will change the music
