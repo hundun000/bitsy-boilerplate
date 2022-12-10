@@ -9,3 +9,7 @@ https://opengameart.org/content/midi-town-theme-melody
 - pixel art
 Author: NaRNeRZz
 https://opengameart.org/content/slimy-adventure-unfinished
+
+- pixel art
+Author: Chasersgaming
+https://opengameart.org/content/rpg-mansion-tile-set-nes

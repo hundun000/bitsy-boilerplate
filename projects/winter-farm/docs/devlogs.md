@@ -16,7 +16,7 @@ On the bitsy hacks scripts side. I use some published and custom hacks to implem
 
 每天可无条件采集n个（随机期望）作物；
 购买斧头（nx元）后，每天可额外采集n个作物；
-购买锄头（3nx元）后，每天可额外采集n个作物；
+购买锄头（2nx元）后，每天可额外采集n个作物；
 每个作物售价x元。游戏目标是5天结束时，至少拥有knx元。
 
 1~2天，买第一个工具

@@ -103,3 +103,29 @@ addDualDialogTag('setVariableByPointer', function (environment, parameters) {
     }
     environment.SetVariable(key, valueWithType);
 });
+
+/**
+ * Usage:
+ * {var_a = 42}
+ * {value = (calculateBoolExpNow "*var_a, =, 42")}
+ * assert value == true
+*/
+addDualDialogTag('calculateBoolExp', function (environment, parameters) {
+	let params = parameters[0].split(',');
+    let operator1 = params[0].trim();
+    if (operator1.startsWith("*")) {
+        operator1 = operator1.substring(1, operator1.length);
+        operator1 = environment.GetVariable(operator1);
+    }
+    let operation = params[1].trim();
+    let operator2 = params[2].trim();
+    if (operator2.startsWith("*")) {
+        operator2 = operator2.substring(1, operator2.length);
+        operator2 = environment.GetVariable(operator2);
+    }
+    let result;
+    if (operation == "=") {
+        result = String(operator1) == String(operator2);
+    }
+    return result;
+});
