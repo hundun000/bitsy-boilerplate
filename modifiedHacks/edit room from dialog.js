@@ -149,6 +149,7 @@ Parameters:
 import bitsy from 'bitsy';
 import { addDualDialogTag } from '@bitsy/hecks/src/helpers/kitsy-script-toolkit';
 import { clamp, getRelativeNumber } from '@bitsy/hecks/src/helpers/utils';
+import { GetArrayAt } from './helpers/hundun-toolkit';
 
 // Draws an Item, Sprite, or Tile at a location in a room
 // {draw "mapId, sourceId, xPos, yPos, roomID"}
@@ -731,6 +732,7 @@ function copyBoxAt(mapId, targetId, x1, y1, x2, y2, copyRoomId, pasteXPos, paste
 	});
 }
 
+// ------ hundun modified hack area ------
 addDualDialogTag('eraseAllByPointer', function (environment, parameters) {
 	var params = parameters[0].split(',');
 	var targetId = environment.GetVariable(params[1].trim());
@@ -740,4 +742,130 @@ addDualDialogTag('eraseAllByPointer', function (environment, parameters) {
 	} else {
 		eraseBoxAt(params[0], targetId, 0, 0, bitsy.mapsize - 1, bitsy.mapsize - 1, roomId);
 	}
+});
+
+/**
+ * Usage:
+ * {let_tileId = {readTileIdAtNow "+0, +0"}}
+ * {
+ *   - let_tileId == "til_A" ?
+ *     do something
+ * }
+*/
+addDualDialogTag('readTileIdAt', function (environment, parameters) {
+	var params = parameters[0].split(',');
+	return readTileIdAt(params[0].trim(), params[1].trim());
+});
+
+function readTileIdAt(xPos, yPos) {
+	var roomId = bitsy.player().room;
+
+	// Trim and sanitize X Position parameter, and set relative positions, even if omitted.
+	xPos = getRelativeNumber(xPos, bitsy.player().x);
+	if (xPos < 0 || xPos > bitsy.mapsize - 1) {
+		console.log("CAN'T READ. X POSITION (" + xPos + ') OUT OF BOUNDS. 0-' + bitsy.mapsize - 1 + ' EXPECTED.');
+		return;
+	}
+
+	// Trim and sanitize Y Position parameter, and set relative positions, even if omitted
+	yPos = getRelativeNumber(yPos, bitsy.player().y);
+	if (yPos < 0 || yPos > bitsy.mapsize - 1) {
+		console.log("CAN'T READ. Y POSITION (" + yPos + ') OUT OF BOUNDS. 0-' + bitsy.mapsize - 1 + ' EXPECTED.');
+		return;
+	}
+
+	// Trim and sanitize Room ID parameter, and set to current room if omitted
+	roomId = (roomId || bitsy.curRoom).toString().trim();
+	if (!bitsy.room[roomId]) {
+		console.log("CAN'T READ. ROOM ID (" + roomId + ') NOT FOUND.');
+		return;
+	}
+
+	// tiles
+	return bitsy.room[roomId].tilemap[yPos][xPos];
+	
+}
+
+/**
+ * Usage:
+ * (drawBoxByCondition "myConditionArray, varArrayWidth, varArrayHeight, TIL, til_source0, til_source1, x0, y0, rm_A")
+ * 
+ * Result equals :
+for (let i = 0 to varArrayWidth)
+   	for (let j = 0 to varArrayHeight)
+	{
+		let currentSpawnXArray = x0 + i
+		let currentSpawnYArray = y0 + j
+		- myConditionArray_x_y == 0 ?
+			(draw "TIL, currentSpawnXArray, currentSpawnYArray, til_source0, rm_A")
+		- else ?
+			(draw "TIL, currentSpawnXArray, currentSpawnYArray, til_source1, rm_A")
+	}
+*/
+addDualDialogTag('drawBoxByCondition', function (environment, parameters) {
+	let params = parameters[0].split(',');
+    let varArrayName = params[0].trim();
+    let varArrayWidth = Number(params[1].trim());
+    let varArrayHeight = Number(params[2].trim());
+	let type = params[3].trim();
+	let source0 = params[4].trim();
+    let source1 = params[5].trim();
+	let x0 = Number(params[6].trim());
+	let y0 = Number(params[7].trim());
+	let map = params[8].trim();
+
+	let source;
+    for (let x = 0; x < varArrayWidth; x++) {
+        for (let y = 0; y < varArrayHeight; y++) {
+			let value = GetArrayAt(environment, varArrayName, [x, y]);
+			let drawX = x0 + x;
+			let drawY = y0 + y;
+            if (value == 0) {
+				source = source0;
+			} else {
+				source = source1;
+			}
+			drawAt(type, source, drawX, drawY, map);
+        }
+    }
+});
+
+/**
+ * Usage:
+ * (drawArrayByCondition "myConditionArray, 5, ITM, itm_source0, itm_source1, mySpawnXArray, mySpawnYArray, rm_A")
+ * 
+ * Result equals :
+ * for (i = 0 to 5)
+ * {
+ * 	var currentSpawnXArray = mySpawnXArray_i
+ * 	var currentSpawnYArray = mySpawnYArray_i
+ * 	- myConditionArray_i == 0 ?
+ * 		(draw "ITM, currentSpawnXArray, currentSpawnYArray, itm_source0, rm_A")
+ * 	- else ?
+ * 		(draw "ITM, currentSpawnXArray, currentSpawnYArray, itm_source1, rm_A")
+ * }
+*/
+addDualDialogTag('drawArrayByCondition', function (environment, parameters) {
+	let params = parameters[0].split(',');
+    let varArrayName = params[0].trim();
+    let varArrayLength = Number(params[1].trim());
+	let type = params[2].trim();
+	let source0 = params[3].trim();
+    let source1 = params[4].trim();
+	let varSpawnXArrayName = params[5].trim();
+	let varSpawnYArrayName = params[6].trim();
+	let map = params[7].trim();
+
+	let source;
+    for (let i = 0; i < varArrayLength; i++) {
+		let value = GetArrayAt(environment, varArrayName, [i]);
+		let drawX = GetArrayAt(environment, varSpawnXArrayName, [i]);
+		let drawY = GetArrayAt(environment, varSpawnYArrayName, [i]);
+		if (value == 0) {
+			source = source0;
+		} else {
+			source = source1;
+		}
+		drawAt(type, source, drawX, drawY, map);
+    }
 });

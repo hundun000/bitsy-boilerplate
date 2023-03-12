@@ -1,6 +1,8 @@
 Write your game's title here
 
-# BITSY VERSION 7.2
+# BITSY VERSION 7.10
+
+# check "▷" and "◁" not in output gamedata
 
 ! ROOM_FORMAT 1
 
@@ -90,7 +92,11 @@ NAME key
 DLG 2
 
 DLG 0
+"""
 I'm a cat
+{value = (compareV2Now "*a, =, 42")}
+compareV2 result is {say value}
+"""
 NAME cat dialog
 
 DLG 1
