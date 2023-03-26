@@ -127,6 +127,95 @@ NAME spr_crushMachine_idle
 DLG dlg_crushMachine_idle
 POS room0 6,5
 
+SPR spr_fermentationMachine_workingPhase1
+00000000
+10000010
+10000010
+11111110
+11110110
+11111110
+11111110
+11111110
+>
+00000000
+10000010
+10000010
+11111110
+11111110
+11111110
+11110110
+11111110
+NAME spr_fermentationMachine_workingPhase1
+DLG dlg_fermentationMachine_workingPhase1
+
+SPR spr_fermentationMachine_workingPhase2
+00000000
+10000010
+10000010
+11111110
+11110110
+11011110
+11111110
+11111110
+>
+00000000
+10000010
+10000010
+11111110
+11111110
+11011110
+11110110
+11111110
+NAME spr_fermentationMachine_workingPhase2
+DLG dlg_fermentationMachine_workingPhase2
+
+SPR spr_fermentationMachine_idle
+00000000
+10000010
+10000010
+10000010
+10000010
+10000010
+10000010
+11111110
+NAME spr_fermentationMachine_idle
+DLG dlg_fermentationMachine_idle
+POS room0 7,5
+
+SPR spr_heaterMachine_working
+00000000
+00010000
+01000100
+00000000
+11111110
+10000010
+10000010
+11111110
+>
+00010000
+10000010
+00010000
+00000000
+11111110
+10000010
+10000010
+11111110
+NAME spr_heaterMachine_working
+DLG dlg_heaterMachine_working
+
+SPR spr_heaterMachine_idle
+00000000
+00000000
+00000000
+00000000
+11111110
+10000010
+10000010
+11111110
+NAME spr_heaterMachine_idle
+DLG dlg_heaterMachine_idle
+POS room0 8,5
+
 # ------ UI ------
 
 SPR UI_holdingItemSlot
@@ -164,6 +253,28 @@ SPR UI_holdingItem_grapeBunch
 00000000
 NAME UI_holdingItem_grapeBunch
 
+SPR UI_holdingItem_grapeJuice
+00000000
+00001000
+00010100
+00100100
+01000010
+01000010
+00111100
+00000000
+NAME UI_holdingItem_grapeJuice
+
+SPR UI_holdingItem_grapeAlcohol
+00000000
+00001000
+00010100
+00110100
+01100010
+01110010
+00111100
+00000000
+NAME UI_holdingItem_grapeAlcohol
+
 # ------ dlg of logic ------
 
 DLG dlg_onStart
@@ -177,13 +288,25 @@ DLG dlg_updateUI
 {
   - var_grapeVineState == 1 ?
     (replaceAllNow "SPR, spr_grapeVine_idle, SPR, spr_grapeVine_working, room0")
-  - else
+  - var_grapeVineState == 0 ?
     (replaceAllNow "SPR, spr_grapeVine_working, SPR, spr_grapeVine_idle, room0")
 }{
   - var_crushMachineState == 1 ?
     (replaceAllNow "SPR, spr_crushMachine_idle, SPR, spr_crushMachine_working, room0")
-  - else
+  - var_crushMachineState == 0 ?
     (replaceAllNow "SPR, spr_crushMachine_working, SPR, spr_crushMachine_idle, room0")
+}{
+  - var_fermentationMachineState == 2 ?
+    (replaceAllNow "SPR, spr_fermentationMachine_workingPhase1, SPR, spr_fermentationMachine_workingPhase2, room0")
+  - var_fermentationMachineState == 1 ?
+    (replaceAllNow "SPR, spr_fermentationMachine_idle, SPR, spr_fermentationMachine_workingPhase1, room0")
+  - var_fermentationMachineState == 0 ?
+    (replaceAllNow "SPR, spr_fermentationMachine_workingPhase2, SPR, spr_fermentationMachine_idle, room0")
+}{
+  - var_heaterState == 1 ?
+    (replaceAllNow "SPR, spr_heaterMachine_idle, SPR, spr_heaterMachine_working, room0")
+  - var_heaterState == 0 ?
+    (replaceAllNow "SPR, spr_heaterMachine_working, SPR, spr_heaterMachine_idle, room0")
 }(imageV2Now "SPR, UI_holdingItemSlot, *var_holdingItem")
 """
 NAME dlg_updateUI
@@ -229,6 +352,51 @@ DLG dlg_crushMachine_idle
 """
 NAME dlg_crushMachine_idle
 
+DLG dlg_fermentationMachine_workingPhase2
+"""
+{
+  - var_holdingItem == "UI_holdingItem_none" ?
+    You take some grape alcohol.{var_holdingItem = "UI_holdingItem_grapeAlcohol"}{var_fermentationMachineState = 0}(jump "dlg_updateUI")
+  - else
+    You can't hold anymore.  
+}
+"""
+NAME dlg_fermentationMachine_workingPhase2
+
+DLG dlg_fermentationMachine_workingPhase1
+"""
+{
+  - var_heaterState == 0 ?
+    You need to turn on the heater for fermentation.
+  - else
+    Keeping fermentation...{var_fermentationMachineState = 2}(jump "dlg_updateUI")
+}
+"""
+NAME dlg_fermentationMachine_workingPhase1
+
+DLG dlg_fermentationMachine_idle
+"""
+{
+  - var_holdingItem == "UI_holdingItem_grapeJuice" ?
+    You put grape juice into the fermentation machine.{var_holdingItem = "UI_holdingItem_none"}{var_fermentationMachineState = 1}(jump "dlg_updateUI")
+  - else
+    The crush machine need grape juice.  
+}
+"""
+NAME dlg_fermentationMachine_idle
+
+DLG dlg_heaterMachine_working
+"""
+You turn off the heater.{var_heaterState = 0}(jump "dlg_updateUI")
+"""
+NAME dlg_heaterMachine_working
+
+DLG dlg_heaterMachine_idle
+"""
+You turn on the heater.{var_heaterState = 1}(jump "dlg_updateUI")
+"""
+NAME dlg_heaterMachine_idle
+
 # ------ vars ------
 
 VAR a
@@ -241,6 +409,12 @@ VAR var_grapeVineState
 0
 
 VAR var_crushMachineState
+0
+
+VAR var_fermentationMachineState
+0
+
+VAR var_heaterState
 0
 
 # ------ tunes ------
