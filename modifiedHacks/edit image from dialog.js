@@ -57,7 +57,7 @@ import bitsy from 'bitsy';
 import { getImageData, setImageData } from '@bitsy/hecks/src/helpers/edit image at runtime';
 import { addDualDialogTag, after, addDialogTag } from '@bitsy/hecks/src/helpers/kitsy-script-toolkit';
 import { getImage } from '@bitsy/hecks/src/helpers/utils';
-import { GetVariableOrPlain } from './helpers/hundun-toolkit';
+import { getVariableOrPlain } from './helpers/hundun-toolkit';
 
 // map of maps
 var maps;
@@ -153,12 +153,12 @@ addDualDialogTag('imagePal', editPalette);
  *  til_UI_1's sprite will change to til_digit_4's;
  *  til_UI_0's sprite will change to til_digit_2's;
  * 
- *  (updateNumberImagesNow "TIL, 'til_UI_', 'til_digit_', 'til_digit_empty', 3, 'a', true")
+ *  (updateNumberImagesNow "TIL, til_UI_, til_digit_, til_digit_empty, 3, a, true")
  *  til_UI_2's sprite will change to til_digit_4's;
  *  til_UI_1's sprite will change to til_digit_2's;
  *  til_UI_0's sprite will change to til_digit_empty's;
  */
-addDialogTag('updateNumberImagesNow', function (environment, parameters) {
+addDialogTag('updateNumberImagesNow', function (environment, parameters, onReturn) {
 	let params = parameters[0].split(',');
 	let type = params[0];
 	let targetIdStart = params[1].trim();
@@ -205,7 +205,7 @@ addDialogTag('updateNumberImagesNow', function (environment, parameters) {
 		let editImageParameters = [type + "," + targetId + "," + sourId];
 		editImage(environment, editImageParameters);
 	}
-
+	onReturn(null);
 });
 
 /**
@@ -220,7 +220,7 @@ addDualDialogTag('imageByVarArrayItem', function (environment, parameters) {
 	var params = parameters[0].split(',');
 	var type = params[0].trim();
     var varArrayName = params[1].trim();
-    var index = GetVariableOrPlain(environment, params[2].trim());
+    var index = getVariableOrPlain(environment, params[2].trim());
 	var source = params[3].trim();
 
 	var targetId = varArrayName + "_" + index;
@@ -248,7 +248,7 @@ addDualDialogTag('imageByVarArrayCondition', function (environment, parameters) 
 	var type = params[0].trim();
 	var targetArrayName = params[1].trim();
     var conditionArrayName = params[2].trim();
-    var length = GetVariableOrPlain(environment, params[3].trim());;
+    var length = getVariableOrPlain(environment, params[3].trim());;
 	var soure0 = params[4].trim();
 	var soure1 = params[5].trim();
 
@@ -281,11 +281,11 @@ addDualDialogTag('imageByVarArrayCondition', function (environment, parameters) 
  * til_UI_0's sprite will change to til_digit_2's;
  * til_UI_1's sprite will change to til_digit_4's;
  */
-addDialogTag('imageV2Now', function (environment, parameters) {
+addDualDialogTag('imageV2', function (environment, parameters) {
     let params = parameters[0].split(',');
     let mapId = params[0];
-    let tgtId = GetVariableOrPlain(environment, params[1].trim());
-    let srcId = GetVariableOrPlain(environment, params[2].trim());
+    let tgtId = getVariableOrPlain(environment, params[1].trim());
+    let srcId = getVariableOrPlain(environment, params[2].trim());
 
     
 

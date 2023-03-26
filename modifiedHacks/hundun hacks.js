@@ -117,3 +117,17 @@ addDualDialogTag('compareV2', function (environment, parameters) {
     }
     return result;
 });
+
+/**
+ * Usage:
+ * {var_a = 42}
+ * {value = (getPointerValue "*var_a")}
+ * 
+ * Result:
+ * value == 42
+*/
+addDualDialogTag('getPointerValue', function (environment, parameters) {
+	const params = parameters[0].split(',');
+    const arg0 = getVariableOrPlain(environment, params[0].trim());
+    return arg0;
+});
