@@ -158,7 +158,7 @@ addDualDialogTag('imagePal', editPalette);
  *  til_UI_1's sprite will change to til_digit_2's;
  *  til_UI_0's sprite will change to til_digit_empty's;
  */
-addDialogTag('updateNumberImagesNow', function (environment, parameters) {
+addDialogTag('updateNumberImages', function (environment, parameters) {
 	let params = parameters[0].split(',');
 	let type = params[0];
 	let targetIdStart = params[1].trim();
