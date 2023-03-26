@@ -57,45 +57,90 @@ SPR A
 00100100
 POS room0 4,4
 
-SPR spr_cat
+# ------ SPR ------
+
+SPR spr_grapeVine_working
+00000000
+00001000
+00011100
+00001000
 00000000
 00000000
-01010001
-01110001
-01110010
-01111100
-00111100
+00011000
 00100100
-NAME spr_cat
-DLG dlg_cat
-POS room0 8,12
-BLIP 1
+>
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00011000
+00100100
+NAME spr_grapeVine_working
+DLG dlg_grapeVine_working
+
+SPR spr_grapeVine_idle
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00011000
+00100100
+NAME spr_grapeVine_idle
+DLG dlg_grapeVine_idle
+POS room0 5,5
+
+SPR spr_crushMachine_working
+01111100
+00010000
+11111110
+10101010
+10101010
+10101010
+10101010
+11111110
+>
+00111000
+00010000
+11111110
+10101010
+10101010
+10101010
+10101010
+11111110
+NAME spr_crushMachine_working
+DLG dlg_crushMachine_working
+
+SPR spr_crushMachine_idle
+01111100
+00010000
+11111110
+10101010
+10101010
+10101010
+10101010
+11111110
+NAME spr_crushMachine_idle
+DLG dlg_crushMachine_idle
+POS room0 6,5
+
+# ------ UI ------
 
 SPR UI_holdingItemSlot
+00111000
+01000100
+00001000
+00010000
+00100000
 00000000
-00000000
-01010001
-01110001
-01110010
-01111100
-00111100
-00100100
+00100000
+00000001
 NAME UI_holdingItemSlot
 DLG 0
 POS room0 0,0
-
-SPR spr_box
-00000000
-00000000
-01010001
-01110001
-01110010
-01111100
-00111100
-00100100
-NAME spr_box
-DLG dlg_box
-POS room0 5,5
 
 SPR UI_holdingItem_none
 00000000
@@ -108,7 +153,7 @@ SPR UI_holdingItem_none
 00000000
 NAME UI_holdingItem_none
 
-SPR UI_holdingItem_grape
+SPR UI_holdingItem_grapeBunch
 00000000
 00000000
 00000000
@@ -117,46 +162,88 @@ SPR UI_holdingItem_grape
 00100100
 00011000
 00000000
-NAME UI_holdingItem_grape
+NAME UI_holdingItem_grapeBunch
+
+# ------ dlg of logic ------
 
 DLG dlg_onStart
 """
-(jumpNow "dlg_updateUI")
+into dlg_onStart.{var_grapeVineState = 1}(jumpNow "dlg_updateUI")
 """
 NAME dlg_onStart
 
-DLG dlg_cat
-"""
-{let_holdingItemId = (getPointerValueNow "*holdingItemId")}
-I'm a cat, you are holding {print let_holdingItemId}, I will take it.
-{holdingItemId = "UI_holdingItem_none"}(jump "dlg_updateUI")
-"""
-NAME dlg_cat
-
-DLG dlg_box
+DLG dlg_updateUI
 """
 {
-  - holdingItemId == "UI_holdingItem_none" ?
-    You take a bunch of grapes.{holdingItemId = "UI_holdingItem_grape"}(jump "dlg_updateUI")
+  - var_grapeVineState == 1 ?
+    (replaceAllNow "SPR, spr_grapeVine_idle, SPR, spr_grapeVine_working, room0")
+  - else
+    (replaceAllNow "SPR, spr_grapeVine_working, SPR, spr_grapeVine_idle, room0")
+}{
+  - var_crushMachineState == 1 ?
+    (replaceAllNow "SPR, spr_crushMachine_idle, SPR, spr_crushMachine_working, room0")
+  - else
+    (replaceAllNow "SPR, spr_crushMachine_working, SPR, spr_crushMachine_idle, room0")
+}(imageV2Now "SPR, UI_holdingItemSlot, *var_holdingItem")
+"""
+NAME dlg_updateUI
+
+# ------ dlg of sprite ------
+
+DLG dlg_grapeVine_working
+"""
+{
+  - var_holdingItem == "UI_holdingItem_none" ?
+    You take a bunch of grapes.{var_holdingItem = "UI_holdingItem_grapeBunch"}{var_grapeVineState = 0}(jump "dlg_updateUI")
   - else
     You can't hold anymore.  
 }
 """
-NAME dlg_box
+NAME dlg_grapeVine_working
 
-DLG dlg_updateUI
+DLG dlg_grapeVine_idle
 """
-(imageV2Now "SPR, UI_holdingItemSlot, *holdingItemId")
+Here is empty.
 """
-NAME dlg_updateUI
+NAME dlg_grapeVine_idle
+
+DLG dlg_crushMachine_working
+"""
+{
+  - var_holdingItem == "UI_holdingItem_none" ?
+    You take some grape juice.{var_holdingItem = "UI_holdingItem_grapeJuice"}{var_crushMachineState = 0}(jump "dlg_updateUI")
+  - else
+    You can't hold anymore.  
+}
+"""
+NAME dlg_crushMachine_working
+
+DLG dlg_crushMachine_idle
+"""
+{
+  - var_holdingItem == "UI_holdingItem_grapeBunch" ?
+    You put grapes into the crush machine.{var_holdingItem = "UI_holdingItem_none"}{var_crushMachineState = 1}(jump "dlg_updateUI")
+  - else
+    The crush machine need grapes.  
+}
+"""
+NAME dlg_crushMachine_idle
+
+# ------ vars ------
 
 VAR a
 42
 
-VAR holdingItemId
+VAR var_holdingItem
 UI_holdingItem_none
 
+VAR var_grapeVineState
+0
 
+VAR var_crushMachineState
+0
+
+# ------ tunes ------
 
 TUNE 1
 3d,0,0,0,3d5,0,0,0,3l,0,0,0,3s,0,0,0

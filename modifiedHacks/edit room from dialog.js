@@ -149,7 +149,7 @@ Parameters:
 import bitsy from 'bitsy';
 import { addDualDialogTag } from '@bitsy/hecks/src/helpers/kitsy-script-toolkit';
 import { clamp, getRelativeNumber } from '@bitsy/hecks/src/helpers/utils';
-import { GetArrayAt } from './helpers/hundun-toolkit';
+import { getArrayAt } from './helpers/hundun-toolkit';
 
 // Draws an Item, Sprite, or Tile at a location in a room
 // {draw "mapId, sourceId, xPos, yPos, roomID"}
@@ -817,7 +817,7 @@ addDualDialogTag('drawBoxByCondition', function (environment, parameters) {
 	let source;
     for (let x = 0; x < varArrayWidth; x++) {
         for (let y = 0; y < varArrayHeight; y++) {
-			let value = GetArrayAt(environment, varArrayName, [x, y]);
+			let value = getArrayAt(environment, varArrayName, [x, y]);
 			let drawX = x0 + x;
 			let drawY = y0 + y;
             if (value == 0) {
@@ -858,9 +858,9 @@ addDualDialogTag('drawArrayByCondition', function (environment, parameters) {
 
 	let source;
     for (let i = 0; i < varArrayLength; i++) {
-		let value = GetArrayAt(environment, varArrayName, [i]);
-		let drawX = GetArrayAt(environment, varSpawnXArrayName, [i]);
-		let drawY = GetArrayAt(environment, varSpawnYArrayName, [i]);
+		let value = getArrayAt(environment, varArrayName, [i]);
+		let drawX = getArrayAt(environment, varSpawnXArrayName, [i]);
+		let drawY = getArrayAt(environment, varSpawnYArrayName, [i]);
 		if (value == 0) {
 			source = source0;
 		} else {
