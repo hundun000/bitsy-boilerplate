@@ -57,7 +57,7 @@ import bitsy from 'bitsy';
 import { getImageData, setImageData } from '@bitsy/hecks/src/helpers/edit image at runtime';
 import { addDualDialogTag, after, addDialogTag } from '@bitsy/hecks/src/helpers/kitsy-script-toolkit';
 import { getImage } from '@bitsy/hecks/src/helpers/utils';
-import { GetVariableOrPlain } from './helpers/hundun-toolkit';
+import { getVariableOrPlain } from './helpers/hundun-toolkit';
 
 // map of maps
 var maps;
@@ -220,7 +220,7 @@ addDualDialogTag('imageByVarArrayItem', function (environment, parameters) {
 	var params = parameters[0].split(',');
 	var type = params[0].trim();
     var varArrayName = params[1].trim();
-    var index = GetVariableOrPlain(environment, params[2].trim());
+    var index = getVariableOrPlain(environment, params[2].trim());
 	var source = params[3].trim();
 
 	var targetId = varArrayName + "_" + index;
@@ -248,7 +248,7 @@ addDualDialogTag('imageByVarArrayCondition', function (environment, parameters) 
 	var type = params[0].trim();
 	var targetArrayName = params[1].trim();
     var conditionArrayName = params[2].trim();
-    var length = GetVariableOrPlain(environment, params[3].trim());;
+    var length = getVariableOrPlain(environment, params[3].trim());;
 	var soure0 = params[4].trim();
 	var soure1 = params[5].trim();
 
@@ -284,8 +284,8 @@ addDualDialogTag('imageByVarArrayCondition', function (environment, parameters) 
 addDialogTag('imageV2Now', function (environment, parameters) {
     let params = parameters[0].split(',');
     let mapId = params[0];
-    let tgtId = GetVariableOrPlain(environment, params[1].trim());
-    let srcId = GetVariableOrPlain(environment, params[2].trim());
+    let tgtId = getVariableOrPlain(environment, params[1].trim());
+    let srcId = getVariableOrPlain(environment, params[2].trim());
 
     
 
