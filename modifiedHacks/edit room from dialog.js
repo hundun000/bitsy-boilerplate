@@ -869,3 +869,25 @@ addDualDialogTag('drawArrayByCondition', function (environment, parameters) {
 		drawAt(type, source, drawX, drawY, map);
     }
 });
+
+
+/**
+ * Usage:
+ * (replaceArray "5, ITM, fromArray, ITM, toArray, rm_A")
+ * 
+*/
+addDualDialogTag('replaceArray', function (environment, parameters) {
+	let params = parameters[0].split(',');
+	const varArrayLength = params[0].trim();
+	const fromType = params[1].trim();
+	const fromArray = params[2].trim();
+	const newType = params[3].trim();
+    const toArray = params[4].trim();
+	const map = params[5].trim();
+
+    for (let i = 0; i < varArrayLength; i++) {
+		const from = fromArray + "_" + i;
+		const to = toArray + "_" + i;
+		replaceBoxAt(fromType, from, newType, to, 0, 0, bitsy.mapsize - 1, bitsy.mapsize - 1, map);
+    }
+});

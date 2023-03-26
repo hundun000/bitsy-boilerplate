@@ -59,7 +59,7 @@ POS room0 4,4
 
 # ------ SPR ------
 
-SPR spr_grapeVine_working
+SPR spr_grapeVine_working_0
 00000000
 00001000
 00011100
@@ -77,10 +77,19 @@ SPR spr_grapeVine_working
 00000000
 00011000
 00100100
-NAME spr_grapeVine_working
+NAME spr_grapeVine_working_0
 DLG dlg_grapeVine_working
 
-SPR spr_grapeVine_idle
+SPR spr_grapeVine_working_1
+00000000
+00001000
+00011100
+00001000
+00000000
+00000000
+00011000
+00100100
+>
 00000000
 00000000
 00000000
@@ -89,9 +98,34 @@ SPR spr_grapeVine_idle
 00000000
 00011000
 00100100
-NAME spr_grapeVine_idle
+NAME spr_grapeVine_working_1
+DLG dlg_grapeVine_working
+
+SPR spr_grapeVine_idle_0
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00011000
+00100100
+NAME spr_grapeVine_idle_0
 DLG dlg_grapeVine_idle
 POS room0 5,5
+
+SPR spr_grapeVine_idle_1
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00011000
+00100100
+NAME spr_grapeVine_idle_1
+DLG dlg_grapeVine_idle
+POS room0 5,6
 
 SPR spr_crushMachine_working
 01111100
@@ -216,6 +250,65 @@ NAME spr_heaterMachine_idle
 DLG dlg_heaterMachine_idle
 POS room0 8,5
 
+SPR spr_barrelMachine_working_0
+00000000
+00111111
+01001000
+10000100
+10000100
+10000100
+01001000
+00111111
+NAME spr_barrelMachine_working_0
+DLG dlg_barrelMachine_working
+
+SPR spr_barrelMachine_working_1
+00000010
+11110001
+00001000
+00000100
+00000100
+00000100
+00001000
+11110000
+>
+00000001
+11110010
+00001000
+00000100
+00000100
+00000100
+00001000
+11110000
+NAME spr_barrelMachine_working_1
+DLG dlg_barrelMachine_working
+
+SPR spr_barrelMachine_idle_0
+00000000
+00111111
+01001000
+10000100
+10000100
+10000100
+01001000
+00111111
+NAME spr_barrelMachine_idle_0
+DLG dlg_barrelMachine_idle
+POS room0 9,5
+
+SPR spr_barrelMachine_idle_1
+00000000
+11110000
+00001000
+00000100
+00000100
+00000100
+00001000
+11110000
+NAME spr_barrelMachine_idle_1
+DLG dlg_barrelMachine_idle
+POS room0 9,5
+
 # ------ UI ------
 
 SPR UI_holdingItemSlot
@@ -279,7 +372,7 @@ NAME UI_holdingItem_grapeAlcohol
 
 DLG dlg_onStart
 """
-into dlg_onStart.{var_grapeVineState = 1}(jumpNow "dlg_updateUI")
+{var_grapeVineState = 1}(jumpNow "dlg_updateUI")
 """
 NAME dlg_onStart
 
@@ -287,9 +380,9 @@ DLG dlg_updateUI
 """
 {
   - var_grapeVineState == 1 ?
-    (replaceAllNow "SPR, spr_grapeVine_idle, SPR, spr_grapeVine_working, room0")
+    (replaceArrayNow "2, SPR, spr_grapeVine_idle, SPR, spr_grapeVine_working, room0")
   - var_grapeVineState == 0 ?
-    (replaceAllNow "SPR, spr_grapeVine_working, SPR, spr_grapeVine_idle, room0")
+    (replaceArrayNow "2, SPR, spr_grapeVine_working, SPR, spr_grapeVine_idle, room0")
 }{
   - var_crushMachineState == 1 ?
     (replaceAllNow "SPR, spr_crushMachine_idle, SPR, spr_crushMachine_working, room0")
@@ -303,10 +396,15 @@ DLG dlg_updateUI
   - var_fermentationMachineState == 0 ?
     (replaceAllNow "SPR, spr_fermentationMachine_workingPhase2, SPR, spr_fermentationMachine_idle, room0")
 }{
-  - var_heaterState == 1 ?
+  - var_heaterMachineState == 1 ?
     (replaceAllNow "SPR, spr_heaterMachine_idle, SPR, spr_heaterMachine_working, room0")
-  - var_heaterState == 0 ?
+  - var_heaterMachineState == 0 ?
     (replaceAllNow "SPR, spr_heaterMachine_working, SPR, spr_heaterMachine_idle, room0")
+}{
+  - var_barrelMachineState == 1 ?
+    (replaceArrayNow "2, SPR, spr_barrelMachine_idle, SPR, spr_barrelMachine_working, room0")
+  - var_barrelMachineState == 0 ?
+    (replaceArrayNow "2, SPR, spr_barrelMachine_working, SPR, spr_barrelMachine_idle, room0")
 }(imageV2Now "SPR, UI_holdingItemSlot, *var_holdingItem")
 """
 NAME dlg_updateUI
@@ -366,7 +464,7 @@ NAME dlg_fermentationMachine_workingPhase2
 DLG dlg_fermentationMachine_workingPhase1
 """
 {
-  - var_heaterState == 0 ?
+  - var_heaterMachineState == 0 ?
     You need to turn on the heater for fermentation.
   - else
     Keeping fermentation...{var_fermentationMachineState = 2}(jump "dlg_updateUI")
@@ -387,13 +485,13 @@ NAME dlg_fermentationMachine_idle
 
 DLG dlg_heaterMachine_working
 """
-You turn off the heater.{var_heaterState = 0}(jump "dlg_updateUI")
+You turn off the heater.{var_heaterMachineState = 0}(jump "dlg_updateUI")
 """
 NAME dlg_heaterMachine_working
 
 DLG dlg_heaterMachine_idle
 """
-You turn on the heater.{var_heaterState = 1}(jump "dlg_updateUI")
+You turn on the heater.{var_heaterMachineState = 1}(jump "dlg_updateUI")
 """
 NAME dlg_heaterMachine_idle
 
@@ -414,7 +512,10 @@ VAR var_crushMachineState
 VAR var_fermentationMachineState
 0
 
-VAR var_heaterState
+VAR var_heaterMachineState
+0
+
+VAR var_barrelMachineState
 0
 
 # ------ tunes ------
