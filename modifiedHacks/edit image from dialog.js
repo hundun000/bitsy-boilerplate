@@ -146,7 +146,7 @@ addDualDialogTag('imagePal', editPalette);
 
 /* 
  * {a = 42}
- * (updateNumberImagesNow "TIL, 'til_UI_', 'til_digit_', 'til_digit_empty', 3, 'a'")
+ * (updateNumberImagesNow "TIL, til_UI_, til_digit_, til_digit_empty, 3, a")
  *  til_UI_2's sprite will change to til_digit_empty's;
  *  til_UI_1's sprite will change to til_digit_4's;
  *  til_UI_0's sprite will change to til_digit_2's;
@@ -269,4 +269,31 @@ addDualDialogTag('imageByVarArrayCondition', function (environment, parameters) 
 		editImage(environment, editImageParameters);
 	}
 
+});
+
+/* 
+ * {var_tgtPointer = "til_UI_1"}
+ * {var_srcPointer = "til_digit_4"}
+ * (imageByPointerNow "TIL, var_tgtPointer, var_srcPointer")
+ * {var_tgtPointer = "til_UI_0"}
+ * {var_srcPointer = "til_digit_2"}
+ * (imageByPointerNow "TIL, var_tgtPointer, var_srcPointer")
+ * til_UI_0's sprite will change to til_digit_2's;
+ * til_UI_1's sprite will change to til_digit_4's;
+ */
+addDialogTag('imageByPointerNow', function (environment, parameters) {
+    let params = parameters[0].split(',');
+    let mapId = params[0];
+    let tgtPointer = params[1].trim();
+    let srcPointer = params[2].trim();
+
+    let tgtId = environment.GetVariable(tgtPointer);
+    let srcId = environment.GetVariable(srcPointer);
+
+    if (tgtId == undefined || srcId == undefined) {
+        throw new Error("pointer params point to undefined: " + parameters[0]);
+    }
+
+    let editImageParameters = [mapId + "," + tgtId + "," + srcId];
+    editImage(environment, editImageParameters);
 });
