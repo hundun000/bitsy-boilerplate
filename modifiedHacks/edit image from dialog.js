@@ -153,12 +153,12 @@ addDualDialogTag('imagePal', editPalette);
  *  til_UI_1's sprite will change to til_digit_4's;
  *  til_UI_0's sprite will change to til_digit_2's;
  * 
- *  (updateNumberImagesNow "TIL, 'til_UI_', 'til_digit_', 'til_digit_empty', 3, 'a', true")
+ *  (updateNumberImagesNow "TIL, til_UI_, til_digit_, til_digit_empty, 3, a, true")
  *  til_UI_2's sprite will change to til_digit_4's;
  *  til_UI_1's sprite will change to til_digit_2's;
  *  til_UI_0's sprite will change to til_digit_empty's;
  */
-addDialogTag('updateNumberImages', function (environment, parameters) {
+addDialogTag('updateNumberImagesNow', function (environment, parameters, onReturn) {
 	let params = parameters[0].split(',');
 	let type = params[0];
 	let targetIdStart = params[1].trim();
@@ -205,7 +205,7 @@ addDialogTag('updateNumberImages', function (environment, parameters) {
 		let editImageParameters = [type + "," + targetId + "," + sourId];
 		editImage(environment, editImageParameters);
 	}
-
+	onReturn(null);
 });
 
 /**
@@ -281,7 +281,7 @@ addDualDialogTag('imageByVarArrayCondition', function (environment, parameters) 
  * til_UI_0's sprite will change to til_digit_2's;
  * til_UI_1's sprite will change to til_digit_4's;
  */
-addDialogTag('imageV2Now', function (environment, parameters) {
+addDualDialogTag('imageV2', function (environment, parameters) {
     let params = parameters[0].split(',');
     let mapId = params[0];
     let tgtId = getVariableOrPlain(environment, params[1].trim());

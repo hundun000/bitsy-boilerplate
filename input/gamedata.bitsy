@@ -1,4 +1,4 @@
-Write your game's title here(jump "dlg_onStart")
+grape wine making game(jump "dlg_onStart")
 
 # BITSY VERSION 8.4
 
@@ -16,13 +16,13 @@ NAME blueprint
 
 ROOM room0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,UI_storageCountBit_0,UI_storageCountBit_1,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,UI_leftBracket,UI_holdingItemSlot,UI_rightBracket,0,0,UI_storagedGrapeWine,UI_x,UI_storageCountBit_1,UI_storageCountBit_0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,til_indoor_NESBrickWallTop5,til_indoor_NESBrickWallTop0,til_indoor_NESBrickWallTop1,til_indoor_NESBrickWallTop1,til_indoor_NESBrickWallTop1,til_indoor_NESBrickWallTop1,til_indoor_NESBrickWallTop1,til_indoor_NESBrickWallTop1,til_indoor_NESBrickWallTop1,til_indoor_NESBrickWallTop5,0,0,0
 0,0,0,til_indoor_NESBrickWallTop5,til_indoor_NESWallpaperC5,til_indoor_NESWallpaperC5,til_indoor_NESWallpaperC5,til_indoor_NESWallpaperC5,til_indoor_NESWallpaperC5,til_indoor_NESWallpaperC5,til_indoor_NESWallpaperC5,til_indoor_NESWallpaperC5,til_indoor_NESBrickWallTop5,0,0,0
 0,0,0,til_indoor_NESBrickWallTop5,til_indoor_NESWallpaperC8,til_indoor_NESWallpaperC8,til_indoor_NESWallpaperC8,til_indoor_NESWallpaperC8,til_indoor_NESWallpaperC8,til_indoor_NESWallpaperC8,til_indoor_NESWallpaperC8,til_indoor_NESWallpaperC8,til_indoor_NESBrickWallTop5,0,0,0
 0,0,0,til_indoor_NESBrickWallTop5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESBrickWallTop5,0,0,0
-0,0,0,til_indoor_NESBrickWallTop5,til_indoor_NESFloorB5,til_indoor_NESFloorB12,til_indoor_NESFloorB5,til_indoor_NESFloorB12,til_indoor_NESFloorB12,til_indoor_NESFloorB5,til_indoor_NESFloorB12,til_indoor_NESFloorB12,til_indoor_NESBrickWallTop5,0,0,0
+0,0,0,til_indoor_NESBrickWallTop5,til_indoor_NESFloorB5,til_indoor_NESFloorB12,til_indoor_NESFloorB12,til_indoor_NESFloorB12,til_indoor_NESFloorB12,til_indoor_NESFloorB12,til_indoor_NESFloorB12,til_indoor_NESFloorB5,til_indoor_NESBrickWallTop5,0,0,0
 0,0,0,til_indoor_NESBrickWallTop5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESBrickWallTop5,0,0,0
 0,0,0,til_indoor_NESBrickWallTop5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESFloorB5,til_indoor_NESBrickWallTop5,0,0,0
 0,0,0,til_indoor_NESBrickWallTop4,til_indoor_NESBrickWallTop2,til_indoor_NESBrickWallTop2,til_indoor_NESBrickWallTop2,til_indoor_NESBrickWallTop2,til_indoor_NESBrickWallTop2,til_indoor_NESFloorB5,til_indoor_NESBrickWallTop1,til_indoor_NESBrickWallTop1,til_indoor_NESBrickWallTop4,0,0,0
@@ -434,6 +434,19 @@ SPR A
 00100100
 POS room0 9,14
 
+SPR spr_trashCan
+00000000
+00011000
+11111111
+01000010
+01000010
+01000010
+01000010
+01111110
+NAME spr_trashCan
+DLG dlg_trashCan
+POS room0 10,13
+
 SPR spr_grapeVine_working_0
 00000000
 00000100
@@ -589,7 +602,7 @@ SPR spr_fermentationMachine_idle
 11111110
 NAME spr_fermentationMachine_idle
 DLG dlg_fermentationMachine_idle
-POS room0 7,6
+POS room0 6,6
 
 SPR spr_heaterMachine_working
 00010000
@@ -623,7 +636,7 @@ SPR spr_heaterMachine_idle
 01000100
 NAME spr_heaterMachine_idle
 DLG dlg_heaterMachine_idle
-POS room0 8,6
+POS room0 7,6
 
 SPR spr_barrelMachine_working_0
 00000000
@@ -669,7 +682,7 @@ SPR spr_barrelMachine_idle_0
 00111111
 NAME spr_barrelMachine_idle_0
 DLG dlg_barrelMachine_idle
-POS room0 9,6
+POS room0 8,6
 
 SPR spr_barrelMachine_idle_1
 00000000
@@ -682,7 +695,7 @@ SPR spr_barrelMachine_idle_1
 11110000
 NAME spr_barrelMachine_idle_1
 DLG dlg_barrelMachine_idle
-POS room0 10,6
+POS room0 9,6
 
 SPR spr_storage_0
 11111111
@@ -695,7 +708,7 @@ SPR spr_storage_0
 11111111
 NAME spr_storage_0
 DLG dlg_storage
-POS room0 11,6
+POS room0 10,6
 
 SPR spr_storage_1
 11111111
@@ -708,11 +721,67 @@ SPR spr_storage_1
 11111111
 NAME spr_storage_1
 DLG dlg_storage
-POS room0 11,5
+POS room0 10,5
 
 # ------ UI ------
 
-SPR UI_holdingItemSlot
+TIL UI_leftBracket
+00000000
+00000110
+00000100
+00000100
+00000100
+00000100
+00000110
+00000000
+NAME UI_leftBracket
+
+TIL UI_rightBracket
+00000000
+01100000
+00100000
+00100000
+00100000
+00100000
+01100000
+00000000
+NAME UI_rightBracket
+
+TIL UI_storagedGrapeWine
+00000000
+01100000
+00100000
+00100000
+00100000
+00100000
+01100000
+00000000
+NAME UI_storagedGrapeWine
+
+TIL UI_storagedGrapeWine
+00011000
+00011000
+00111100
+00111100
+00111100
+00111100
+00111100
+00111100
+NAME UI_storagedGrapeWine
+
+TIL UI_x
+00000000
+00000000
+00000000
+01000100
+00101000
+00010000
+00101000
+01000100
+NAME UI_x
+
+
+TIL UI_holdingItemSlot
 00111000
 01000100
 00001000
@@ -721,8 +790,7 @@ SPR UI_holdingItemSlot
 00000000
 00100000
 00000001
-NAME UI_holdingItemSlot
-POS room0 0,0
+TIL UI_holdingItemSlot
 
 TIL UI_storageCountBit_0
 00111000
@@ -746,7 +814,7 @@ TIL UI_storageCountBit_1
 00000001
 NAME UI_storageCountBit_1
 
-SPR UI_holdingItem_none
+TIL UI_holdingItem_none
 00000000
 00000000
 00000000
@@ -757,43 +825,43 @@ SPR UI_holdingItem_none
 00000000
 NAME UI_holdingItem_none
 
-SPR UI_holdingItem_grapeBunch
-00000000
-00000000
-00000000
-00111100
-01100100
-00100100
+TIL UI_holdingItem_grapeBunch
+00100000
+00010000
+01111110
+11111111
+00111110
+00011100
 00011000
-00000000
+00001000
 NAME UI_holdingItem_grapeBunch
 
-SPR UI_holdingItem_grapeJuice
+TIL UI_holdingItem_grapeJuice
 00000000
 00001000
 00010100
 00100100
 01000010
 01000010
+01000010
 00111100
-00000000
 NAME UI_holdingItem_grapeJuice
 
-SPR UI_holdingItem_grapeAlcohol
+TIL UI_holdingItem_grapeAlcohol
 00000000
 00001000
 00010100
 00110100
 01100010
+01100010
 01110010
 00111100
-00000000
 NAME UI_holdingItem_grapeAlcohol
 
-SPR UI_holdingItem_grapeWine
-00000000
+TIL UI_holdingItem_grapeWine
 00011000
 00011000
+00111100
 00111100
 00111100
 00111100
@@ -961,17 +1029,28 @@ DLG dlg_updateUI
     (replaceArrayNow "2, SPR, spr_barrelMachine_idle, SPR, spr_barrelMachine_working, room0")
   - var_barrelMachineState == 0 ?
     (replaceArrayNow "2, SPR, spr_barrelMachine_working, SPR, spr_barrelMachine_idle, room0")
-}(imageV2Now "SPR, UI_holdingItemSlot, *var_holdingItem")(updateNumberImagesNow "TIL, 'UI_storageCountBit_', 'source_char_', 'source_char_empty', 2, 'var_storageCount', true")
+}(imageV2Now "TIL, UI_holdingItemSlot, *var_holdingItem")(updateNumberImagesNow "TIL, UI_storageCountBit_, source_char_, source_char_empty, 2, var_storageCount, true")
 """
 NAME dlg_updateUI
 
 # ------ dlg of sprite ------
 
+DLG dlg_trashCan
+"""
+{
+  - var_holdingItem == "UI_holdingItem_none" ?
+    This is a trash can.
+  - else
+    You throw you're holding into the trash can.  {var_holdingItem = "UI_holdingItem_none"}(jump "dlg_updateUI")
+}
+"""
+NAME dlg_trashCan
+
 DLG dlg_grapeVine_working
 """
 {
   - var_holdingItem == "UI_holdingItem_none" ?
-    You take a bunch of grapes.{var_holdingItem = "UI_holdingItem_grapeBunch"}{var_grapeVineState = 0}(jump "dlg_updateUI")
+    You take a bunch of grapes.{var_holdingItem = "UI_holdingItem_grapeBunch"}(jump "dlg_updateUI")
   - else
     You can't hold anymore.  
 }
@@ -1034,7 +1113,7 @@ DLG dlg_fermentationMachine_idle
   - var_holdingItem == "UI_holdingItem_grapeJuice" ?
     You put grape juice into the fermentation machine.{var_holdingItem = "UI_holdingItem_none"}{var_fermentationMachineState = 1}(jump "dlg_updateUI")
   - else
-    The crush machine need grape juice.  
+    The fermentation machine need grape juice.  
 }
 """
 NAME dlg_fermentationMachine_idle
@@ -1051,12 +1130,11 @@ You turn on the heater.{var_heaterMachineState = 1}(jump "dlg_updateUI")
 """
 NAME dlg_heaterMachine_idle
 
-
 DLG dlg_barrelMachine_working
 """
 {
   - var_holdingItem == "UI_holdingItem_none" ?
-    You take some grape wine.{var_holdingItem = "UI_holdingItem_grapeWine"}{var_barrelMachineState = 0}(jump "dlg_updateUI")
+    You take a bottle of grape wine.{var_holdingItem = "UI_holdingItem_grapeWine"}{var_barrelMachineState = 0}(jump "dlg_updateUI")
   - else
     You can't hold anymore.  
 }
@@ -1066,10 +1144,10 @@ NAME dlg_barrelMachine_working
 DLG dlg_barrelMachine_idle
 """
 {
-  - var_holdingItem == "UI_holdingItem_grapeJuice" ?
-    You put grape alcohol into the barrel machine.{var_holdingItem = "UI_holdingItem_none"}{var_barrelMachineState = 1}(jump "dlg_updateUI")
+  - var_holdingItem == "UI_holdingItem_grapeAlcohol" ?
+    You put grape alcohol into the barrel.{var_holdingItem = "UI_holdingItem_none"}{var_barrelMachineState = 1}(jump "dlg_updateUI")
   - else
-    The crush machine need grape alcohol.  
+    The barrel need grape alcohol.  
 }
 """
 NAME dlg_barrelMachine_idle
@@ -1078,7 +1156,7 @@ DLG dlg_storage
 """
 {
   - var_holdingItem == "UI_holdingItem_grapeWine" ?
-    You put grape wine into the barrel machine.{var_holdingItem = "UI_holdingItem_none"}{var_storageCount = var_storageCount + 1}(jump "dlg_updateUI")
+    You put grape wine into the storage.{var_holdingItem = "UI_holdingItem_none"}{var_storageCount = var_storageCount + 1}(jump "dlg_updateUI")
   - else
     The storage need grape wine.  
 }
@@ -1088,11 +1166,8 @@ NAME dlg_storage
 
 # ------ vars ------
 
-VAR a
-42
-
 VAR var_holdingItem
-UI_holdingItem_grapeWine
+UI_holdingItem_none
 
 VAR var_grapeVineState
 0
