@@ -149,14 +149,14 @@ addDualDialogTag('imagePal', editPalette);
 /* 
  * {a = 42}
  * (updateNumberImagesNow "TIL, til_UI_, til_digit_, til_digit_empty, 3, a")
- *  til_UI_2's sprite will change to til_digit_empty's;
- *  til_UI_1's sprite will change to til_digit_4's;
- *  til_UI_0's sprite will change to til_digit_2's;
- * 
- *  (updateNumberImagesNow "TIL, til_UI_, til_digit_, til_digit_empty, 3, a, true")
- *  til_UI_2's sprite will change to til_digit_4's;
+ *  til_UI_0's sprite will change to til_digit_4's;
  *  til_UI_1's sprite will change to til_digit_2's;
+ *  til_UI_2's sprite will change to til_digit_empty's;
+ * 
+ *  // if rightSide = params[6] == true
  *  til_UI_0's sprite will change to til_digit_empty's;
+ *  til_UI_1's sprite will change to til_digit_4's;
+ *  til_UI_2's sprite will change to til_digit_2's;
  */
 addDialogTag('updateNumberImagesNow', function (environment, parameters, onReturn) {
 	let params = parameters[0].split(',');
@@ -166,7 +166,7 @@ addDialogTag('updateNumberImagesNow', function (environment, parameters, onRetur
 	let emptyNumberId = params[3].trim();
 	let size = parseInt(params[4].trim());
 	let valuePointer = params[5].trim();
-	let left = params[6].trim();
+	let rightSide = params[6]?.trim();
 
 	let value = parseInt(environment.GetVariable(valuePointer));
 	if (value == undefined) {
@@ -187,7 +187,7 @@ addDialogTag('updateNumberImagesNow', function (environment, parameters, onRetur
 		let targetId = (targetIdStart + index);
 		
 		let sourId;
-		if (left) {
+		if (!rightSide) {
 			if (index >= size - notEmptyDigitLength) {
 				sourId = (sourIdStart + digits[index - (size -notEmptyDigitLength)]);
 			} else {
@@ -266,6 +266,7 @@ addDualDialogTag('imageByVarArrayCondition', function (environment, parameters) 
 		editImage(environment, editImageParameters);
 	}
 
+	onReturn(null)
 });
 
 /* 
