@@ -149,7 +149,7 @@ Parameters:
 import bitsy from 'bitsy';
 import { addDualDialogTag } from '@bitsy/hecks/src/helpers/kitsy-script-toolkit';
 import { clamp, getRelativeNumber } from '@bitsy/hecks/src/helpers/utils';
-import { getArrayAt } from './helpers/hundun-toolkit';
+import { getArrayAt } from '../helpers/hundun-toolkit';
 
 // Draws an Item, Sprite, or Tile at a location in a room
 // {draw "mapId, sourceId, xPos, yPos, roomID"}
