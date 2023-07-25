@@ -57,6 +57,7 @@ import bitsy from 'bitsy';
 import { getImageData, setImageData } from '@bitsy/hecks/src/helpers/edit image at runtime';
 import { addDualDialogTag, after, addDialogTag } from '@bitsy/hecks/src/helpers/kitsy-script-toolkit';
 import { getImage } from '@bitsy/hecks/src/helpers/utils';
+import { getVariableOrPlain } from '../helpers/hundun-toolkit';
 
 // map of maps
 var maps;
@@ -144,6 +145,7 @@ function editPalette(environment, parameters) {
 addDualDialogTag('image', editImage);
 addDualDialogTag('imagePal', editPalette);
 
+// ------ hundun modified hack area ------
 /* 
  * {a = 42}
  * (updateNumberImagesNow "TIL, til_UI_, til_digit_, til_digit_empty, 3, a")
@@ -158,7 +160,7 @@ addDualDialogTag('imagePal', editPalette);
  */
 addDialogTag('updateNumberImagesNow', function (environment, parameters, onReturn) {
 	let params = parameters[0].split(',');
-	let mapId = params[0];
+	let type = params[0];
 	let targetIdStart = params[1].trim();
 	let sourIdStart = params[2].trim();
 	let emptyNumberId = params[3].trim();
@@ -200,7 +202,67 @@ addDialogTag('updateNumberImagesNow', function (environment, parameters, onRetur
 		}
 		
 
-		let editImageParameters = [mapId + "," + targetId + "," + sourId];
+		let editImageParameters = [type + "," + targetId + "," + sourId];
+		editImage(environment, editImageParameters);
+	}
+	onReturn(null);
+});
+
+/**
+ * Usage:
+ * {index = 0}
+ * (imageByVarArrayItem "SPR, spr_targetArray, *index, spr_source")
+ * 
+ *  Result equals:
+ *  (image "SPR, spr_targetArray_0, spr_source")
+*/
+addDualDialogTag('imageByVarArrayItem', function (environment, parameters) {
+	var params = parameters[0].split(',');
+	var type = params[0].trim();
+    var varArrayName = params[1].trim();
+    var index = getVariableOrPlain(environment, params[2].trim());
+	var source = params[3].trim();
+
+	var targetId = varArrayName + "_" + index;
+	let editImageParameters = [type + "," + targetId + "," + source];
+	editImage(environment, editImageParameters);
+});
+
+
+/**
+ * Usage:
+ * {length= 5}
+ * (imageByVarArrayCondition "SPR, spr_targetArray, myConditionArray, *length, spr_source0, spr_source1")
+ * 
+ * Result equals:
+ * for (i = 0 to 5)
+ * {
+      - myConditionArray_i == 0 ?
+        (image "SPR, spr_targetArray_i, spr_source0")
+      - else ?
+        (image "SPR, spr_targetArray_i, spr_source1")
+    }
+*/
+addDualDialogTag('imageByVarArrayCondition', function (environment, parameters) {
+	var params = parameters[0].split(',');
+	var type = params[0].trim();
+	var targetArrayName = params[1].trim();
+    var conditionArrayName = params[2].trim();
+    var length = getVariableOrPlain(environment, params[3].trim());;
+	var soure0 = params[4].trim();
+	var soure1 = params[5].trim();
+
+	for (var index = 0; index < length; index++) {
+		var targetId = targetArrayName + "_" + index;
+		var conditonKey = conditionArrayName + "_" + index;
+		var conditonValue = environment.GetVariable(conditonKey);
+		var source;
+		if (conditonValue == 0) {
+			source = soure0;
+		} else {
+			source = soure1;
+		}
+		let editImageParameters = [type + "," + targetId + "," + source];
 		editImage(environment, editImageParameters);
 	}
 
@@ -208,27 +270,25 @@ addDialogTag('updateNumberImagesNow', function (environment, parameters, onRetur
 });
 
 /* 
+ * Usage:
  * {var_tgtPointer = "til_UI_1"}
  * {var_srcPointer = "til_digit_4"}
- * (imageByPointerNow "TIL, var_tgtPointer, var_srcPointer")
+ * (imageV2Now "TIL, *var_tgtPointer, *var_srcPointer")
  * {var_tgtPointer = "til_UI_0"}
  * {var_srcPointer = "til_digit_2"}
- * (imageByPointerNow "TIL, var_tgtPointer, var_srcPointer")
+ * (imageV2Now "TIL, *var_tgtPointer, *var_srcPointer")
+ * 
+ * Result:
  * til_UI_0's sprite will change to til_digit_2's;
  * til_UI_1's sprite will change to til_digit_4's;
  */
-addDialogTag('imageByPointerNow', function (environment, parameters) {
+addDualDialogTag('imageV2', function (environment, parameters) {
     let params = parameters[0].split(',');
     let mapId = params[0];
-    let tgtPointer = params[1].trim();
-    let srcPointer = params[2].trim();
+    let tgtId = getVariableOrPlain(environment, params[1].trim());
+    let srcId = getVariableOrPlain(environment, params[2].trim());
 
-    let tgtId = environment.GetVariable(tgtPointer);
-    let srcId = environment.GetVariable(srcPointer);
-
-    if (tgtId == undefined || srcId == undefined) {
-        throw new Error("pointer params point to undefined: " + parameters[0]);
-    }
+    
 
     let editImageParameters = [mapId + "," + tgtId + "," + srcId];
     editImage(environment, editImageParameters);

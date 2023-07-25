@@ -1,6 +1,6 @@
 Bitsy Tower(jump "fun_onStart")
 
-# BITSY VERSION 7.12
+# BITSY VERSION 7.10
 
 # check "▷" and "◁" not in output gamedata
 
@@ -3097,8 +3097,18 @@ VAR member_playerMoney
 VAR member_playerLevel
 0
 
+<<<<<<< HEAD
 VAR const_the3FShopPrice
 25
+=======
+DLG 0
+"""
+I'm a cat
+{value = (compareV2Now "*a, =, 42")}
+compareV2 result is {say value}
+"""
+NAME cat dialog
+>>>>>>> hundun-base-v7
 
 VAR const_the3FShopHpAmount
 800

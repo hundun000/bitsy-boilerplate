@@ -3,6 +3,7 @@
 /.working
 /input/template.html
 /output
+output.zip
 
 # Logs
 logs
