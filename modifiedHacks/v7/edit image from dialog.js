@@ -57,7 +57,7 @@ import bitsy from 'bitsy';
 import { getImageData, setImageData } from '@bitsy/hecks/src/helpers/edit image at runtime';
 import { addDualDialogTag, after, addDialogTag } from '@bitsy/hecks/src/helpers/kitsy-script-toolkit';
 import { getImage } from '@bitsy/hecks/src/helpers/utils';
-import { getVariableOrPlain } from './helpers/hundun-toolkit';
+import { getVariableOrPlain } from '../helpers/hundun-toolkit';
 
 // map of maps
 var maps;

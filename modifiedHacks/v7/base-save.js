@@ -58,7 +58,7 @@ export var hackOptions = {
 function save() {
 	var snapshot = {};
 	if (hackOptions.position) {
-		snapshot.room = bitsy.state.room;
+		snapshot.room = bitsy.curRoom;
 		snapshot.x = bitsy.player().x;
 		snapshot.y = bitsy.player().y;
 	}
@@ -77,7 +77,6 @@ function save() {
 			return [room[0], room[1].items];
 		});
 	}
-	
 	if (hackOptions.variables) {
 		snapshot.variables = bitsy.scriptInterpreter.GetVariableNames().map(function (variable) {
 			return [variable, bitsy.scriptInterpreter.GetVariable(variable)];
@@ -100,11 +99,11 @@ function load() {
 
 	if (hackOptions.position) {
 		if (snapshot.room) {
-			bitsy.state.room = bitsy.player().room = snapshot.room;
+			bitsy.curRoom = bitsy.player().room = snapshot.room;
 		}
 		if (snapshot.x && snapshot.y) {
-			bitsy.playerPrevX = bitsy.player().x = snapshot.x;
-			bitsy.playerPrevY = bitsy.player().y = snapshot.y;
+			bitsy.player().x = snapshot.x;
+			bitsy.player().y = snapshot.y;
 		}
 	}
 	if (hackOptions.sprites_position) {
@@ -135,7 +134,6 @@ function load() {
 		bitsy.saveHack.sequenceIndices = snapshot.sequenceIndices;
 		bitsy.saveHack.shuffles = snapshot.shuffles;
 	}
-	bitsy.drawRoom(bitsy.room[bitsy.state.room], { redrawAll: true });
 }
 
 function clear() {
@@ -175,7 +173,7 @@ optionsShuffled = window.saveHack.loadShuffle(this) || optionsShuffled;
 window.saveHack.saveShuffle(this, optionsShuffled);
 options[index]`
 );
-inject(/(\/\/ bitsy\.log\(".+" \+ index\);)/g, '$1\nvar i = window.saveHack.loadSeqIdx(this);index = i === undefined ? index : i;');
+inject(/(\/\/ bitsyLog\(".+" \+ index\);)/g, '$1\nvar i = window.saveHack.loadSeqIdx(this);index = i === undefined ? index : i;');
 // save index on changes
 inject(/(index = next;)/g, '$1window.saveHack.saveSeqIdx(this, index);');
 inject(/(\tindex = 0;)/g, '$1window.saveHack.saveSeqIdx(this, index);');
@@ -213,22 +211,14 @@ before('startExportedGame', function () {
 	}
 });
 
-// override title if loading
-var replaceTitle;
-before('renderer.SetDrawings', function () {
-	if (replaceTitle !== undefined) {
-		bitsy.setTitle(replaceTitle);
-	}
-});
-
 // hook up dialog functions
 function dialogLoad(environment, parameters) {
-	replaceTitle = parameters[0] || '';
 	var loadOnStart = hackOptions.loadOnStart;
 	hackOptions.loadOnStart = true;
 	bitsy.reset_cur_game();
-	bitsy.load_game(bitsy.bitsy.getGameData(), bitsy.bitsy.getFontData());
 	hackOptions.loadOnStart = loadOnStart;
+	bitsy.dialogBuffer.EndDialog();
+	bitsy.startNarrating(parameters[0] || '');
 }
 addDualDialogTag('save', save);
 addDualDialogTag('load', dialogLoad);
