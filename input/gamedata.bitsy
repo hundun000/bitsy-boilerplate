@@ -1,6 +1,6 @@
 Bitsy Tower(jump "fun_onStart")
 
-# BITSY VERSION 7.10
+# BITSY VERSION 7.12
 
 # check "▷" and "◁" not in output gamedata
 
@@ -21,7 +21,7 @@ UI_money,UI_playerMoney_5,UI_playerMoney_4,UI_playerMoney_3,UI_playerMoney_2,UI_
 UI_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_upstair,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
 UI_blueKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
 UI_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
-0,0,0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
+tile_playerFaeryCross,0,0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
 0,0,0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
 0,0,0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
 0,0,0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
@@ -31,7 +31,8 @@ UI_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,tile_blockInner,tile_bl
 0,0,0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
 0,0,0,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block
 NAME room_floor0
-EXT 9,4 room_floor1 9,13 DLG fun_towerSave
+ITM item_faeryCross 10,12
+EXT 9,4 room_floor1 9,13 DLG fun_downstair
 PAL 0
 
 # generated from TowerBitsyMapModel
@@ -43,7 +44,7 @@ UI_money,UI_playerMoney_5,UI_playerMoney_4,UI_playerMoney_3,UI_playerMoney_2,UI_
 UI_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,tile_upstair,0,0,0,0,0,0,0,0,0,0,tile_block
 UI_blueKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_block
 UI_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,0,0,0,0,0,tile_blockInner,0,0,0,tile_blockInner,0,tile_block
-0,0,0,tile_block,0,0,0,tile_blockInner,0,tile_blockInner,0,0,0,tile_blockInner,0,tile_block
+tile_playerFaeryCross,0,0,tile_block,0,0,0,tile_blockInner,0,tile_blockInner,0,0,0,tile_blockInner,0,tile_block
 0,0,0,tile_block,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,0,tile_block
 0,0,0,tile_block,0,0,0,tile_blockInner,0,0,0,0,0,tile_blockInner,0,tile_block
 0,0,0,tile_block,0,0,0,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_block
@@ -67,8 +68,8 @@ ITM item_yellowKey 14,14
 ITM item_blueKey 6,10
 ITM item_blueKey 14,13
 ITM item_redKey 8,13
-ITM item_DefGem 4,10
-ITM item_AtkGem 6,7
+ITM item_defGem 4,10
+ITM item_atkGem 6,7
 ITM item_healBottle 4,6
 ITM item_healBottle 10,6
 ITM item_healBottle 12,6
@@ -77,8 +78,8 @@ ITM item_healBottle 12,7
 ITM item_healBottle 4,13
 ITM item_healBottle 4,14
 ITM item_bigHealBottle 5,13
-EXT 9,14 room_floor0 9,5 DLG fun_towerSave
-EXT 4,4 room_floor2 4,5 DLG fun_towerSave
+EXT 9,14 room_floor0 9,5 DLG fun_upstair
+EXT 4,4 room_floor2 4,5 DLG fun_downstair
 PAL 0
 
 # generated from TowerBitsyMapModel
@@ -90,7 +91,7 @@ UI_money,UI_playerMoney_5,UI_playerMoney_4,UI_playerMoney_3,UI_playerMoney_2,UI_
 UI_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,tile_downstair,tile_blockInner,0,0,0,tile_blockInner,0,0,0,0,tile_blockInner,tile_block
 UI_blueKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,0,tile_blockInner,0,tile_blockInner,0,tile_blockInner,0,0,0,0,tile_blockInner,tile_block
 UI_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,0,tile_blockInner,0,tile_blockInner,0,tile_blockInner,0,0,0,0,tile_blockInner,tile_block
-0,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_block
+tile_playerFaeryCross,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_block
 0,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,0,0,0,0,0,0,tile_blockInner,tile_block
 0,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_block
 0,0,0,tile_block,0,tile_blockInner,0,0,0,0,tile_blockInner,0,0,0,tile_blockInner,tile_block
@@ -111,14 +112,14 @@ ITM item_yellowKey 6,12
 ITM item_yellowKey 6,13
 ITM item_blueKey 13,5
 ITM item_redKey 13,4
-ITM item_DefGem 11,4
-ITM item_DefGem 6,5
-ITM item_DefGem 11,5
-ITM item_DefGem 11,6
-ITM item_AtkGem 10,4
-ITM item_AtkGem 10,5
-ITM item_AtkGem 10,6
-ITM item_AtkGem 6,14
+ITM item_defGem 11,4
+ITM item_defGem 6,5
+ITM item_defGem 11,5
+ITM item_defGem 11,6
+ITM item_atkGem 10,4
+ITM item_atkGem 10,5
+ITM item_atkGem 10,6
+ITM item_atkGem 6,14
 ITM item_healBottle 9,12
 ITM item_healBottle 9,13
 ITM item_healBottle 9,14
@@ -126,8 +127,8 @@ ITM item_bigHealBottle 8,5
 ITM item_bigHealBottle 8,12
 ITM item_bigHealBottle 8,13
 ITM item_bigHealBottle 8,14
-EXT 4,4 room_floor1 5,4 DLG fun_towerSave
-EXT 4,14 room_floor3 5,14 DLG fun_towerSave
+EXT 4,4 room_floor1 5,4 DLG fun_upstair
+EXT 4,14 room_floor3 5,14 DLG fun_downstair
 PAL 0
 
 # generated from TowerBitsyMapModel
@@ -139,7 +140,7 @@ UI_money,UI_playerMoney_5,UI_playerMoney_4,UI_playerMoney_3,UI_playerMoney_2,UI_
 UI_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,0,0,0,tile_blockInner,0,0,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_block
 UI_blueKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,0,0,0,tile_blockInner,0,0,0,tile_blockInner,0,0,0,tile_block
 UI_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,0,0,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,0,tile_block
-0,0,0,tile_block,tile_blockInner,0,tile_blockInner,tile_blockInner,0,0,0,tile_blockInner,0,tile_blockInner,0,tile_block
+tile_playerFaeryCross,0,0,tile_block,tile_blockInner,0,tile_blockInner,tile_blockInner,0,0,0,tile_blockInner,0,tile_blockInner,0,tile_block
 0,0,0,tile_block,0,0,0,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,0,tile_blockInner,0,tile_block
 0,0,0,tile_block,0,tile_blockInner,0,0,0,0,0,tile_blockInner,0,tile_blockInner,0,tile_block
 0,0,0,tile_block,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,0,0,tile_blockInner,0,tile_block
@@ -157,50 +158,82 @@ ITM item_yellowKey 12,8
 ITM item_yellowKey 12,9
 ITM item_yellowKey 12,13
 ITM item_yellowKey 12,14
-ITM item_DefGem 10,13
-ITM item_AtkGem 10,14
+ITM item_ironSword 4,4
+ITM item_defGem 10,13
+ITM item_atkGem 10,14
 ITM item_bigHealBottle 11,14
-EXT 4,14 room_floor2 4,13 DLG fun_towerSave
-END dlg_end 14,14
+EXT 4,14 room_floor2 4,13 DLG fun_upstair
+EXT 14,14 room_floor4 14,13 DLG fun_downstair
+PAL 0
+
+# generated from TowerBitsyMapModel
+ROOM room_floor4
+UI_floor,UI_playerFloor_2,UI_playerFloor_1,UI_playerFloor_0,0,0,0,0,UI_Hp,UI_playerHp_5,UI_playerHp_4,UI_playerHp_3,UI_playerHp_2,UI_playerHp_1,UI_playerHp_0,0
+UI_level,UI_playerLevel_2,UI_playerLevel_1,UI_playerLevel_0,0,0,0,0,UI_Atk,UI_playerAtk_2,UI_playerAtk_1,UI_playerAtk_0,0,0,0,0
+UI_money,UI_playerMoney_5,UI_playerMoney_4,UI_playerMoney_3,UI_playerMoney_2,UI_playerMoney_1,UI_playerMoney_0,0,UI_Def,UI_playerDef_2,UI_playerDef_1,UI_playerDef_0,0,0,0,0
+0,0,0,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block
+UI_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,0,0,0,tile_blockInner,0,0,0,tile_blockInner,0,0,0,tile_block
+UI_blueKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,0,tile_blockInner,0,tile_blockInner,0,0,0,tile_blockInner,0,tile_blockInner,0,tile_block
+UI_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,0,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,0,tile_block
+tile_playerFaeryCross,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,0,0,0,tile_blockInner,0,tile_blockInner,0,tile_block
+0,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,0,0,0,tile_blockInner,0,tile_blockInner,0,tile_block
+0,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,0,tile_block
+0,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,0,0,0,tile_blockInner,0,tile_blockInner,0,tile_block
+0,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,0,0,0,tile_blockInner,0,tile_blockInner,0,tile_block
+0,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,0,tile_blockInner,0,tile_block
+0,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,0,0,0,tile_blockInner,0,tile_blockInner,0,tile_block
+0,0,0,tile_block,tile_upstair,tile_blockInner,0,0,0,0,0,0,0,tile_blockInner,tile_downstair,tile_block
+0,0,0,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block
+NAME room_floor4
+ITM item_yellowKey 8,13
+ITM item_yellowKey 10,13
+ITM item_defGem 8,8
+ITM item_defGem 10,8
+ITM item_atkGem 8,11
+ITM item_atkGem 10,11
+ITM item_healBottle 6,8
+ITM item_healBottle 12,8
+ITM item_healBottle 6,9
+ITM item_healBottle 12,9
+EXT 14,14 room_floor3 14,13 DLG fun_upstair
+EXT 4,14 room_floor5 4,13 DLG fun_downstair
+PAL 0
+
+# generated from TowerBitsyMapModel
+ROOM room_floor5
+UI_floor,UI_playerFloor_2,UI_playerFloor_1,UI_playerFloor_0,0,0,0,0,UI_Hp,UI_playerHp_5,UI_playerHp_4,UI_playerHp_3,UI_playerHp_2,UI_playerHp_1,UI_playerHp_0,0
+UI_level,UI_playerLevel_2,UI_playerLevel_1,UI_playerLevel_0,0,0,0,0,UI_Atk,UI_playerAtk_2,UI_playerAtk_1,UI_playerAtk_0,0,0,0,0
+UI_money,UI_playerMoney_5,UI_playerMoney_4,UI_playerMoney_3,UI_playerMoney_2,UI_playerMoney_1,UI_playerMoney_0,0,UI_Def,UI_playerDef_2,UI_playerDef_1,UI_playerDef_0,0,0,0,0
+0,0,0,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block
+UI_yellowKey,UI_playerYellowKey_1,UI_playerYellowKey_0,tile_block,0,tile_blockInner,0,tile_blockInner,0,0,0,0,0,0,0,tile_block
+UI_blueKey,UI_playerBlueKey_1,UI_playerBlueKey_0,tile_block,0,tile_blockInner,0,tile_blockInner,0,0,0,0,0,0,0,tile_block
+UI_redKey,UI_playerRedKey_1,UI_playerRedKey_0,tile_block,0,tile_blockInner,0,tile_blockInner,0,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_block
+tile_playerFaeryCross,0,0,tile_block,0,0,0,tile_blockInner,0,0,tile_blockInner,0,0,0,0,tile_block
+0,0,0,tile_block,0,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,0,0,0,tile_block
+0,0,0,tile_block,0,tile_blockInner,0,0,0,0,0,0,0,0,0,tile_block
+0,0,0,tile_block,0,tile_blockInner,tile_blockInner,0,tile_blockInner,tile_blockInner,tile_blockInner,tile_blockInner,0,0,0,tile_block
+0,0,0,tile_block,0,0,tile_blockInner,0,tile_blockInner,0,0,0,0,0,0,tile_block
+0,0,0,tile_block,tile_blockInner,tile_blockInner,tile_blockInner,0,tile_blockInner,0,tile_blockInner,0,tile_blockInner,0,tile_blockInner,tile_block
+0,0,0,tile_block,0,0,tile_blockInner,0,tile_blockInner,0,tile_blockInner,0,0,0,tile_blockInner,tile_block
+0,0,0,tile_block,tile_downstair,0,0,0,0,0,tile_blockInner,0,tile_blockInner,tile_upstair,tile_blockInner,tile_block
+0,0,0,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block,tile_block
+NAME room_floor5
+ITM item_yellowKey 13,4
+ITM item_yellowKey 14,5
+ITM item_yellowKey 11,14
+ITM item_blueKey 14,4
+ITM item_defGem 4,10
+ITM item_defGem 11,13
+ITM item_atkGem 6,5
+ITM item_atkGem 4,9
+ITM item_healBottle 6,4
+ITM item_bigHealBottle 8,4
+ITM item_ironShield 8,7
+EXT 4,14 room_floor4 4,13 DLG fun_upstair
+END dlg_end 13,14
 PAL 0
 
 
-
-# generated from TowerUiModel
-TIL UI_playerDef_0
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerDef_0
-
-# generated from TowerUiModel
-TIL UI_playerDef_1
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerDef_1
-
-# generated from TowerUiModel
-TIL UI_playerDef_2
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerDef_2
 
 # generated from TowerUiModel
 TIL UI_playerMoney_0
@@ -275,30 +308,6 @@ TIL UI_playerMoney_5
 NAME UI_playerMoney_5
 
 # generated from TowerUiModel
-TIL UI_playerRedKey_0
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerRedKey_0
-
-# generated from TowerUiModel
-TIL UI_playerRedKey_1
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerRedKey_1
-
-# generated from TowerUiModel
 TIL UI_playerAtk_0
 00111000
 01000100
@@ -333,30 +342,6 @@ TIL UI_playerAtk_2
 00100000
 00000001
 NAME UI_playerAtk_2
-
-# generated from TowerUiModel
-TIL UI_playerYellowKey_0
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerYellowKey_0
-
-# generated from TowerUiModel
-TIL UI_playerYellowKey_1
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerYellowKey_1
 
 # generated from TowerUiModel
 TIL UI_playerHp_0
@@ -431,42 +416,6 @@ TIL UI_playerHp_5
 NAME UI_playerHp_5
 
 # generated from TowerUiModel
-TIL UI_playerLevel_0
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerLevel_0
-
-# generated from TowerUiModel
-TIL UI_playerLevel_1
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerLevel_1
-
-# generated from TowerUiModel
-TIL UI_playerLevel_2
-00111000
-01000100
-00001000
-00010000
-00100000
-00000000
-00100000
-00000001
-NAME UI_playerLevel_2
-
-# generated from TowerUiModel
 TIL UI_playerFloor_0
 00111000
 01000100
@@ -503,6 +452,78 @@ TIL UI_playerFloor_2
 NAME UI_playerFloor_2
 
 # generated from TowerUiModel
+TIL UI_playerDef_0
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerDef_0
+
+# generated from TowerUiModel
+TIL UI_playerDef_1
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerDef_1
+
+# generated from TowerUiModel
+TIL UI_playerDef_2
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerDef_2
+
+# generated from TowerUiModel
+TIL UI_playerLevel_0
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerLevel_0
+
+# generated from TowerUiModel
+TIL UI_playerLevel_1
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerLevel_1
+
+# generated from TowerUiModel
+TIL UI_playerLevel_2
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerLevel_2
+
+# generated from TowerUiModel
 TIL UI_playerBlueKey_0
 00111000
 01000100
@@ -525,6 +546,54 @@ TIL UI_playerBlueKey_1
 00100000
 00000001
 NAME UI_playerBlueKey_1
+
+# generated from TowerUiModel
+TIL UI_playerRedKey_0
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerRedKey_0
+
+# generated from TowerUiModel
+TIL UI_playerRedKey_1
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerRedKey_1
+
+# generated from TowerUiModel
+TIL UI_playerYellowKey_0
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerYellowKey_0
+
+# generated from TowerUiModel
+TIL UI_playerYellowKey_1
+00111000
+01000100
+00001000
+00010000
+00100000
+00000000
+00100000
+00000001
+NAME UI_playerYellowKey_1
 
 
 
@@ -796,6 +865,50 @@ TIL tile_upstair
 01111111
 NAME tile_upstair
 
+TIL tile_playerHasFaeryCross
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME tile_playerHasFaeryCross
+
+TIL tile_playerFaeryCross
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME tile_playerFaeryCross
+
+TIL source_playerHasFaeryCross
+00000000
+00011000
+00011000
+01101110
+00011000
+00011000
+00011000
+00000000 
+NAME source_playerHasFaeryCross
+
+ITM item_faeryCross
+00000000
+00011000
+00011000
+01101110
+00011000
+00011000
+00011000
+00000000   
+NAME item_faeryCross
+DLG dlg_faeryCross
 
 ITM item_yellowKey
 00000000
@@ -821,6 +934,18 @@ ITM item_blueKey
 NAME item_blueKey
 DLG dlg_blueKey
 
+ITM item_ironSword
+00000000
+00011000
+00100100
+00100100
+00100100
+00100100
+01111110
+00011000
+NAME item_ironSword
+DLG dlg_ironSword
+
 ITM item_redKey
 00000000
 00111110
@@ -833,7 +958,7 @@ ITM item_redKey
 NAME item_redKey
 DLG dlg_redKey
 
-ITM item_DefGem
+ITM item_defGem
 00000000
 01111100
 10000010
@@ -842,10 +967,22 @@ ITM item_DefGem
 10000010
 10000010
 01111100
-NAME item_DefGem
-DLG dlg_DefGem
+NAME item_defGem
+DLG dlg_defGem
 
-ITM item_AtkGem
+ITM item_steelSword
+00000000
+00011000
+00100100
+00100100
+00100100
+00100100
+01111110
+00011000
+NAME item_steelSword
+DLG dlg_steelSword
+
+ITM item_atkGem
 00010000
 00101000
 01000100
@@ -854,8 +991,8 @@ ITM item_AtkGem
 01000100
 00101000
 00010000
-NAME item_AtkGem
-DLG dlg_AtkGem
+NAME item_atkGem
+DLG dlg_atkGem
 
 ITM item_healBottle
 00000000
@@ -869,6 +1006,18 @@ ITM item_healBottle
 NAME item_healBottle
 DLG dlg_healBottle
 
+ITM item_holySword
+00000000
+00011000
+00100100
+00100100
+00100100
+00100100
+01111110
+00011000    
+NAME item_holySword
+DLG dlg_holySword
+
 ITM item_bigHealBottle
 00000000
 00011000
@@ -880,6 +1029,42 @@ ITM item_bigHealBottle
 00111100
 NAME item_bigHealBottle
 DLG dlg_bigHealBottle
+
+ITM item_ironShield
+00000000
+01111110
+01000010
+01000010
+01000010
+00100100
+00011000
+00000000
+NAME item_ironShield
+DLG dlg_ironShield
+
+ITM item_steelShield
+00000000
+01111110
+01000010
+01000010
+01000010
+00100100
+00011000
+00000000
+NAME item_steelShield
+DLG dlg_steelShield
+
+ITM item_holyShield
+00000000
+01111110
+01000010
+01000010
+01000010
+00100100
+00011000
+00000000
+NAME item_holyShield
+DLG dlg_holyShield
 
 
 
@@ -934,6 +1119,32 @@ SPR spr_tradeFaery
 # POS room_floor0 8,12
 DLG dlg_tradeFaery
 
+SPR spr_the5FElder
+00011000
+00011000
+00011000
+00111100
+01111110
+10111101
+00100100
+00110110
+# lazy draw
+# POS room_floor5 5,11
+DLG dlg_the5FElder
+
+SPR spr_the5FMerchant
+00011000
+00011000
+00011000
+00111100
+01111110
+10111101
+00100100
+00110110
+# lazy draw
+# POS ▷the5FMerchant_roomId◁ ▷the5FMerchant_x◁,▷the5FMerchant_y◁
+DLG dlg_the5FMerchant
+
 SPR spr_the3FShopL
 00000000
 00001111
@@ -944,7 +1155,7 @@ SPR spr_the3FShopL
 00100000
 00111111
 POS room_floor3 8,4
-DLG spr_the3FShop
+DLG dlg_the3FShop
 
 SPR spr_the3FShopM
 00000000
@@ -956,7 +1167,7 @@ SPR spr_the3FShopM
 00100100
 11111111
 POS room_floor3 9,4
-DLG spr_the3FShop
+DLG dlg_the3FShop
 
 SPR spr_the3FShopR
 00000000
@@ -968,7 +1179,7 @@ SPR spr_the3FShopR
 00000100
 11111100
 POS room_floor3 10,4
-DLG spr_the3FShop
+DLG dlg_the3FShop
 
 # generated from TowerBitsyMonsterModel
 SPR spr_greenSlime_floor1_3_0
@@ -1270,6 +1481,52 @@ DLG dlg_redSlime_floor3_8_8_instance
 POS room_floor3 12,12
 
 # generated from TowerBitsyMonsterModel
+SPR spr_redSlime_floor4_0_6
+00000000
+00111100
+01000010
+10000001
+10100101
+10000001
+10000001
+01111110
+>
+00000000
+00000000
+00111100
+01000010
+10000001
+10100101
+10000001
+01111110
+NAME spr_redSlime_floor4_0_6
+DLG dlg_redSlime_floor4_0_6_instance
+POS room_floor4 4,10
+
+# generated from TowerBitsyMonsterModel
+SPR spr_redSlime_floor4_10_6
+00000000
+00111100
+01000010
+10000001
+10100101
+10000001
+10000001
+01111110
+>
+00000000
+00000000
+00111100
+01000010
+10000001
+10100101
+10000001
+01111110
+NAME spr_redSlime_floor4_10_6
+DLG dlg_redSlime_floor4_10_6_instance
+POS room_floor4 14,10
+
+# generated from TowerBitsyMonsterModel
 SPR spr_smallBat_floor1_8_5
 00000000
 00000000
@@ -1431,6 +1688,190 @@ DLG dlg_smallBat_floor3_7_9_instance
 POS room_floor3 11,13
 
 # generated from TowerBitsyMonsterModel
+SPR spr_smallBat_floor4_0_4
+00000000
+00000000
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
+NAME spr_smallBat_floor4_0_4
+DLG dlg_smallBat_floor4_0_4_instance
+POS room_floor4 4,8
+
+# generated from TowerBitsyMonsterModel
+SPR spr_smallBat_floor4_10_4
+00000000
+00000000
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
+NAME spr_smallBat_floor4_10_4
+DLG dlg_smallBat_floor4_10_4_instance
+POS room_floor4 14,8
+
+# generated from TowerBitsyMonsterModel
+SPR spr_smallBat_floor4_0_5
+00000000
+00000000
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
+NAME spr_smallBat_floor4_0_5
+DLG dlg_smallBat_floor4_0_5_instance
+POS room_floor4 4,9
+
+# generated from TowerBitsyMonsterModel
+SPR spr_smallBat_floor4_10_5
+00000000
+00000000
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
+NAME spr_smallBat_floor4_10_5
+DLG dlg_smallBat_floor4_10_5_instance
+POS room_floor4 14,9
+
+# generated from TowerBitsyMonsterModel
+SPR spr_smallBat_floor5_5_5
+00000000
+00000000
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
+NAME spr_smallBat_floor5_5_5
+DLG dlg_smallBat_floor5_5_5_instance
+POS room_floor5 9,9
+
+# generated from TowerBitsyMonsterModel
+SPR spr_smallBat_floor5_3_8
+00000000
+00000000
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
+NAME spr_smallBat_floor5_3_8
+DLG dlg_smallBat_floor5_3_8_instance
+POS room_floor5 7,12
+
+# generated from TowerBitsyMonsterModel
+SPR spr_smallBat_floor5_5_9
+00000000
+00000000
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
+NAME spr_smallBat_floor5_5_9
+DLG dlg_smallBat_floor5_5_9_instance
+POS room_floor5 9,13
+
+# generated from TowerBitsyMonsterModel
+SPR spr_smallBat_floor5_2_10
+00000000
+00000000
+00101000
+00010000
+00111000
+01010100
+10000010
+00000000
+>
+00000000
+00000000
+10101010
+10010010
+01111100
+00010000
+00000000
+00000000
+NAME spr_smallBat_floor5_2_10
+DLG dlg_smallBat_floor5_2_10_instance
+POS room_floor5 6,14
+
+# generated from TowerBitsyMonsterModel
 SPR spr_blackSlime_floor1_8_4
 00000000
 00111100
@@ -1452,6 +1893,144 @@ SPR spr_blackSlime_floor1_8_4
 NAME spr_blackSlime_floor1_8_4
 DLG dlg_blackSlime_floor1_8_4_instance
 POS room_floor1 12,8
+
+# generated from TowerBitsyMonsterModel
+SPR spr_blackSlime_floor4_1_0
+00000000
+00111100
+01111110
+11111111
+11011011
+11111111
+11111111
+01111110
+>
+00000000
+00000000
+00111100
+01111110
+11111111
+11011011
+11111111
+01111110
+NAME spr_blackSlime_floor4_1_0
+DLG dlg_blackSlime_floor4_1_0_instance
+POS room_floor4 5,4
+
+# generated from TowerBitsyMonsterModel
+SPR spr_blackSlime_floor4_9_0
+00000000
+00111100
+01111110
+11111111
+11011011
+11111111
+11111111
+01111110
+>
+00000000
+00000000
+00111100
+01111110
+11111111
+11011011
+11111111
+01111110
+NAME spr_blackSlime_floor4_9_0
+DLG dlg_blackSlime_floor4_9_0_instance
+POS room_floor4 13,4
+
+# generated from TowerBitsyMonsterModel
+SPR spr_blackSlime_floor4_3_10
+00000000
+00111100
+01111110
+11111111
+11011011
+11111111
+11111111
+01111110
+>
+00000000
+00000000
+00111100
+01111110
+11111111
+11011011
+11111111
+01111110
+NAME spr_blackSlime_floor4_3_10
+DLG dlg_blackSlime_floor4_3_10_instance
+POS room_floor4 7,14
+
+# generated from TowerBitsyMonsterModel
+SPR spr_blackSlime_floor4_7_10
+00000000
+00111100
+01111110
+11111111
+11011011
+11111111
+11111111
+01111110
+>
+00000000
+00000000
+00111100
+01111110
+11111111
+11011011
+11111111
+01111110
+NAME spr_blackSlime_floor4_7_10
+DLG dlg_blackSlime_floor4_7_10_instance
+POS room_floor4 11,14
+
+# generated from TowerBitsyMonsterModel
+SPR spr_blackSlime_floor5_3_6
+00000000
+00111100
+01111110
+11111111
+11011011
+11111111
+11111111
+01111110
+>
+00000000
+00000000
+00111100
+01111110
+11111111
+11011011
+11111111
+01111110
+NAME spr_blackSlime_floor5_3_6
+DLG dlg_blackSlime_floor5_3_6_instance
+POS room_floor5 7,10
+
+# generated from TowerBitsyMonsterModel
+SPR spr_blackSlime_floor5_3_7
+00000000
+00111100
+01111110
+11111111
+11011011
+11111111
+11111111
+01111110
+>
+00000000
+00000000
+00111100
+01111110
+11111111
+11011011
+11111111
+01111110
+NAME spr_blackSlime_floor5_3_7
+DLG dlg_blackSlime_floor5_3_7_instance
+POS room_floor5 7,11
 
 # generated from TowerBitsyMonsterModel
 SPR spr_smallSkeleton_floor1_2_2
@@ -1546,6 +2125,75 @@ DLG dlg_smallSkeleton_floor3_5_3_instance
 POS room_floor3 9,7
 
 # generated from TowerBitsyMonsterModel
+SPR spr_smallSkeleton_floor4_2_3
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00100000
+>
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00001000
+NAME spr_smallSkeleton_floor4_2_3
+DLG dlg_smallSkeleton_floor4_2_3_instance
+POS room_floor4 6,7
+
+# generated from TowerBitsyMonsterModel
+SPR spr_smallSkeleton_floor4_8_3
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00100000
+>
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00001000
+NAME spr_smallSkeleton_floor4_8_3
+DLG dlg_smallSkeleton_floor4_8_3_instance
+POS room_floor4 12,7
+
+# generated from TowerBitsyMonsterModel
+SPR spr_smallSkeleton_floor5_6_5
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00100000
+>
+00111000
+01010000
+01111000
+00111000
+00010000
+00101000
+01010100
+00001000
+NAME spr_smallSkeleton_floor5_6_5
+DLG dlg_smallSkeleton_floor5_6_5_instance
+POS room_floor5 10,9
+
+# generated from TowerBitsyMonsterModel
 SPR spr_skeletonSoldier_floor1_1_5
 00111000
 01010000
@@ -1592,6 +2240,98 @@ DLG dlg_skeletonSoldier_floor1_1_8_instance
 POS room_floor1 5,12
 
 # generated from TowerBitsyMonsterModel
+SPR spr_skeletonSoldier_floor5_4_2
+00111000
+01010000
+01111000
+00111010
+00010010
+00101010
+01010110
+00100010
+>
+00111000
+01010000
+01111000
+00111010
+00010010
+00101010
+01010110
+00001010
+NAME spr_skeletonSoldier_floor5_4_2
+DLG dlg_skeletonSoldier_floor5_4_2_instance
+POS room_floor5 8,6
+
+# generated from TowerBitsyMonsterModel
+SPR spr_skeletonSoldier_floor5_5_3
+00111000
+01010000
+01111000
+00111010
+00010010
+00101010
+01010110
+00100010
+>
+00111000
+01010000
+01111000
+00111010
+00010010
+00101010
+01010110
+00001010
+NAME spr_skeletonSoldier_floor5_5_3
+DLG dlg_skeletonSoldier_floor5_5_3_instance
+POS room_floor5 9,7
+
+# generated from TowerBitsyMonsterModel
+SPR spr_skeletonSoldier_floor5_9_3
+00111000
+01010000
+01111000
+00111010
+00010010
+00101010
+01010110
+00100010
+>
+00111000
+01010000
+01111000
+00111010
+00010010
+00101010
+01010110
+00001010
+NAME spr_skeletonSoldier_floor5_9_3
+DLG dlg_skeletonSoldier_floor5_9_3_instance
+POS room_floor5 13,7
+
+# generated from TowerBitsyMonsterModel
+SPR spr_skeletonSoldier_floor5_10_4
+00111000
+01010000
+01111000
+00111010
+00010010
+00101010
+01010110
+00100010
+>
+00111000
+01010000
+01111000
+00111010
+00010010
+00101010
+01010110
+00001010
+NAME spr_skeletonSoldier_floor5_10_4
+DLG dlg_skeletonSoldier_floor5_10_4_instance
+POS room_floor5 14,8
+
+# generated from TowerBitsyMonsterModel
 SPR spr_beastMonster_floor1_9_9
 00000000
 01100110
@@ -1613,6 +2353,305 @@ SPR spr_beastMonster_floor1_9_9
 NAME spr_beastMonster_floor1_9_9
 DLG dlg_beastMonster_floor1_9_9_instance
 POS room_floor1 13,13
+
+# generated from TowerBitsyMonsterModel
+SPR spr_beastMonster_floor4_4_6
+00000000
+01100110
+00111100
+00101000
+00011100
+00111110
+01011000
+00001000
+>
+00000000
+01100110
+00111100
+00101000
+00011100
+01111100
+00011010
+00010000
+NAME spr_beastMonster_floor4_4_6
+DLG dlg_beastMonster_floor4_4_6_instance
+POS room_floor4 8,10
+
+# generated from TowerBitsyMonsterModel
+SPR spr_beastMonster_floor4_6_6
+00000000
+01100110
+00111100
+00101000
+00011100
+00111110
+01011000
+00001000
+>
+00000000
+01100110
+00111100
+00101000
+00011100
+01111100
+00011010
+00010000
+NAME spr_beastMonster_floor4_6_6
+DLG dlg_beastMonster_floor4_6_6_instance
+POS room_floor4 10,10
+
+# generated from TowerBitsyMonsterModel
+SPR spr_beastMonster_floor4_5_7
+00000000
+01100110
+00111100
+00101000
+00011100
+00111110
+01011000
+00001000
+>
+00000000
+01100110
+00111100
+00101000
+00011100
+01111100
+00011010
+00010000
+NAME spr_beastMonster_floor4_5_7
+DLG dlg_beastMonster_floor4_5_7_instance
+POS room_floor4 9,11
+
+# generated from TowerBitsyMonsterModel
+SPR spr_beastMonster_floor5_8_3
+00000000
+01100110
+00111100
+00101000
+00011100
+00111110
+01011000
+00001000
+>
+00000000
+01100110
+00111100
+00101000
+00011100
+01111100
+00011010
+00010000
+NAME spr_beastMonster_floor5_8_3
+DLG dlg_beastMonster_floor5_8_3_instance
+POS room_floor5 12,7
+
+# generated from TowerBitsyMonsterModel
+SPR spr_beastMonster_floor5_8_7
+00000000
+01100110
+00111100
+00101000
+00011100
+00111110
+01011000
+00001000
+>
+00000000
+01100110
+00111100
+00101000
+00011100
+01111100
+00011010
+00010000
+NAME spr_beastMonster_floor5_8_7
+DLG dlg_beastMonster_floor5_8_7_instance
+POS room_floor5 12,11
+
+# generated from TowerBitsyMonsterModel
+SPR spr_juniorGuard_floor4_5_6
+00000000
+01100110
+00111100
+00101001
+00011101
+00111111
+01011001
+00001000
+>
+00000000
+01100110
+00111100
+00101000
+00011101
+01111101
+00011011
+00010001
+NAME spr_juniorGuard_floor4_5_6
+DLG dlg_juniorGuard_floor4_5_6_instance
+POS room_floor4 9,10
+
+# generated from TowerBitsyMonsterModel
+SPR spr_juniorGuard_floor5_9_7
+00000000
+01100110
+00111100
+00101001
+00011101
+00111111
+01011001
+00001000
+>
+00000000
+01100110
+00111100
+00101000
+00011101
+01111101
+00011011
+00010001
+NAME spr_juniorGuard_floor5_9_7
+DLG dlg_juniorGuard_floor5_9_7_instance
+POS room_floor5 13,11
+
+# generated from TowerBitsyMonsterModel
+SPR spr_largeBat_floor4_4_3
+00000000
+00100100
+00011000
+00011000
+00100100
+01000010
+11000011
+00000000
+>
+00000000
+10000001
+10100101
+11011011
+01111110
+00011000
+00000000
+00000000
+NAME spr_largeBat_floor4_4_3
+DLG dlg_largeBat_floor4_4_3_instance
+POS room_floor4 8,7
+
+# generated from TowerBitsyMonsterModel
+SPR spr_largeBat_floor4_6_3
+00000000
+00100100
+00011000
+00011000
+00100100
+01000010
+11000011
+00000000
+>
+00000000
+10000001
+10100101
+11011011
+01111110
+00011000
+00000000
+00000000
+NAME spr_largeBat_floor4_6_3
+DLG dlg_largeBat_floor4_6_3_instance
+POS room_floor4 10,7
+
+# generated from TowerBitsyMonsterModel
+SPR spr_largeBat_floor4_5_4
+00000000
+00100100
+00011000
+00011000
+00100100
+01000010
+11000011
+00000000
+>
+00000000
+10000001
+10100101
+11011011
+01111110
+00011000
+00000000
+00000000
+NAME spr_largeBat_floor4_5_4
+DLG dlg_largeBat_floor4_5_4_instance
+POS room_floor4 9,8
+
+# generated from TowerBitsyMonsterModel
+SPR spr_largeBat_floor5_0_2
+00000000
+00100100
+00011000
+00011000
+00100100
+01000010
+11000011
+00000000
+>
+00000000
+10000001
+10100101
+11011011
+01111110
+00011000
+00000000
+00000000
+NAME spr_largeBat_floor5_0_2
+DLG dlg_largeBat_floor5_0_2_instance
+POS room_floor5 4,6
+
+# generated from TowerBitsyMonsterModel
+SPR spr_largeBat_floor5_0_4
+00000000
+00100100
+00011000
+00011000
+00100100
+01000010
+11000011
+00000000
+>
+00000000
+10000001
+10100101
+11011011
+01111110
+00011000
+00000000
+00000000
+NAME spr_largeBat_floor5_0_4
+DLG dlg_largeBat_floor5_0_4_instance
+POS room_floor5 4,8
+
+# generated from TowerBitsyMonsterModel
+SPR spr_redBat_floor4_5_3
+00000000
+00100100
+10011001
+11111111
+11111111
+11011011
+11011011
+01000010
+>
+00000000
+10000001
+10100101
+10011001
+11111111
+11111111
+11011011
+01011010
+NAME spr_redBat_floor4_5_3
+DLG dlg_redBat_floor4_5_3_instance
+POS room_floor4 9,7
 
 # generated from TowerBitsyMonsterModel
 SPR spr_goldenGuard_floor2_9_2
@@ -1705,6 +2744,121 @@ SPR spr_juniorWizard_floor1_6_5
 NAME spr_juniorWizard_floor1_6_5
 DLG dlg_juniorWizard_floor1_6_5_instance
 POS room_floor1 10,9
+
+# generated from TowerBitsyMonsterModel
+SPR spr_juniorWizard_floor5_5_0
+00000000
+01010100
+00111000
+01101100
+11111110
+00010000
+00010000
+00011000
+>
+00000000
+00000000
+01010100
+00111000
+01101100
+11111110
+00010000
+00011000
+NAME spr_juniorWizard_floor5_5_0
+DLG dlg_juniorWizard_floor5_5_0_instance
+POS room_floor5 9,4
+
+# generated from TowerBitsyMonsterModel
+SPR spr_juniorWizard_floor5_8_0
+00000000
+01010100
+00111000
+01101100
+11111110
+00010000
+00010000
+00011000
+>
+00000000
+00000000
+01010100
+00111000
+01101100
+11111110
+00010000
+00011000
+NAME spr_juniorWizard_floor5_8_0
+DLG dlg_juniorWizard_floor5_8_0_instance
+POS room_floor5 12,4
+
+# generated from TowerBitsyMonsterModel
+SPR spr_juniorWizard_floor5_4_1
+00000000
+01010100
+00111000
+01101100
+11111110
+00010000
+00010000
+00011000
+>
+00000000
+00000000
+01010100
+00111000
+01101100
+11111110
+00010000
+00011000
+NAME spr_juniorWizard_floor5_4_1
+DLG dlg_juniorWizard_floor5_4_1_instance
+POS room_floor5 8,5
+
+# generated from TowerBitsyMonsterModel
+SPR spr_juniorWizard_floor5_9_1
+00000000
+01010100
+00111000
+01101100
+11111110
+00010000
+00010000
+00011000
+>
+00000000
+00000000
+01010100
+00111000
+01101100
+11111110
+00010000
+00011000
+NAME spr_juniorWizard_floor5_9_1
+DLG dlg_juniorWizard_floor5_9_1_instance
+POS room_floor5 13,5
+
+# generated from TowerBitsyMonsterModel
+SPR spr_juniorWizard_floor5_2_3
+00000000
+01010100
+00111000
+01101100
+11111110
+00010000
+00010000
+00011000
+>
+00000000
+00000000
+01010100
+00111000
+01101100
+11111110
+00010000
+00011000
+NAME spr_juniorWizard_floor5_2_3
+DLG dlg_juniorWizard_floor5_2_3_instance
+POS room_floor5 6,7
 
 # generated from TowerBitsyDoorModel
 SPR spr_yellowDoor_floor0_5_7
@@ -1917,6 +3071,132 @@ DLG dlg_yellowDoor_floor3_7_7_instance
 POS room_floor3 11,11
 
 # generated from TowerBitsyDoorModel
+SPR spr_yellowDoor_floor4_0_1
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
+11111111
+00000000
+NAME spr_yellowDoor_floor4_0_1
+DLG dlg_yellowDoor_floor4_0_1_instance
+POS room_floor4 4,5
+
+# generated from TowerBitsyDoorModel
+SPR spr_yellowDoor_floor4_2_1
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
+11111111
+00000000
+NAME spr_yellowDoor_floor4_2_1
+DLG dlg_yellowDoor_floor4_2_1_instance
+POS room_floor4 6,5
+
+# generated from TowerBitsyDoorModel
+SPR spr_yellowDoor_floor4_8_1
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
+11111111
+00000000
+NAME spr_yellowDoor_floor4_8_1
+DLG dlg_yellowDoor_floor4_8_1_instance
+POS room_floor4 12,5
+
+# generated from TowerBitsyDoorModel
+SPR spr_yellowDoor_floor4_10_1
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
+11111111
+00000000
+NAME spr_yellowDoor_floor4_10_1
+DLG dlg_yellowDoor_floor4_10_1_instance
+POS room_floor4 14,5
+
+# generated from TowerBitsyDoorModel
+SPR spr_yellowDoor_floor5_8_2
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
+11111111
+00000000
+NAME spr_yellowDoor_floor5_8_2
+DLG dlg_yellowDoor_floor5_8_2_instance
+POS room_floor5 12,6
+
+# generated from TowerBitsyDoorModel
+SPR spr_yellowDoor_floor5_1_3
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
+11111111
+00000000
+NAME spr_yellowDoor_floor5_1_3
+DLG dlg_yellowDoor_floor5_1_3_instance
+POS room_floor5 5,7
+
+# generated from TowerBitsyDoorModel
+SPR spr_yellowDoor_floor5_5_8
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
+11111111
+00000000
+NAME spr_yellowDoor_floor5_5_8
+DLG dlg_yellowDoor_floor5_5_8_instance
+POS room_floor5 9,12
+
+# generated from TowerBitsyDoorModel
+SPR spr_yellowDoor_floor5_9_8
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
+11111111
+00000000
+NAME spr_yellowDoor_floor5_9_8
+DLG dlg_yellowDoor_floor5_9_8_instance
+POS room_floor5 13,12
+
+# generated from TowerBitsyDoorModel
+SPR spr_yellowDoor_floor5_8_9
+00111000
+01010101
+01010110
+01010101
+01010111
+01010100
+11111111
+00000000
+NAME spr_yellowDoor_floor5_8_9
+DLG dlg_yellowDoor_floor5_8_9_instance
+POS room_floor5 12,13
+
+# generated from TowerBitsyDoorModel
 SPR spr_blueDoor_floor2_5_7
 00111000
 01010101
@@ -1929,6 +3209,34 @@ SPR spr_blueDoor_floor2_5_7
 NAME spr_blueDoor_floor2_5_7
 DLG dlg_blueDoor_floor2_5_7_instance
 POS room_floor2 9,11
+
+# generated from TowerBitsyDoorModel
+SPR spr_blueDoor_floor4_5_8
+00111000
+01010101
+11111110
+01010101
+11111111
+01010100
+11111111
+00000000 
+NAME spr_blueDoor_floor4_5_8
+DLG dlg_blueDoor_floor4_5_8_instance
+POS room_floor4 9,12
+
+# generated from TowerBitsyDoorModel
+SPR spr_blueDoor_floor5_7_8
+00111000
+01010101
+11111110
+01010101
+11111111
+01010100
+11111111
+00000000 
+NAME spr_blueDoor_floor5_7_8
+DLG dlg_blueDoor_floor5_7_8_instance
+POS room_floor5 11,12
 
 # generated from TowerBitsyDoorModel
 SPR spr_redDoor_floor1_5_8
@@ -1944,9 +3252,23 @@ NAME spr_redDoor_floor1_5_8
 DLG dlg_redDoor_floor1_5_8_instance
 POS room_floor1 9,12
 
+# generated from TowerBitsyDoorModel
+SPR spr_redDoor_floor4_5_5
+00000000
+10111101
+01111110
+01111110
+01011110
+01111110
+11111110
+00000000 
+NAME spr_redDoor_floor4_5_5
+DLG dlg_redDoor_floor4_5_5_instance
+POS room_floor4 9,9
 
 
-# ------ file constDialogPart.txt ------
+
+# ------ file constDialogPart-item.txt ------
 
 DLG dlg_yellowKey
 """
@@ -1982,42 +3304,74 @@ Heal: {printTile "UI_Hp"} {print let_enhance_before} -> {print member_playerHp}(
 """
 NAME dlg_bigHealBottle
 
-DLG dlg_AtkGem
+DLG dlg_faeryCross
+"""
+{member_playerHasFaeryCross = 1}
+Give it to the faery.(jump "fun_updateUI_all")
+"""
+NAME dlg_faeryCross
+
+DLG dlg_ironSword
+"""
+{let_enhance_before = member_playerAtk}
+{member_playerAtk = member_playerAtk + 10}
+You pick up the iron-sword, enhance: {printTile "UI_Atk"} {print let_enhance_before} -> {print member_playerAtk}(jump "fun_updateUI_all")
+"""
+NAME dlg_ironSword
+
+DLG dlg_steelSword
+"""
+{let_enhance_before = member_playerAtk}
+{member_playerAtk = member_playerAtk + 30}
+You pick up the steel-sword, enhance: {printTile "UI_Atk"} {print let_enhance_before} -> {print member_playerAtk}(jump "fun_updateUI_all")
+"""
+NAME dlg_steelSword
+
+DLG dlg_holySword
+"""
+{let_enhance_before = member_playerAtk}
+{member_playerAtk = member_playerAtk + 120}
+You pick up the holy-sword, enhance: {printTile "UI_Atk"} {print let_enhance_before} -> {print member_playerAtk}(jump "fun_updateUI_all")
+"""
+NAME dlg_holySword
+
+DLG dlg_atkGem
 """
 {let_enhance_before = member_playerAtk}
 {member_playerAtk = member_playerAtk + 3}
 Enhance: {printTile "UI_Atk"} {print let_enhance_before} -> {print member_playerAtk}(jump "fun_updateUI_all")
 """
-NAME dlg_AtkGem
+NAME dlg_atkGem
 
-DLG dlg_DefGem
+DLG dlg_defGem
 """
 {let_enhance_before = member_playerDef}
 {member_playerDef = member_playerDef + 3}
 Enhance: {printTile "UI_Def"} {print let_enhance_before} -> {print member_playerDef}(jump "fun_updateUI_all")
 """
-NAME dlg_DefGem
+NAME dlg_defGem
+
+# ------ file constDialogPart-npc.txt ------
 
 DLG dlg_starterFaery
 """
-Hi, see you later.
+I'm finding the FAERY CROSS {printItem "item_faeryCross"}, give it to me and I will improve your power. See you later.
 {eraseAllNow "SPR, spr_starterFaery, room_floor0"}{drawNow "SPR, spr_tradeFaery, 8, 12, room_floor0"}(jump "fun_updateUI_all")
 """
 NAME dlg_starterFaery
 
 DLG dlg_tradeFaery
 """
-I'm finding [money_icon]x1, can you help me? Give it to me and I will improve your power.
 {
-  - member_playerMoney >= 1 ?
+  - member_playerHasFaeryCross > 0 ?
     {let_trade_can_afford = 1}
   - else   
     {let_trade_can_afford = 0}
 }{
   - let_trade_can_afford == 1 ?
-    Do you want to pay for {printTile "UI_Atk"}x100 & {printTile "UI_Def"}x100?(jump "dlg_tradeFaery_ask")
+    Do you want to give the CROSS {printItem "item_faeryCross"} to me?(jump "dlg_tradeFaery_ask")
   - else
-    You can't afford it.
+    Finding the CROSS {printItem "item_faeryCross"}.
 }
 """
 NAME dlg_tradeFaery
@@ -2037,23 +3391,127 @@ DLG dlg_tradeFaery_checkComfirmed
 """
 {
   - let_trade_confirmed == 1 ?
-    {member_playerMoney = member_playerMoney - 1}
-    {member_playerAtk = member_playerAtk + 100}
-    {member_playerDef = member_playerDef + 100}
-    Trade done.{eraseAllNow "SPR, spr_tradeFaery, room_floor0"}(jump "fun_updateUI_all")
+    {member_playerHasFaeryCross = 0}
+    {let_enhance_atk_before = member_playerAtk}
+    {let_enhance_def_before = member_playerDef}
+    {member_playerAtk = member_playerAtk * 4.0 / 3.0}
+    {member_playerDef = member_playerDef * 4.0 / 3.0}
+    {member_playerAtk = (jsNow "Math.ceil(scriptInterpreter.GetVariable('member_playerAtk'))")}
+    {member_playerDef = (jsNow "Math.ceil(scriptInterpreter.GetVariable('member_playerDef'))")}
+    I improve your power: {printTile "UI_Atk"} {print let_enhance_atk_before} -> {print member_playerAtk}, {printTile "UI_Def"} {print let_enhance_def_before} -> {print member_playerDef}.{eraseAllNow "SPR, spr_tradeFaery, room_floor0"}(jump "fun_updateUI_all")
   - else?
-    You choose not to trade.
+    You can do it later.
 }
 """
 NAME dlg_tradeFaery_checkComfirmed  
 
+DLG dlg_the5FElder
+"""
+{arg_currentElderPrice_1 = 100}
+{arg_currentElderLevelAmount = 1}
+{arg_currentElderPrice_2 = 30}
+{arg_currentElderAtkAmount = 5}
+{arg_currentElderPrice_3 = 30}
+{arg_currentElderDefAmount = 5}
+(jump "dlg_currentElder")
+"""
+NAME dlg_the5FElder
+
+DLG dlg_the13FElder
+"""
+{arg_currentElderPrice_1 = 270}
+{arg_currentElderLevelAmount = 3}
+{arg_currentElderPrice_2 = 95}
+{arg_currentElderAtkAmount = 17}
+{arg_currentElderPrice_3 = 95}
+{arg_currentElderDefAmount = 17}
+(jump "dlg_currentElder")
+"""
+NAME dlg_the13FElder
+
+DLG dlg_currentElder
+"""
+The price is ...{
+  - member_playerExp >= arg_currentElderPrice_1 ?
+    {let_trade_can_afford_1 = 1}
+  - else   
+    {let_trade_can_afford_1 = 0}
+}{
+  - member_playerExp >= arg_currentElderPrice_2 ?
+    {let_trade_can_afford_2 = 1}
+  - else   
+    {let_trade_can_afford_2 = 0}
+}{
+  - member_playerExp >= arg_currentElderPrice_3 ?
+    {let_trade_can_afford_3 = 1}
+  - else   
+    {let_trade_can_afford_3 = 0}
+}(jump "dlg_currentElder_ask")
+"""
+NAME dlg_currentElder
+
+DLG dlg_currentElder_ask
+"""
+{choice
+  - {printTile "UI_level"}x{print arg_currentElderLevelAmount}
+    {
+      - let_trade_can_afford_1 == 1 ?
+        {let_trade_confirmed = 1}
+      - else   
+        {let_trade_confirmed = -1}
+    }
+  - {printTile "UI_Atk"}x{print arg_currentElderAtkAmount}
+    {
+      - let_trade_can_afford_2 == 1 ?
+        {let_trade_confirmed = 2}
+      - else   
+        {let_trade_confirmed = -1}
+    }
+  - {printTile "UI_Def"}x{print arg_currentElderDefAmount}
+    {
+      - let_trade_can_afford_3 == 1 ?
+        {let_trade_confirmed = 3}
+      - else   
+        {let_trade_confirmed = -1}
+    }
+  - No
+    {let_trade_confirmed = 0}
+}(jump "dlg_currentElder_checkComfirmed")
+"""
+NAME dlg_currentElder_ask
+
+DLG dlg_currentElder_checkComfirmed
+"""
+{
+  - let_trade_confirmed == -1 ?
+    You can't afford it.
+  - let_trade_confirmed == 1 ?
+    {member_playerExp = member_playerExp - arg_currentElderPrice_1}
+    {member_playerLevel = member_playerLevel + arg_currentElderLevelAmount}
+    {member_playerHp = member_playerHp + 1000 * arg_currentElderLevelAmount}
+    {member_playerAtk = member_playerAtk + 7 * arg_currentElderLevelAmount}
+    {member_playerDef = member_playerDef + 7 * arg_currentElderLevelAmount}
+    Trade level done.(jump "fun_updateUI_all")
+  - let_trade_confirmed == 2 ?
+    {member_playerExp = member_playerExp - arg_currentElderPrice_2}
+    {member_playerAtk = member_playerAtk + arg_currentElderAtkAmount}
+    Trade atk done.(jump "fun_updateUI_all")
+  - let_trade_confirmed == 3 ?
+    {member_playerExp = member_playerExp - arg_currentElderPrice_3}
+    {member_playerDef = member_playerDef+ arg_currentElderDefAmount}
+    Trade def done.(jump "fun_updateUI_all")
+  - else?
+    You choose not to trade.
+}
+"""
+NAME dlg_currentElder_checkComfirmed  
 
 DLG dlg_the3FShop
 """
-{arg_currentShopPrice = const_the3FShopPrice}
-{arg_currentShopHpAmount = const_the3FShopHpAmount}
-{arg_currentShopAtkAmount = const_the3FShopAtkAmount}
-{arg_currentShopDefAmount = const_the3FShopDefAmount}
+{arg_currentShopPrice = 25}
+{arg_currentShopHpAmount = 800}
+{arg_currentShopAtkAmount = 4}
+{arg_currentShopDefAmount = 4}
 (jump "dlg_currentShop")
 """
 NAME dlg_the3FShop
@@ -2111,14 +3569,27 @@ DLG dlg_currentShop_checkComfirmed
 """
 NAME dlg_currentShop_checkComfirmed  
 
+# ------ file constDialogPart.txt ------
+
+DLG fun_upstair
+"""
+{member_playerFloor = member_playerFloor + 1}(jump "fun_towerSave")
+"""
+NAME fun_upstair
+
+DLG fun_downstair
+"""
+{member_playerFloor = member_playerFloor - 1}(jump "fun_towerSave")
+"""
+NAME fun_downstair
 
 DLG fun_towerSave
 """
 {globalVar_saveState = 2}
 (save)
+(jump "fun_updateUI_all")
 """
 NAME fun_towerSave
-
 
 DLG fun_onStart
 """
@@ -2146,8 +3617,7 @@ NAME fun_onStart
 
 DLG fun_postLoad
 """
-Load done.
-(jump "fun_updateUI_all")
+(jumpNow "fun_updateUI_all")Load done.
 """
 NAME fun_postLoad
 
@@ -2172,6 +3642,12 @@ DLG fun_updateUI_all
 (updateNumberImagesNow "TIL, UI_playerBlueKey_, source_char_, source_char_empty, 2, let_drawingNumber")
 {let_drawingNumber = {item "item_redKey"}}
 (updateNumberImagesNow "TIL, UI_playerRedKey_, source_char_, source_char_empty, 2, let_drawingNumber")
+{
+  - member_playerHasFaeryCross > 0 ?
+    (imageNow "TIL, tile_playerFaeryCross, source_playerHasFaeryCross")
+  - else
+    (imageNow "TIL, tile_playerFaeryCross, source_char_empty")
+}
 """
 NAME fun_updateUI_all
 
@@ -2216,7 +3692,7 @@ DLG fun_afterBattle
   - arg_checkComfirmBattle_comfirmed == 1 ?
     {member_playerHp = member_playerHp - var_calculateBattle_playerCostHP}
     {member_playerMoney = member_playerMoney + arg_calculateBattle_ememyReward}
-    After battle, you: {printTile "UI_Hp"} {print member_playerHp}, {printTile "UI_money"} {print member_playerMoney}(eraseAllByPointerNow "SPR, var_pointer_eraseTargetId, var_pointer_eraseSpriteRoomId")(jump "fun_updateUI_all")
+    (eraseAllByPointerNow "SPR, var_pointer_eraseTargetId, var_pointer_eraseSpriteRoomId")(jump "fun_updateUI_all")
   - else
     You choose not to fight.
 }
@@ -2437,6 +3913,24 @@ DLG dlg_redSlime_floor3_8_8_instance
 NAME dlg_redSlime_floor3_8_8_instance
 
 # generated from TowerBitsyMonsterModel
+DLG dlg_redSlime_floor4_0_6_instance
+"""
+{var_pointer_eraseTargetId = "spr_redSlime_floor4_0_6"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_redSlime_prototype")
+"""
+NAME dlg_redSlime_floor4_0_6_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_redSlime_floor4_10_6_instance
+"""
+{var_pointer_eraseTargetId = "spr_redSlime_floor4_10_6"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_redSlime_prototype")
+"""
+NAME dlg_redSlime_floor4_10_6_instance
+
+# generated from TowerBitsyMonsterModel
 DLG dlg_redSlime_prototype
 """
 {arg_calculateBattle_ememyATK = 15}
@@ -2512,6 +4006,78 @@ DLG dlg_smallBat_floor3_7_9_instance
 NAME dlg_smallBat_floor3_7_9_instance
 
 # generated from TowerBitsyMonsterModel
+DLG dlg_smallBat_floor4_0_4_instance
+"""
+{var_pointer_eraseTargetId = "spr_smallBat_floor4_0_4"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_smallBat_prototype")
+"""
+NAME dlg_smallBat_floor4_0_4_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_smallBat_floor4_10_4_instance
+"""
+{var_pointer_eraseTargetId = "spr_smallBat_floor4_10_4"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_smallBat_prototype")
+"""
+NAME dlg_smallBat_floor4_10_4_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_smallBat_floor4_0_5_instance
+"""
+{var_pointer_eraseTargetId = "spr_smallBat_floor4_0_5"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_smallBat_prototype")
+"""
+NAME dlg_smallBat_floor4_0_5_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_smallBat_floor4_10_5_instance
+"""
+{var_pointer_eraseTargetId = "spr_smallBat_floor4_10_5"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_smallBat_prototype")
+"""
+NAME dlg_smallBat_floor4_10_5_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_smallBat_floor5_5_5_instance
+"""
+{var_pointer_eraseTargetId = "spr_smallBat_floor5_5_5"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_smallBat_prototype")
+"""
+NAME dlg_smallBat_floor5_5_5_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_smallBat_floor5_3_8_instance
+"""
+{var_pointer_eraseTargetId = "spr_smallBat_floor5_3_8"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_smallBat_prototype")
+"""
+NAME dlg_smallBat_floor5_3_8_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_smallBat_floor5_5_9_instance
+"""
+{var_pointer_eraseTargetId = "spr_smallBat_floor5_5_9"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_smallBat_prototype")
+"""
+NAME dlg_smallBat_floor5_5_9_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_smallBat_floor5_2_10_instance
+"""
+{var_pointer_eraseTargetId = "spr_smallBat_floor5_2_10"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_smallBat_prototype")
+"""
+NAME dlg_smallBat_floor5_2_10_instance
+
+# generated from TowerBitsyMonsterModel
 DLG dlg_smallBat_prototype
 """
 {arg_calculateBattle_ememyATK = 20}
@@ -2531,6 +4097,60 @@ DLG dlg_blackSlime_floor1_8_4_instance
 (jump "dlg_blackSlime_prototype")
 """
 NAME dlg_blackSlime_floor1_8_4_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_blackSlime_floor4_1_0_instance
+"""
+{var_pointer_eraseTargetId = "spr_blackSlime_floor4_1_0"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_blackSlime_prototype")
+"""
+NAME dlg_blackSlime_floor4_1_0_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_blackSlime_floor4_9_0_instance
+"""
+{var_pointer_eraseTargetId = "spr_blackSlime_floor4_9_0"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_blackSlime_prototype")
+"""
+NAME dlg_blackSlime_floor4_9_0_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_blackSlime_floor4_3_10_instance
+"""
+{var_pointer_eraseTargetId = "spr_blackSlime_floor4_3_10"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_blackSlime_prototype")
+"""
+NAME dlg_blackSlime_floor4_3_10_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_blackSlime_floor4_7_10_instance
+"""
+{var_pointer_eraseTargetId = "spr_blackSlime_floor4_7_10"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_blackSlime_prototype")
+"""
+NAME dlg_blackSlime_floor4_7_10_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_blackSlime_floor5_3_6_instance
+"""
+{var_pointer_eraseTargetId = "spr_blackSlime_floor5_3_6"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_blackSlime_prototype")
+"""
+NAME dlg_blackSlime_floor5_3_6_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_blackSlime_floor5_3_7_instance
+"""
+{var_pointer_eraseTargetId = "spr_blackSlime_floor5_3_7"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_blackSlime_prototype")
+"""
+NAME dlg_blackSlime_floor5_3_7_instance
 
 # generated from TowerBitsyMonsterModel
 DLG dlg_blackSlime_prototype
@@ -2581,6 +4201,33 @@ DLG dlg_smallSkeleton_floor3_5_3_instance
 NAME dlg_smallSkeleton_floor3_5_3_instance
 
 # generated from TowerBitsyMonsterModel
+DLG dlg_smallSkeleton_floor4_2_3_instance
+"""
+{var_pointer_eraseTargetId = "spr_smallSkeleton_floor4_2_3"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_smallSkeleton_prototype")
+"""
+NAME dlg_smallSkeleton_floor4_2_3_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_smallSkeleton_floor4_8_3_instance
+"""
+{var_pointer_eraseTargetId = "spr_smallSkeleton_floor4_8_3"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_smallSkeleton_prototype")
+"""
+NAME dlg_smallSkeleton_floor4_8_3_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_smallSkeleton_floor5_6_5_instance
+"""
+{var_pointer_eraseTargetId = "spr_smallSkeleton_floor5_6_5"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_smallSkeleton_prototype")
+"""
+NAME dlg_smallSkeleton_floor5_6_5_instance
+
+# generated from TowerBitsyMonsterModel
 DLG dlg_smallSkeleton_prototype
 """
 {arg_calculateBattle_ememyATK = 25}
@@ -2611,6 +4258,42 @@ DLG dlg_skeletonSoldier_floor1_1_8_instance
 NAME dlg_skeletonSoldier_floor1_1_8_instance
 
 # generated from TowerBitsyMonsterModel
+DLG dlg_skeletonSoldier_floor5_4_2_instance
+"""
+{var_pointer_eraseTargetId = "spr_skeletonSoldier_floor5_4_2"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_skeletonSoldier_prototype")
+"""
+NAME dlg_skeletonSoldier_floor5_4_2_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_skeletonSoldier_floor5_5_3_instance
+"""
+{var_pointer_eraseTargetId = "spr_skeletonSoldier_floor5_5_3"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_skeletonSoldier_prototype")
+"""
+NAME dlg_skeletonSoldier_floor5_5_3_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_skeletonSoldier_floor5_9_3_instance
+"""
+{var_pointer_eraseTargetId = "spr_skeletonSoldier_floor5_9_3"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_skeletonSoldier_prototype")
+"""
+NAME dlg_skeletonSoldier_floor5_9_3_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_skeletonSoldier_floor5_10_4_instance
+"""
+{var_pointer_eraseTargetId = "spr_skeletonSoldier_floor5_10_4"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_skeletonSoldier_prototype")
+"""
+NAME dlg_skeletonSoldier_floor5_10_4_instance
+
+# generated from TowerBitsyMonsterModel
 DLG dlg_skeletonSoldier_prototype
 """
 {arg_calculateBattle_ememyATK = 40}
@@ -2632,6 +4315,51 @@ DLG dlg_beastMonster_floor1_9_9_instance
 NAME dlg_beastMonster_floor1_9_9_instance
 
 # generated from TowerBitsyMonsterModel
+DLG dlg_beastMonster_floor4_4_6_instance
+"""
+{var_pointer_eraseTargetId = "spr_beastMonster_floor4_4_6"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_beastMonster_prototype")
+"""
+NAME dlg_beastMonster_floor4_4_6_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_beastMonster_floor4_6_6_instance
+"""
+{var_pointer_eraseTargetId = "spr_beastMonster_floor4_6_6"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_beastMonster_prototype")
+"""
+NAME dlg_beastMonster_floor4_6_6_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_beastMonster_floor4_5_7_instance
+"""
+{var_pointer_eraseTargetId = "spr_beastMonster_floor4_5_7"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_beastMonster_prototype")
+"""
+NAME dlg_beastMonster_floor4_5_7_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_beastMonster_floor5_8_3_instance
+"""
+{var_pointer_eraseTargetId = "spr_beastMonster_floor5_8_3"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_beastMonster_prototype")
+"""
+NAME dlg_beastMonster_floor5_8_3_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_beastMonster_floor5_8_7_instance
+"""
+{var_pointer_eraseTargetId = "spr_beastMonster_floor5_8_7"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_beastMonster_prototype")
+"""
+NAME dlg_beastMonster_floor5_8_7_instance
+
+# generated from TowerBitsyMonsterModel
 DLG dlg_beastMonster_prototype
 """
 {arg_calculateBattle_ememyATK = 75}
@@ -2642,6 +4370,24 @@ DLG dlg_beastMonster_prototype
 (jump "fun_calculateBattle")
 """
 NAME dlg_beastMonster_prototype
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_juniorGuard_floor4_5_6_instance
+"""
+{var_pointer_eraseTargetId = "spr_juniorGuard_floor4_5_6"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_juniorGuard_prototype")
+"""
+NAME dlg_juniorGuard_floor4_5_6_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_juniorGuard_floor5_9_7_instance
+"""
+{var_pointer_eraseTargetId = "spr_juniorGuard_floor5_9_7"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_juniorGuard_prototype")
+"""
+NAME dlg_juniorGuard_floor5_9_7_instance
 
 # generated from TowerBitsyMonsterModel
 DLG dlg_juniorGuard_prototype
@@ -2656,6 +4402,51 @@ DLG dlg_juniorGuard_prototype
 NAME dlg_juniorGuard_prototype
 
 # generated from TowerBitsyMonsterModel
+DLG dlg_largeBat_floor4_4_3_instance
+"""
+{var_pointer_eraseTargetId = "spr_largeBat_floor4_4_3"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_largeBat_prototype")
+"""
+NAME dlg_largeBat_floor4_4_3_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_largeBat_floor4_6_3_instance
+"""
+{var_pointer_eraseTargetId = "spr_largeBat_floor4_6_3"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_largeBat_prototype")
+"""
+NAME dlg_largeBat_floor4_6_3_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_largeBat_floor4_5_4_instance
+"""
+{var_pointer_eraseTargetId = "spr_largeBat_floor4_5_4"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_largeBat_prototype")
+"""
+NAME dlg_largeBat_floor4_5_4_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_largeBat_floor5_0_2_instance
+"""
+{var_pointer_eraseTargetId = "spr_largeBat_floor5_0_2"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_largeBat_prototype")
+"""
+NAME dlg_largeBat_floor5_0_2_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_largeBat_floor5_0_4_instance
+"""
+{var_pointer_eraseTargetId = "spr_largeBat_floor5_0_4"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_largeBat_prototype")
+"""
+NAME dlg_largeBat_floor5_0_4_instance
+
+# generated from TowerBitsyMonsterModel
 DLG dlg_largeBat_prototype
 """
 {arg_calculateBattle_ememyATK = 65}
@@ -2666,6 +4457,15 @@ DLG dlg_largeBat_prototype
 (jump "fun_calculateBattle")
 """
 NAME dlg_largeBat_prototype
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_redBat_floor4_5_3_instance
+"""
+{var_pointer_eraseTargetId = "spr_redBat_floor4_5_3"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_redBat_prototype")
+"""
+NAME dlg_redBat_floor4_5_3_instance
 
 # generated from TowerBitsyMonsterModel
 DLG dlg_redBat_prototype
@@ -2872,6 +4672,51 @@ DLG dlg_juniorWizard_floor1_6_5_instance
 NAME dlg_juniorWizard_floor1_6_5_instance
 
 # generated from TowerBitsyMonsterModel
+DLG dlg_juniorWizard_floor5_5_0_instance
+"""
+{var_pointer_eraseTargetId = "spr_juniorWizard_floor5_5_0"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_juniorWizard_prototype")
+"""
+NAME dlg_juniorWizard_floor5_5_0_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_juniorWizard_floor5_8_0_instance
+"""
+{var_pointer_eraseTargetId = "spr_juniorWizard_floor5_8_0"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_juniorWizard_prototype")
+"""
+NAME dlg_juniorWizard_floor5_8_0_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_juniorWizard_floor5_4_1_instance
+"""
+{var_pointer_eraseTargetId = "spr_juniorWizard_floor5_4_1"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_juniorWizard_prototype")
+"""
+NAME dlg_juniorWizard_floor5_4_1_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_juniorWizard_floor5_9_1_instance
+"""
+{var_pointer_eraseTargetId = "spr_juniorWizard_floor5_9_1"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_juniorWizard_prototype")
+"""
+NAME dlg_juniorWizard_floor5_9_1_instance
+
+# generated from TowerBitsyMonsterModel
+DLG dlg_juniorWizard_floor5_2_3_instance
+"""
+{var_pointer_eraseTargetId = "spr_juniorWizard_floor5_2_3"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_juniorWizard_prototype")
+"""
+NAME dlg_juniorWizard_floor5_2_3_instance
+
+# generated from TowerBitsyMonsterModel
 DLG dlg_juniorWizard_prototype
 """
 {arg_calculateBattle_ememyATK = 50}
@@ -3019,6 +4864,87 @@ DLG dlg_yellowDoor_floor3_7_7_instance
 NAME dlg_yellowDoor_floor3_7_7_instance
 
 # generated from TowerBitsyDoorModel
+DLG dlg_yellowDoor_floor4_0_1_instance
+"""
+{var_pointer_eraseTargetId = "spr_yellowDoor_floor4_0_1"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_yellowDoor_prototype")
+"""
+NAME dlg_yellowDoor_floor4_0_1_instance
+
+# generated from TowerBitsyDoorModel
+DLG dlg_yellowDoor_floor4_2_1_instance
+"""
+{var_pointer_eraseTargetId = "spr_yellowDoor_floor4_2_1"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_yellowDoor_prototype")
+"""
+NAME dlg_yellowDoor_floor4_2_1_instance
+
+# generated from TowerBitsyDoorModel
+DLG dlg_yellowDoor_floor4_8_1_instance
+"""
+{var_pointer_eraseTargetId = "spr_yellowDoor_floor4_8_1"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_yellowDoor_prototype")
+"""
+NAME dlg_yellowDoor_floor4_8_1_instance
+
+# generated from TowerBitsyDoorModel
+DLG dlg_yellowDoor_floor4_10_1_instance
+"""
+{var_pointer_eraseTargetId = "spr_yellowDoor_floor4_10_1"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_yellowDoor_prototype")
+"""
+NAME dlg_yellowDoor_floor4_10_1_instance
+
+# generated from TowerBitsyDoorModel
+DLG dlg_yellowDoor_floor5_8_2_instance
+"""
+{var_pointer_eraseTargetId = "spr_yellowDoor_floor5_8_2"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_yellowDoor_prototype")
+"""
+NAME dlg_yellowDoor_floor5_8_2_instance
+
+# generated from TowerBitsyDoorModel
+DLG dlg_yellowDoor_floor5_1_3_instance
+"""
+{var_pointer_eraseTargetId = "spr_yellowDoor_floor5_1_3"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_yellowDoor_prototype")
+"""
+NAME dlg_yellowDoor_floor5_1_3_instance
+
+# generated from TowerBitsyDoorModel
+DLG dlg_yellowDoor_floor5_5_8_instance
+"""
+{var_pointer_eraseTargetId = "spr_yellowDoor_floor5_5_8"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_yellowDoor_prototype")
+"""
+NAME dlg_yellowDoor_floor5_5_8_instance
+
+# generated from TowerBitsyDoorModel
+DLG dlg_yellowDoor_floor5_9_8_instance
+"""
+{var_pointer_eraseTargetId = "spr_yellowDoor_floor5_9_8"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_yellowDoor_prototype")
+"""
+NAME dlg_yellowDoor_floor5_9_8_instance
+
+# generated from TowerBitsyDoorModel
+DLG dlg_yellowDoor_floor5_8_9_instance
+"""
+{var_pointer_eraseTargetId = "spr_yellowDoor_floor5_8_9"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_yellowDoor_prototype")
+"""
+NAME dlg_yellowDoor_floor5_8_9_instance
+
+# generated from TowerBitsyDoorModel
 DLG dlg_yellowDoor_prototype
 """
 {
@@ -3041,6 +4967,24 @@ DLG dlg_blueDoor_floor2_5_7_instance
 NAME dlg_blueDoor_floor2_5_7_instance
 
 # generated from TowerBitsyDoorModel
+DLG dlg_blueDoor_floor4_5_8_instance
+"""
+{var_pointer_eraseTargetId = "spr_blueDoor_floor4_5_8"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_blueDoor_prototype")
+"""
+NAME dlg_blueDoor_floor4_5_8_instance
+
+# generated from TowerBitsyDoorModel
+DLG dlg_blueDoor_floor5_7_8_instance
+"""
+{var_pointer_eraseTargetId = "spr_blueDoor_floor5_7_8"}
+{var_pointer_eraseSpriteRoomId = "room_floor5"}
+(jump "dlg_blueDoor_prototype")
+"""
+NAME dlg_blueDoor_floor5_7_8_instance
+
+# generated from TowerBitsyDoorModel
 DLG dlg_blueDoor_prototype
 """
 {
@@ -3061,6 +5005,15 @@ DLG dlg_redDoor_floor1_5_8_instance
 (jump "dlg_redDoor_prototype")
 """
 NAME dlg_redDoor_floor1_5_8_instance
+
+# generated from TowerBitsyDoorModel
+DLG dlg_redDoor_floor4_5_5_instance
+"""
+{var_pointer_eraseTargetId = "spr_redDoor_floor4_5_5"}
+{var_pointer_eraseSpriteRoomId = "room_floor4"}
+(jump "dlg_redDoor_prototype")
+"""
+NAME dlg_redDoor_floor4_5_5_instance
 
 # generated from TowerBitsyDoorModel
 DLG dlg_redDoor_prototype
@@ -3094,30 +5047,14 @@ VAR member_playerFloor
 VAR member_playerMoney
 0
 
+VAR member_playerExp
+0
+
 VAR member_playerLevel
 0
 
-<<<<<<< HEAD
-VAR const_the3FShopPrice
-25
-=======
-DLG 0
-"""
-I'm a cat
-{value = (compareV2Now "*a, =, 42")}
-compareV2 result is {say value}
-"""
-NAME cat dialog
->>>>>>> hundun-base-v7
-
-VAR const_the3FShopHpAmount
-800
-
-VAR const_the3FShopAtkAmount
-4
-
-VAR const_the3FShopDefAmount
-4
+VAR member_playerHasFaeryCross
+0
 
 VAR globalVar_saveState
 -1
